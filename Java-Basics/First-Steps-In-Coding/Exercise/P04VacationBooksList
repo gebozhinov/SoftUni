@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class VacationBooksList {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int pages = Integer.parseInt(scanner.nextLine());
+        int readPages = Integer.parseInt(scanner.nextLine());
+        int days = Integer.parseInt(scanner.nextLine());
+        int hoursNeeded = pages / readPages;
+        int hoursNeededADay = hoursNeeded / days;
+        System.out.println(hoursNeededADay);
+
+    }
+}
