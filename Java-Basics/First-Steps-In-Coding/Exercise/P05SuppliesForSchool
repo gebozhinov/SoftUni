@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SuppliesForSchool {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int pencilPackages = Integer.parseInt(scanner.nextLine());
+        int markerPackages = Integer.parseInt(scanner.nextLine());
+        int cleaner = Integer.parseInt(scanner.nextLine());
+        int discountPercent = Integer.parseInt(scanner.nextLine());
+
+        // Calculating
+        double pencilTotalCost = pencilPackages * 5.8;
+        double markerTotalCost = markerPackages * 7.2;
+        double cleanerTotalCost = cleaner * 1.2;
+        double totalCost = pencilTotalCost + markerTotalCost + cleanerTotalCost;
+        double discount = (totalCost * discountPercent) / 100;
+        double discountedCost = totalCost - discount;
+
+        System.out.println(discountedCost);
+    }
+}
