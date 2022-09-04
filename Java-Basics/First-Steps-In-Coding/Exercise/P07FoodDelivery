@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class FoodDelivery {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int chickenMenus = Integer.parseInt(scanner.nextLine());
+        int fishMenus = Integer.parseInt(scanner.nextLine());
+        int vegetarianMenus = Integer.parseInt(scanner.nextLine());
+        double chickenMenusTotalPrice = chickenMenus * 10.35;
+        double fishMenusTotalPrice = fishMenus * 12.4;
+        double vegetarianMenusTotalPrice = vegetarianMenus * 8.15;
+        double menusTotalPrice = chickenMenusTotalPrice + fishMenusTotalPrice + vegetarianMenusTotalPrice;
+        double desert = menusTotalPrice * 0.2;
+        double totalPrice = menusTotalPrice + desert + 2.5;
+        System.out.println(totalPrice);
+    }
+}
