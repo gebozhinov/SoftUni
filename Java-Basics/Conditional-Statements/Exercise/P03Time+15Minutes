@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class TimePlus15Minutes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int h = Integer.parseInt(scanner.nextLine());
+        int m = Integer.parseInt(scanner.nextLine());
+        m += 15;
+        int time = (h * 60) + m;
+        int hours = time / 60;
+        int minutes = time % 60;
+
+        if (hours >= 24) {
+            hours = 0;
+        }
+        System.out.printf("%d:%02d", hours, minutes);
+    }
+}
