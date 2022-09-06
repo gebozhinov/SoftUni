@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class LunchBreak {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String series = scanner.nextLine();
+        int seriesLength = Integer.parseInt(scanner.nextLine());
+        int breakLength = Integer.parseInt(scanner.nextLine());
+
+        double lunchBreak = breakLength * 0.125;
+        double sleepBreak = breakLength * 0.25;
+        double freeTime = breakLength - lunchBreak - sleepBreak;
+
+        if (freeTime >= seriesLength) {
+            double timeLeft = Math.ceil(freeTime - seriesLength);
+            System.out.printf("You have enough time to watch %s and left with" +
+                    " %.0f minutes free time.", series, timeLeft);
+        } else {
+            double timeNeeded = Math.ceil(seriesLength - freeTime);
+            System.out.printf("You don't have enough time to watch %s, you need %.0f more minutes.", series, timeNeeded);
+        }
+    }
+}
