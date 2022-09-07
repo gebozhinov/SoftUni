@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class TradeCommissions {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String town = scanner.nextLine();
+        double volume = Double.parseDouble(scanner.nextLine());
+
+        double commission = 0.0;
+        boolean isValid = true;
+        switch (town) {
+            case "Sofia":
+                if (volume < 0) {
+                    isValid = false;
+                } else if (volume <= 500) {
+                    commission = volume * 0.05;
+                } else if (volume <= 1000) {
+                    commission = volume * 0.07;
+                } else if (volume <= 10000) {
+                    commission = volume * 0.08;
+                } else if (volume > 10000) {
+                    commission = volume * 0.12;
+                }
+                break;
+            case "Varna":
+                if (volume < 0) {
+                    isValid = false;
+                } else if (volume <= 500) {
+                    commission = volume * 0.045;
+                } else if (volume <= 1000) {
+                    commission = volume * 0.075;
+                } else if (volume <= 10000) {
+                    commission = volume * 0.1;
+                } else if (volume > 10000) {
+                    commission = volume * 0.13;
+                }
+                break;
+            case "Plovdiv":
+                if (volume < 0) {
+                    isValid = false;
+                } else if (volume <= 500) {
+                    commission = volume * 0.055;
+                } else if (volume <= 1000) {
+                    commission = volume * 0.08;
+                } else if (volume <= 10000) {
+                    commission = volume * 0.12;
+                } else if (volume > 10000) {
+                    commission = volume * 0.145;
+                }
+                break;
+            default:
+                isValid = false;
+                break;
+        }
+        if (isValid) {
+            System.out.printf("%.2f", commission);
+        } else {
+            System.out.println("error");
+        }
+    }
+}
