@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class OnTimeForTheExam {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int examHour = Integer.parseInt(scanner.nextLine());
+        int examMinutes = Integer.parseInt(scanner.nextLine());
+        int arriveHour = Integer.parseInt(scanner.nextLine());
+        int arriveMinutes = Integer.parseInt(scanner.nextLine());
+
+        int exam = (examHour * 60) + examMinutes;
+        int arrive = (arriveHour * 60) + arriveMinutes;
+
+        boolean isMinutesBefore = false;
+        boolean isHoursBefore = false;
+        boolean isHoursLate = false;
+        boolean isMinutesLate = false;
+        if (exam - arrive >= 0 && exam - arrive <= 30) {
+            System.out.println("On time");
+            if (exam - arrive >= 1) {
+                isMinutesBefore = true;
+            }
+        } else if (exam - arrive > 30) {
+            System.out.println("Early");
+            if (exam - arrive >= 60) {
+                isHoursBefore = true;
+            } else {
+                isMinutesBefore = true;
+            }
+        } else {
+            System.out.println("Late");
+            if (exam - arrive <= -60) {
+                isHoursLate = true;
+            } else {
+                isMinutesLate = true;
+            }
+        }
+        if (isMinutesBefore) {
+            System.out.printf("%d minutes before the start", exam - arrive);
+        } else if (isHoursBefore) {
+            System.out.printf("%d:%02d hours before the start", (exam - arrive) / 60, (exam - arrive) % 60);
+        } else if (isMinutesLate) {
+            System.out.printf("%d minutes after the start", arrive - exam);
+        } else if (isHoursLate) {
+            System.out.printf("%d:%02d hours after the start", (arrive - exam) / 60, (arrive - exam) % 60);
+        }
+    }
+}
+
