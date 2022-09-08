@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Cinema {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String projectionType = scanner.nextLine();
+        int rows = Integer.parseInt(scanner.nextLine());
+        int col = Integer.parseInt(scanner.nextLine());
+
+        int theaterArea = rows * col;
+
+        double ticketsPrice = 0.00;
+        switch (projectionType) {
+            case "Premiere":
+                ticketsPrice = theaterArea * 12;
+                break;
+            case "Normal":
+                ticketsPrice = theaterArea * 7.5;
+                break;
+            case "Discount":
+                ticketsPrice = theaterArea * 5;
+                break;
+        }
+        System.out.printf("%.2f leva", ticketsPrice);
+    }
+}
