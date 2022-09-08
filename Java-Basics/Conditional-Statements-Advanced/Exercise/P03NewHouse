@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class NewHouse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String flowers = scanner.nextLine();
+        int flowersAmount = Integer.parseInt(scanner.nextLine());
+        int budget = Integer.parseInt(scanner.nextLine());
+
+        double price = 0.0;
+        switch (flowers) {
+            case "Roses":
+                price = flowersAmount * 5;
+                if (flowersAmount > 80) {
+                    price *= 0.9;
+                }
+                break;
+            case "Dahlias":
+                price = flowersAmount * 3.8;
+                if (flowersAmount > 90) {
+                    price *= 0.85;
+                }
+                break;
+            case "Tulips":
+                price = flowersAmount * 2.8;
+                if (flowersAmount > 80) {
+                    price *= 0.85;
+                }
+                break;
+            case "Narcissus":
+                price = flowersAmount * 3;
+                if (flowersAmount < 120) {
+                    price *= 1.15;
+                }
+                break;
+            case "Gladiolus":
+                price = flowersAmount * 2.5;
+                if (flowersAmount < 80) {
+                    price *= 1.2;
+                }
+                break;
+        }
+        double diff = Math.abs(budget - price);
+        if (budget >= price) {
+            System.out.printf("Hey, you have a great garden with %d %s and %.2f leva left.", flowersAmount, flowers, diff);
+        } else {
+            System.out.printf("Not enough money, you need %.2f leva more.", diff);
+        }
+    }
+}
