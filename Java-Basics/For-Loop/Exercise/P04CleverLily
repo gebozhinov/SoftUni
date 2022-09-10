@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class CleverLily {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int age = Integer.parseInt(scanner.nextLine());
+        double washingMachine = Double.parseDouble(scanner.nextLine());
+        int toyPrice = Integer.parseInt(scanner.nextLine());
+        int money = 0;
+        int savedMoney = 0;
+        int countToys = 0;
+        for (int i = 1; i <= age; i++) {
+            if (i % 2 != 0) {
+                countToys += 1;
+            } else {
+                money += 1;
+                savedMoney += 10 * money - 1;
+            }
+        }
+        int toysSold = countToys * toyPrice;
+        int totalMoneySaved = savedMoney + toysSold;
+        double diff = Math.abs(washingMachine - totalMoneySaved);
+        if (totalMoneySaved >= washingMachine) {
+            System.out.printf("Yes! %.2f", diff);
+        } else {
+            System.out.printf("No! %.2f", diff);
+        }
+    }
+}
