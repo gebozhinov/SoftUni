@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Graduation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String studentName = scanner.nextLine();
+        int studentClass = 1;
+        double totalGrade = 0;
+        int fail = 0;
+        boolean pass = true;
+        while (studentClass <= 12) {
+            double grade = Double.parseDouble(scanner.nextLine());
+            totalGrade += grade;
+            if (grade >= 4) {
+                studentClass += 1;
+            } else {
+                fail += 1;
+            }
+            if (fail == 2) {
+                pass = false;
+                break;
+            }
+        }
+        if (pass) {
+            System.out.printf("%s graduated. Average grade: %.2f", studentName, totalGrade / 12);
+        } else {
+            System.out.printf("%s has been excluded at %d grade", studentName, studentClass);
+        }
+    }
+}
