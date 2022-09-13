@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Coins {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double change = Double.parseDouble(scanner.nextLine());
+        double convertChange = Math.floor(change * 100);
+        int coins = 0;
+        while (convertChange > 0) {
+            if (convertChange >= 200) {
+                coins++;
+                convertChange -= 200;
+            } else if (convertChange >= 100) {
+                coins++;
+                convertChange -= 100;
+            } else if (convertChange >= 50) {
+                coins++;
+                convertChange -= 50;
+            } else if (convertChange >= 20) {
+                coins++;
+                convertChange -= 20;
+            } else if (convertChange >= 10) {
+                coins++;
+                convertChange -= 10;
+            } else if (convertChange >= 5) {
+                coins++;
+                convertChange -= 5;
+            } else if (convertChange >= 2) {
+                coins++;
+                convertChange -= 2;
+            } else if (convertChange >= 1) {
+                coins++;
+                convertChange -= 1;
+            }
+        }
+        System.out.println(coins);
+    }
+}
