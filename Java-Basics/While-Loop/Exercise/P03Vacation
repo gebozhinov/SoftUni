@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Vacation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double tripMoney = Double.parseDouble(scanner.nextLine());
+        double budget = Double.parseDouble(scanner.nextLine());
+        int days = 0;
+        int consistentDays = 0;
+        while (budget < tripMoney) {
+            days++;
+            String action = scanner.nextLine();
+            double money = Double.parseDouble(scanner.nextLine());
+            if (action.equals("save")) {
+                budget += money;
+                consistentDays = 0;
+            } else {
+                consistentDays += 1;
+                budget -= money;
+                if (budget < 0) {
+                    budget = 0;
+                }
+            }
+            if (consistentDays == 5) {
+                break;
+            }
+        }
+        if (budget >= tripMoney) {
+            System.out.printf("You saved the money for %d days.", days);
+        } else {
+            System.out.println("You can't save the money.");
+            System.out.printf("%d", days);
+        }
+    }
+}
