@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class FuelTankPartTwo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String fuel = scanner.nextLine();
+        double litres = Double.parseDouble(scanner.nextLine());
+        String clubCard = scanner.nextLine();
+
+        double price = 0;
+        if (fuel.equals("Gas")) {
+            price = 0.93;
+            if (clubCard.equals("Yes")) {
+                price -= 0.08;
+            }
+        } else if (fuel.equals("Gasoline")) {
+            price = 2.22;
+            if (clubCard.equals("Yes")) {
+                price -= 0.18;
+            }
+        } else {
+            price = 2.33;
+            if (clubCard.equals("Yes")) {
+                price -= 0.12;
+            }
+        }
+        double totalPrice = litres * price;
+        if (litres >= 20 && litres <= 25) {
+            totalPrice *= 0.92;
+        } else if (litres > 25) {
+            totalPrice *= 0.9;
+        }
+        System.out.printf("%.2f lv.", totalPrice);
+    }
+}
