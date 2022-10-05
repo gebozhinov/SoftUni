@@ -9,12 +9,6 @@ You will be given 3 lines of input – student name, age, and average grade. You
 
 | Input | Output |
 | --- | --- |
-|`John`<br> `15`<br> `5.40`| Name: John, Age: 15, Grade: 5.40 |
- `15`   
- `5.40`
-| `Steve` | Name: Steve, Age: 16, Grade: 2.50 |
-`16`
-`2.50`
-`Marry` | Name: Marry, Age: 12, Grade: 6.00
-`12`
-`6.00`
+|John<br>15<br>5.40| Name: John, Age: 15, Grade: 5.40| 
+|Steve<br>16<br>2.50| Name: Steve, Age: 16, Grade: 2.50|
+|Marry<br>12<br>6.00| Name: Marry, Age: 12, Grade: 6.00|
