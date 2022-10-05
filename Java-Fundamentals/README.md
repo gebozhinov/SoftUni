@@ -11,9 +11,10 @@ among students about the upcoming professional modules and the knowledge they wi
  ## **Skills you will acquire**
  
 ```diff
--  Handling the standard functionality of the programming language
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- Handling the standard functionality of the programming language
+- Basics of web development
+- Understanding the interrelationship between different IT concepts
+- Analysis of complex problems and reduction to computer-executable steps
+- Basic HTML and CSS skills
+- Working with linear data structures
 ```
