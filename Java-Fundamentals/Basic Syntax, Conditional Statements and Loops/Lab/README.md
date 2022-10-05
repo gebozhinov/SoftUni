@@ -10,8 +10,9 @@ You will be given 3 lines of input – student name, age, and average grade. You
 | Input | Output |
 | --- | --- |
 | John | Name: John, Age: 15, Grade: 5.40 |
- 15   
-git diff | Show file differences that haven't been staged |
+  15   
+  5.40
+| git diff | Show file differences that haven't been staged |
 
 
 
