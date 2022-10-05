@@ -7,11 +7,12 @@ You will be given 3 lines of input – student name, age, and average grade. You
 
 ### Examples
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
+| Input | Output |
+| --- | --- |
+| John
+15
+5.40 | Name: John, Age: 15, Grade: 5.40 |
+| git diff | Show file differences that haven't been staged |
 
 
 
