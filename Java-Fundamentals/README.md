@@ -11,7 +11,7 @@ among students about the upcoming professional modules and the knowledge they wi
  ## **Skills you will acquire**
  
 ```diff
-- * Handling the standard functionality of the programming language
+-  Handling the standard functionality of the programming language
 + text in green
 ! text in orange
 # text in gray
