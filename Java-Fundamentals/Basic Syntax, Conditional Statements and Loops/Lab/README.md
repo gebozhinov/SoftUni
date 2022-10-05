@@ -47,6 +47,6 @@ The input will be on two lines. On the first line, you will receive the hours an
 ### Output
 Print on the console the time after 30 minutes. The result should be in the format "hh:mm". The hours have one or two numbers and the minutes have always two numbers (with leading zero).
 ### Constraints
-•	The hours will be between 0 and 23.
-•	The minutes will be between 0 and 59.
+* The hours will be between 0 and 23.
+*	The minutes will be between 0 and 59.
 
