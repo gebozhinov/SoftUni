@@ -12,7 +12,6 @@ You will be given 3 lines of input – student name, age, and average grade. You
 | John  |Name: John, Age: 15, Grade: 5.40   |
 | 15    |                                   |
 | 5.40  |                                   |
-|-------------------------------------------|
 | Steve | Name: Steve, Age: 16, Grade: 2.50 |
 | 16    |                                   |
 | 2.50  |                                   |
