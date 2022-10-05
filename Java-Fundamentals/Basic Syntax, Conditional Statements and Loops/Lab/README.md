@@ -15,4 +15,6 @@ You will be given 3 lines of input – student name, age, and average grade. You
 | `Steve` | Name: Steve, Age: 16, Grade: 2.50 |
 `16`
 `2.50`
-
+`Marry` | Name: Marry, Age: 12, Grade: 6.00
+`12`
+`6.00`
