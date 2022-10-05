@@ -1,4 +1,5 @@
-# Problems for exercises and homework for the "Programming Fundamentals" course @ SoftUni.
+# Lab: Basic Syntax, Conditional Statements and Loops
+Problems for exercises and homework for the "Programming Fundamentals" course @ SoftUni.
 
 ## 1.	Student Information
 
