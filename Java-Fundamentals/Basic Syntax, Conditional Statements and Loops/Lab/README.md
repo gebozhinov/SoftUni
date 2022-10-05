@@ -183,20 +183,3 @@ for (int i = 0; i <= n; i++) {
     sum += 2 * i;
     }
 System.out.printf("Sum: %d%n", sum); |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
