@@ -122,7 +122,7 @@ Print the next n odd numbers, starting from 1, separated by new lines. On the la
 ### Examples
 | Input | Output |
 | --- | --- |
-|5|1<br>3<br>5<br>7<br>9<br><br>Sum: 25|
+|5|1<br>3<br>5<br>7<br>9<br>Sum: 25|
 |3|1<br>3<br>5<br>Sum: 9|
 
 ## 10.	Multiplication Table
@@ -175,11 +175,4 @@ You are given a program (existing source code) that prints the next n odd number
 
 |SumOddNumbers.java|
 |------------------|
-|Scanner sc = new Scanner(System.in);
-int n = Integer.parseInt(sc.nextLine());
-int sum = 1;
-for (int i = 0; i <= n; i++) {
-    System.out.print(2 * i + 1);
-    sum += 2 * i;
-    }
-System.out.printf("Sum: %d%n", sum); |
+|Scanner sc = new Scanner(System.in);<br>int n = Integer.parseInt(sc.nextLine());<br>int sum = 1;<br>for (int i = 0; i <= n; i++) {<br>    System.out.print(2 * i + 1);<br>    sum += 2 * i;<br>    }<br>System.out.printf("Sum: %d%n", sum); |
