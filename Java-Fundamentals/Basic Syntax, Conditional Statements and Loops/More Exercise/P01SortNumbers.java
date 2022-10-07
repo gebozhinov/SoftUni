@@ -1,5 +1,3 @@
-package basic.syntax.conditional.statements.and.loops.more.exercise;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
