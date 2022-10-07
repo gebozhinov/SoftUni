@@ -1,5 +1,3 @@
-package basic.syntax.conditional.statements.and.loops.more.exercise;
-
 import java.util.Scanner;
 
 public class P02EnglishNameOfTheLastDigit {
