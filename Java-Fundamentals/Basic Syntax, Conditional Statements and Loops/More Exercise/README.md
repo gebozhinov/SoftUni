@@ -24,7 +24,7 @@ Write a method that returns the English name of the last digit of a given number
 ## 3.	Gaming Store
 Write a program, which helps you buy the games. The valid games are the following games in this table:Write a program, which helps you buy the games. The valid games are the following games in this table:
 
-| Input | Output |
+| Name | Price |
 | --- | --- |
 |OutFall 4|$39.99|
 |CS: OG|$15.99|
