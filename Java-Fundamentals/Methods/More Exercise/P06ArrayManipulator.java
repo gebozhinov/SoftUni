@@ -32,7 +32,8 @@ public class P06ArrayManipulator {
                     printMinIndex(numbers, "even");
                 } else {
                     printMinIndex(numbers, "odd");
-                }} else if (action[0].equals("first")) {
+                }
+            } else if (action[0].equals("first")) {
                 int countFirst = Integer.parseInt(action[1]);
                 if (countFirst <= 0 || countFirst > numbers.length) {
                     System.out.println("Invalid count");
@@ -68,7 +69,8 @@ public class P06ArrayManipulator {
         int maxOddIndex = Integer.MIN_VALUE;
         int maxEvenNum = Integer.MIN_VALUE;
         int maxOddNum = Integer.MIN_VALUE;
-for (int i = 0; i < numbers.length; i++) {
+
+        for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] % 2 == 0) {
                 if (maxEvenNum <= numbers[i]) {
                     maxEvenIndex = i;
@@ -117,7 +119,8 @@ for (int i = 0; i < numbers.length; i++) {
             System.out.println("No matches");
         }
     }
-  public static void printFirstCount(int[] numbers, int count, String evenOrOdd) {
+
+    public static void printFirstCount(int[] numbers, int count, String evenOrOdd) {
         List<Integer> firstEvenNumbers = new ArrayList<>();
         List<Integer> firstOddNumbers = new ArrayList<>();
         int countEvenNumbers = 0;
