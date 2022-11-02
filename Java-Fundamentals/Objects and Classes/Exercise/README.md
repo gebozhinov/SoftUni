@@ -50,16 +50,7 @@ Using the Person class, write a program that reads from the console N lines of p
 |3<br>Peter 12<br>Sam 31<br>Itan 48|Sam – 31<br>Itan - 48|
 |5<br>Niko 33<br>Yana 88<br>Todor 22<br>Lisa 44<br>Sam 11|Niko - 33<br>Yana - 88<br>Lisa - 44|
 
-## 4.	Articles 2.0
-Change the program from the second problem, so you can store a list of articles. You will not need the methods anymore (except the ToString method). On the first line, you will get a number n. On the next n lines, you will get some articles in the same format as the previous task ("{title}, {content}, {author}"). Finally, you will get one of the three inputs: "title", "content", "author". Print the articles. 
-
-### Examples
-| Input | Output |
-| --- | --- |
-|2<br>Science, planets, Bill<br>Article, content, Johnny<br>title|Science - planets: Bill Article - content: Johnny|
-|3<br>title1, C, author1<br>title2, B, author2<br>title3, A, author3<br>content|title1 - C: author1<br>title2 - B: author2<br>title3 - A: author3|
-
-## 5.	Students
+## 4.	Students
 Write a program that receives n count of students and orders them by grade (in descending). Each student should have a first name (string), last name (string), and grade (a floating-point number). 
 
 ### Input
@@ -75,7 +66,7 @@ Write a program that receives n count of students and orders them by grade (in d
 |4<br>Lakia Eason 3.90<br>Prince Messing 5.49<br>Akiko Segers 4.85<br>Rocco Erben 6.00|Rocco Erben: 6.00<br>Prince Messing: 5.49<br>Akiko Segers: 4.85<br>Lakia Eason: 3.90|
 |4<br>Sydnie Britton 5.79<br>Amias Mathews 2.30<br>Mora Tod 2.78<br>Pete Kendrick 2.61|Sydnie Britton: 5.79<br>Mora Tod: 2.78<br>Pete Kendrick: 2.61<br>Amias Mathews: 2.30|
 
-## 6.	Vehicle Catalogue
+## 5.	Vehicle Catalogue
 You have to make a catalog for vehicles. You will receive two types of vehicles - a car or a truck. 
 Until you receive the command "End" you will receive lines of input in the format:
 
@@ -109,7 +100,7 @@ Format the answer to the 2nd decimal point.
 |truck Man red 200<br>truck Mercedes blue 300<br>car Ford green 120<br>car Ferrari red 550<br>car Lamborghini orange 570<br>End<br>Ferrari<br>Ford<br>Man<br>Close the Catalogue|Type: Car<br>Model: Ferrari<br>Color: red<br>Horsepower: 550<br>Type: Car<br>Model: Ford<br>Color: green<br>Horsepower: 120<br>Type: Truck<br>Model: Man<br>Color: red<br>Horsepower: 200<br>Cars have average horsepower of: 413.33.<br>Trucks have average horsepower of: 250.00.|
 |car Opel green 736<br>End<br>Close the Catalogue|Cars have average horsepower of: 736.00.<br>Trucks have average horsepower of: 0.00.|
 
-## 7.	Order by Age
+## 6.	Order by Age
 You will receive an unknown number of lines. On each line, you will receive an array with 3 elements. The first element will be a string and represents the name of the person. The second element will be a string and will represent the ID of the person. The last element will be an integer which represents the age of the person.
 When you receive the command "End", stop taking input and print all the people, ordered by age.
 
