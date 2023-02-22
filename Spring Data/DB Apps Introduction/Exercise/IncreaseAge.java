@@ -20,5 +20,7 @@ public class IncreaseAge {
         minionNameAndAgeSet.next();
         System.out.println(minionNameAndAgeSet.getString("output"));
 
+        Utils.closeSQLConnection();
+
     }
 }
