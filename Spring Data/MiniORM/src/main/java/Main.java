@@ -1,3 +1,4 @@
+import entities.Account;
 import entities.Student;
 import entities.User;
 import orm.Connector;
@@ -14,24 +15,29 @@ public class Main {
 
         Connection connection = Connector.getConnection();
 
-        EntityManager<User> userManager = new EntityManager<>(connection);
+//        EntityManager<User> userManager = new EntityManager<>(connection);
 //        User user = new User("First", 32, LocalDate.now());
 //        userManager.persist(user);
 //
-        EntityManager<Student> studentManager = new EntityManager<>(connection);
+//        EntityManager<Student> studentManager = new EntityManager<>(connection);
 //        Student student = new Student("Ivan");
 //        studentManager.persist(student);
+//
+//        User first = userManager.findFirst(User.class);
+//
+//        System.out.println(first.getId() + " " + first.getUsername());
+//
+//        Student first1 = studentManager.findFirst(Student.class, "name = 'test'");
+//
+//        System.out.println(first1.getId() + " " + first1.getName());
+//
+//        userManager.find(User.class, "age > 18 AND registration_date > '2022-06-06'")
+//                .forEach(u -> System.out.println(u.toString()));
 
-        User first = userManager.findFirst(User.class);
+        EntityManager<Account> accountEntityManager = new EntityManager<>(connection);
 
-        System.out.println(first.getId() + " " + first.getUsername());
-
-        Student first1 = studentManager.findFirst(Student.class, "name = 'test'");
-
-        System.out.println(first1.getId() + " " + first1.getName());
-
-        userManager.find(User.class, "age > 18 AND registration_date > '2022-06-06'")
-                .forEach(u -> System.out.println(u.toString()));
+//        accountEntityManager.doCreate(Account.class);
+        accountEntityManager.doAlter(Account.class);
 
     }
 }
