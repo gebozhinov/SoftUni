@@ -12,6 +12,6 @@
         <property name="connection.password">1234</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.transform_hbm_xml.enabled">true</property>
-        <mapping resource="student.hbm.xml"/>
+        <mapping resource="old_resources/student.hbm.xmltudent.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
