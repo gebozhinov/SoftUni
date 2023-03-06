@@ -26,5 +26,4 @@ public class GetEmployeeWithProject {
 
         entityManager.close();
     }
-
 }
