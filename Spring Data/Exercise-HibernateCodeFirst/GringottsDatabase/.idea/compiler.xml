@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BillsPaymentSystem" />
+        <module name="FootballBetting" />
         <module name="GringottsDatabase" />
         <module name="HospitalDatabase" />
         <module name="SalesDatabase" />
