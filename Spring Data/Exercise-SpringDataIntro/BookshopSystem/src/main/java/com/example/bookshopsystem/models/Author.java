@@ -2,10 +2,13 @@ package com.example.bookshopsystem.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Getter
 @Setter
@@ -19,6 +22,9 @@ public class Author extends BaseEntity {
     private String firstName;
     @Column(name = "last_name", nullable = false)
     private String lastName;
+
+    @OneToMany(targetEntity = Book.class, mappedBy = "author")
+    private Set<Book> books;
 
     public Author(Builder builder) {
         this.firstName = builder.firstName;

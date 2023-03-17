@@ -19,4 +19,22 @@ public class Category extends BaseEntity {
     @ManyToMany(mappedBy = "categories")
     private Set<Book> books;
 
+    public Category(Builder builder) {
+        this.name = builder.name;
+    }
+
+    public static class Builder {
+        private String name;
+        public Builder() {
+
+        }
+        public Builder withName(String name) {
+            this.name = name;
+            return this;
+        }
+        public Category build() {
+            return new Category(this);
+        }
+    }
+
 }
