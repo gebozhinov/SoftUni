@@ -11,7 +11,11 @@ import java.util.Optional;
 
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Long> {
-    Author findAuthorById(Long id);
+    Optional<Author> findAuthorById(Long id);
 
     Optional<List<Author>> findDistinctByBooksReleaseDateBefore(LocalDate date);
+
+    @Query("SELECT DISTINCT a FROM Author a ")
+    Optional<List<Author>> getAllAuthors();
+
 }

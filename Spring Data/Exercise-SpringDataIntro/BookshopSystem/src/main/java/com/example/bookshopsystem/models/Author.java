@@ -1,18 +1,15 @@
 package com.example.bookshopsystem.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
 @Table(name = "authors")
 public class Author extends BaseEntity {
@@ -23,8 +20,12 @@ public class Author extends BaseEntity {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @OneToMany(targetEntity = Book.class, mappedBy = "author")
+    @OneToMany(targetEntity = Book.class, mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Book> books;
+
+    public Author() {
+        this.books = new HashSet<>();
+    }
 
     public Author(Builder builder) {
         this.firstName = builder.firstName;

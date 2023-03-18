@@ -16,6 +16,7 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
@@ -65,5 +66,12 @@ public class BookServiceImpl implements BookService{
         return this.bookRepository
                         .findAllByReleaseDateAfter(date)
                         .orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<Book> findBooksByAuthorFirstNameAndAuthorLastNameOrderByReleaseDateDescTitleAsc(String firstName, String lastName) {
+        return this.bookRepository.findBooksByAuthorFirstNameAndAuthorLastNameOrderByReleaseDateDescTitleAsc(firstName, lastName)
+                .orElseThrow(NoSuchElementException::new);
+
     }
 }

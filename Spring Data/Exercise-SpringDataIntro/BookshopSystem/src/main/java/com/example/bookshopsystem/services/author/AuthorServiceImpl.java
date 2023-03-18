@@ -9,9 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Random;
+import java.util.*;
 
 import static com.example.bookshopsystem.constant.FilePath.AUTHORS_FILE_NAME;
 import static com.example.bookshopsystem.constant.FilePath.RESOURCE_URL;
@@ -19,9 +17,11 @@ import static com.example.bookshopsystem.constant.FilePath.RESOURCE_URL;
 @Service
 public class AuthorServiceImpl implements AuthorService {
     private final AuthorRepository authorRepository;
+
     @Autowired
     public AuthorServiceImpl(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
+
     }
 
     @Override
@@ -46,7 +46,7 @@ public class AuthorServiceImpl implements AuthorService {
         final long count = this.authorRepository.count();
         if (count != 0) {
             final long randomAuthorId = new Random().nextLong(1L, count) + 1L;
-            return this.authorRepository.findAuthorById(randomAuthorId);
+            return this.authorRepository.findAuthorById(randomAuthorId).orElseThrow(NoSuchElementException::new);
         }
         throw new RuntimeException();
     }
@@ -56,4 +56,16 @@ public class AuthorServiceImpl implements AuthorService {
         return this.authorRepository.findDistinctByBooksReleaseDateBefore(date)
                 .orElseThrow(NoSuchElementException::new);
     }
+
+    @Override
+    public List<Author> getAllAuthorsOrderByBooks() {
+        List<Author> authors = this.authorRepository.getAllAuthors()
+                .orElseThrow(NoSuchElementException::new);
+        return authors.stream()
+                .sorted(Collections.reverseOrder(
+                        Comparator.comparing(
+                                author -> author.getBooks().size())))
+                .toList();
+    }
+
 }
