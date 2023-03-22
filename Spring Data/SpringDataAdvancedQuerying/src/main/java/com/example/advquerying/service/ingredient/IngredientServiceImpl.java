@@ -4,6 +4,7 @@ import com.example.advquerying.entities.Ingredient;
 import com.example.advquerying.repository.IngredientRepository;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -26,5 +27,23 @@ public class IngredientServiceImpl implements IngredientService {
     public List<Ingredient> findByNameInOrderByPriceAsc(List<String> names) {
         return this.ingredientRepository.findByNameInOrderByPriceAsc(names)
                 .orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    @Transactional
+    public void deleteByName(String name) {
+        this.ingredientRepository.deleteByName(name);
+    }
+
+    @Override
+    @Transactional
+    public void updateAllPrice() {
+        this.ingredientRepository.updateAllPrice();
+    }
+
+    @Override
+    @Transactional
+    public void updateAllPriceByName(List<String> names) {
+        this.ingredientRepository.updateAllPriceByName(names);
     }
 }

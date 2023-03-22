@@ -1,6 +1,5 @@
 package com.example.advquerying;
 
-import com.example.advquerying.entities.Shampoo;
 import com.example.advquerying.service.ingredient.IngredientService;
 import com.example.advquerying.service.shampoo.ShampooService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,9 +56,16 @@ public class ConsoleRunner implements CommandLineRunner {
 //            System.out.println(shampoo);
 //        }
 
-        List<Shampoo> shampoos = this.shampooService.findShampoosByIngredientsLessThan(2);
-        for (Shampoo shampoo : shampoos) {
-            System.out.println(shampoo.getBrand());
-        }
+//        List<Shampoo> shampoos = this.shampooService.findShampoosByIngredientsLessThan(2);
+//        for (Shampoo shampoo : shampoos) {
+//            System.out.println(shampoo.getBrand());
+//        }
+
+//        this.ingredientService.deleteByName("Apple");
+
+//        this.ingredientService.updateAllPrice();
+
+        List<String> ingredients = List.of("Apple", "Nettle", "Macadamia Oil", "Aloe Vera");
+        this.ingredientService.updateAllPriceByName(ingredients);
     }
 }

@@ -8,4 +8,11 @@ public interface IngredientService {
 
     List<Ingredient> findIngredientsByNameStartsWith(String letter);
     List<Ingredient> findByNameInOrderByPriceAsc(List<String> names);
+
+    void deleteByName(String name);
+
+    void updateAllPrice();
+
+    void updateAllPriceByName(List<String> names);
+
 }
