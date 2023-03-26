@@ -1,6 +1,7 @@
 package bg.softuni.exercisespringdataadvancedquerying.service.impl;
 
-import bg.softuni.exercisespringdataadvancedquerying.model.dto.TotalNumberOfBookCopies;
+import bg.softuni.exercisespringdataadvancedquerying.model.dto.BookInformation;
+import bg.softuni.exercisespringdataadvancedquerying.model.dto.TotalBookCopies;
 import bg.softuni.exercisespringdataadvancedquerying.model.entity.*;
 import bg.softuni.exercisespringdataadvancedquerying.repository.BookRepository;
 import bg.softuni.exercisespringdataadvancedquerying.service.AuthorService;
@@ -130,8 +131,29 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<Book> getTotalBookCopies() {
+    public List<TotalBookCopies> getTotalBookCopies() {
         return this.bookRepository.getTotalBookCopies().orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<BookInformation> getBookInformation(String title) {
+        return this.bookRepository.getBookInformation(title).orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public Integer increaseBookCopies(LocalDate date, int addCopies) {
+        int count = this.bookRepository.increaseBookCopies(date, addCopies).orElseThrow(NoSuchElementException::new);
+        return count * addCopies;
+    }
+
+    @Override
+    public void deleteByCopiesIsLessThan(Integer copies) {
+        this.bookRepository.deleteByCopiesIsLessThan(copies);
+    }
+
+    @Override
+    public int totalAmountOfBooksByAuthor(String name) {
+        return this.bookRepository.totalAmountOfBooksByAuthor(name);
     }
 
 

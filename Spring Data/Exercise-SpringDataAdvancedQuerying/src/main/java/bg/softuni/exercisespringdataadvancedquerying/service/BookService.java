@@ -1,6 +1,7 @@
 package bg.softuni.exercisespringdataadvancedquerying.service;
 
-import bg.softuni.exercisespringdataadvancedquerying.model.dto.TotalNumberOfBookCopies;
+import bg.softuni.exercisespringdataadvancedquerying.model.dto.BookInformation;
+import bg.softuni.exercisespringdataadvancedquerying.model.dto.TotalBookCopies;
 import bg.softuni.exercisespringdataadvancedquerying.model.entity.AgeRestriction;
 import bg.softuni.exercisespringdataadvancedquerying.model.entity.Book;
 import bg.softuni.exercisespringdataadvancedquerying.model.entity.EditionType;
@@ -36,7 +37,15 @@ public interface BookService {
 
     Integer getCountOfBooksWithTitleLongerThan(Integer number);
 
-    List<Book> getTotalBookCopies();
+    List<TotalBookCopies> getTotalBookCopies();
+
+    List<BookInformation> getBookInformation(String title);
+
+    Integer increaseBookCopies(LocalDate date, int addCopies);
+
+    void deleteByCopiesIsLessThan(Integer copies);
+
+    int totalAmountOfBooksByAuthor(String name);
 
 
 }
