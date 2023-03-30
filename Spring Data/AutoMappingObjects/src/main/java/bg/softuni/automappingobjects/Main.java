@@ -4,6 +4,7 @@ import bg.softuni.automappingobjects.entities.Address;
 import bg.softuni.automappingobjects.entities.Employee;
 import bg.softuni.automappingobjects.entities.dto.AddressDTO;
 import bg.softuni.automappingobjects.entities.dto.CreateEmployeeDTO;
+import bg.softuni.automappingobjects.entities.dto.ManagerDTO;
 import bg.softuni.automappingobjects.services.AddressService;
 import bg.softuni.automappingobjects.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,44 @@ public class Main implements CommandLineRunner {
     public void run(String... args) throws Exception {
 //        createAddress();
 //        createEmployee();
-        printAllEmployees();
+//        printAllEmployees();
+//        printEmployeeNames();
+//        printEmployeeFirstNameAndSalary();
+//        printAllManagers();
+//        printAllManagers2();
+    }
+
+    // 3.	Projection
+    private void printAllManagers2() {
+        this.employeeService.getInfo()
+                .forEach(e -> System.out.printf("%s %s %.2f - Manager: %s%n", e.getFirstName(),
+                        e.getLastName(), e.getSalary(), e.getManagerLastName()));
+    }
+
+    //2.	Advanced Mapping
+    private void printAllManagers() {
+        for (ManagerDTO manager : this.employeeService.findAllManager()) {
+            System.out.printf("%s %s | Employees: %d%n",
+                    manager.getFirstName(), manager.getLastName(), manager.getEmployees().size());
+            for (int i = 0; i < manager.getEmployees().size(); i++) {
+                String employeeName = manager.getEmployees().get(i).getFirstName() + " " +
+                        manager.getEmployees().get(i).getLastName();
+                BigDecimal salary = manager.getEmployees().get(i).getSalary();
+                System.out.printf("    - %s %.2f%n", employeeName, salary);
+            }
+        }
+    }
+
+    private void printEmployeeFirstNameAndSalary() {
+        long employeeId = Long.parseLong(scanner.nextLine());
+        System.out.println(this.employeeService.findFirstNameAndSalaryById(employeeId)
+                .getFirstName());
+        System.out.println(this.employeeService.findFirstNameAndSalaryById(employeeId).getSalary());
+    }
+
+    private void printEmployeeNames() {
+        long employeeId = Long.parseLong(scanner.nextLine());
+        System.out.println(this.employeeService.findNamesById(employeeId));
     }
 
     private void printAllEmployees() {
