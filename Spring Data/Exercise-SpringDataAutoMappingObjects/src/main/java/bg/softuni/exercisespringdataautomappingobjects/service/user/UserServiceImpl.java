@@ -4,8 +4,10 @@ import bg.softuni.exercisespringdataautomappingobjects.model.dto.LoginUserDTO;
 import bg.softuni.exercisespringdataautomappingobjects.model.dto.RegisterUserDTO;
 import bg.softuni.exercisespringdataautomappingobjects.model.entities.User;
 import bg.softuni.exercisespringdataautomappingobjects.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -16,7 +18,9 @@ import static bg.softuni.exercisespringdataautomappingobjects.Constant.Validatio
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ModelMapper mapper;
+
     private String loggedUserName;
+
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository, ModelMapper mapper) {
@@ -41,6 +45,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
+    @Modifying
     public void login(String[] args) {
         String email = args[1];
         String password = args[2];
@@ -55,16 +61,28 @@ public class UserServiceImpl implements UserService {
         if (!optionalUser.get().getPassword().equals(user.getPassword())) {
             throw new IllegalArgumentException(INCORRECT_USERNAME_PASSWORD);
         }
+
         this.loggedUserName = optionalUser.get().getFullName();
+
         System.out.printf(SUCCESSFULLY_LOGGED + "%n", optionalUser.get().getFullName());
     }
 
     @Override
     public String logout() {
-        if (this.loggedUserName == null) {
+        if (loggedUserName == null) {
             return CANNOT_LOG_OUT;
         }
-
-        return String.format(LOG_OUT, loggedUserName);
+        String printName = loggedUserName;
+        loggedUserName = null;
+        return String.format(LOG_OUT, printName);
     }
+
+    @Override
+    public User findByEmail(String email) {
+        return this.userRepository.findByEmail(email).orElse(null);
+    }
+
+
+
+
 }

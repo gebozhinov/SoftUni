@@ -1,9 +1,11 @@
 package bg.softuni.exercisespringdataautomappingobjects.model.entities;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.boot.jackson.JsonComponent;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -29,12 +31,14 @@ public class User extends BaseEntity{
     private List<Game> games;
     @Column(name = "is_admin")
     private boolean isAdmin;
+
     @OneToMany(targetEntity = Order.class, mappedBy = "user")
     private Set<Order> orders;
 
     public User() {
         this.games = new ArrayList<>();
         this.orders = new HashSet<>();
+
     }
 
 }

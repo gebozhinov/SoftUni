@@ -18,4 +18,14 @@ public enum Validation {
 
     public static final  String CANNOT_LOG_OUT = "Cannot log out. No user was logged in.";
     public static final String LOG_OUT = "User %s successfully logged out";
+
+    public static final String INVALID_TITLE = "Has to begin with an uppercase letter " +
+            "and must have length between 3 and 100 symbols (inclusively).";
+
+    public static final String INVALID_PRICE = "Must be a positive number.";
+    public static final String INVALID_SIZE = "Must be a positive number.";
+
+    public static final String INVALID_TRAILER = "Only videos from YouTube are allowed.";
+    public static final String INVALID_IMAGE_URL = "It should be a plain text starting with http://, https://";
+    public static final String INVALID_DESCRIPTION_LENGTH = "Must be at least 20 symbols";
 }
