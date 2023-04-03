@@ -1,6 +1,8 @@
 package bg.softuni.exercisespringdataautomappingobjects.service.game;
 
 import bg.softuni.exercisespringdataautomappingobjects.model.dto.GameDTO;
+import bg.softuni.exercisespringdataautomappingobjects.model.dto.GameDetailsDTO;
+import bg.softuni.exercisespringdataautomappingobjects.model.dto.GameInfoDTO;
 import bg.softuni.exercisespringdataautomappingobjects.model.entities.Game;
 import bg.softuni.exercisespringdataautomappingobjects.repository.GameRepository;
 import jakarta.transaction.Transactional;
@@ -14,6 +16,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
@@ -89,6 +92,17 @@ public class GameServiceImpl implements GameService {
         String title = game.getTitle();
         this.gameRepository.delete(game);
         return title;
+    }
+
+    @Override
+    public List<GameInfoDTO> findAllGames() {
+        return this.gameRepository.findAllGames()
+                .orElse(null);
+    }
+
+    @Override
+    public GameDetailsDTO findGameDetails(String title) {
+        return this.gameRepository.findGameDetails(title).orElse(null);
     }
 
 }

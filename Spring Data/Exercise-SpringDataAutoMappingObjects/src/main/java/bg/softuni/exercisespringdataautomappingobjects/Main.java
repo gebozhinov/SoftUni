@@ -1,5 +1,6 @@
 package bg.softuni.exercisespringdataautomappingobjects;
 
+import bg.softuni.exercisespringdataautomappingobjects.model.dto.GameInfoDTO;
 import bg.softuni.exercisespringdataautomappingobjects.model.entities.User;
 import bg.softuni.exercisespringdataautomappingobjects.service.game.GameService;
 import bg.softuni.exercisespringdataautomappingobjects.service.user.UserService;
@@ -17,7 +18,7 @@ public class Main implements CommandLineRunner {
     private final UserService userService;
     private final GameService gameService;
     private final Scanner scanner;
-    private String loggedUserEmail;
+    private User loggedUser;
 
     @Autowired
     public Main(UserService userService, GameService gameService) {
@@ -39,29 +40,48 @@ public class Main implements CommandLineRunner {
                 }
                 case "LoginUser" -> {
                     userService.login(input);
-                    this.loggedUserEmail = input[1];
+                    this.loggedUser = this.userService.findByEmail(input[1]);
                 }
                 case "AddGame" -> {
-                    User user = this.userService.findByEmail(loggedUserEmail);
-                    if (user != null && user.isAdmin()) {
+                    if (isAdminLogged()) {
                         gameService.add(input);
                         System.out.printf("Added %s%n", input[1]);
                     }
                 }
                 case "EditGame" -> {
-                    User user = this.userService.findByEmail(loggedUserEmail);
-                    if (user != null && user.isAdmin()) {
+                    if (isAdminLogged()) {
                         this.gameService.edit(input);
                         System.out.printf("Edited %s%n",
                                 this.gameService.findById(Long.parseLong(input[1])).getTitle());
                     }
                 }
                 case "DeleteGame" -> {
-                    User user = this.userService.findByEmail(loggedUserEmail);
-                    if (user != null && user.isAdmin()) {
+                    if (isAdminLogged()) {
                         long id = Long.parseLong(input[1]);
                         System.out.printf("Deleted %s%n",
                                 this.gameService.delete(id));
+                    }
+                }
+                case "AllGames" -> this.gameService.findAllGames().
+                        stream()
+                        .map(GameInfoDTO::toString)
+                        .forEach(System.out::println);
+                case "DetailGame" -> {
+                    String title = input[1];
+                    System.out.println(this.gameService.findGameDetails(title).toString());
+                }
+                case "OwnedGames" -> {
+                    if (loggedUser != null) {
+                        this.userService.findOwnedGames().
+                        forEach(System.out::println);
+                    }
+                }
+                case "Purchase" -> {
+                    // Purchase|Overwatch
+                    if (loggedUser != null) {
+                        String title = input[1];
+                        this.userService.purchase(title);
+                        System.out.println(title + " purchased");
                     }
                 }
             }
@@ -71,4 +91,9 @@ public class Main implements CommandLineRunner {
         System.out.println(this.userService.logout());
 
     }
+
+    private boolean isAdminLogged() {
+        return loggedUser != null && loggedUser.isAdmin();
+    }
+
 }

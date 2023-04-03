@@ -24,7 +24,9 @@ public class User extends BaseEntity{
     private String password;
     @Column(name = "full_name", nullable = false)
     private String fullName;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {
+            CascadeType.PERSIST, CascadeType.DETACH
+    })
     @JoinTable(name = "users_games",
     joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "game_id", referencedColumnName = "id"))
@@ -34,6 +36,10 @@ public class User extends BaseEntity{
 
     @OneToMany(targetEntity = Order.class, mappedBy = "user")
     private Set<Order> orders;
+
+    public void addGame(Game game) {
+        this.games.add(game);
+    }
 
     public User() {
         this.games = new ArrayList<>();

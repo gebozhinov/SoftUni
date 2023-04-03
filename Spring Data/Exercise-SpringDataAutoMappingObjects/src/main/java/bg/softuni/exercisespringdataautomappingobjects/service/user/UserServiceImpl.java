@@ -2,7 +2,9 @@ package bg.softuni.exercisespringdataautomappingobjects.service.user;
 
 import bg.softuni.exercisespringdataautomappingobjects.model.dto.LoginUserDTO;
 import bg.softuni.exercisespringdataautomappingobjects.model.dto.RegisterUserDTO;
+import bg.softuni.exercisespringdataautomappingobjects.model.entities.Game;
 import bg.softuni.exercisespringdataautomappingobjects.model.entities.User;
+import bg.softuni.exercisespringdataautomappingobjects.repository.GameRepository;
 import bg.softuni.exercisespringdataautomappingobjects.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
@@ -10,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import static bg.softuni.exercisespringdataautomappingobjects.Constant.Validation.*;
@@ -17,14 +21,15 @@ import static bg.softuni.exercisespringdataautomappingobjects.Constant.Validatio
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+    private final GameRepository gameRepository;
     private final ModelMapper mapper;
-
-    private String loggedUserName;
+    private User loggedUser;
 
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, ModelMapper mapper) {
+    public UserServiceImpl(UserRepository userRepository, GameRepository gameRepository, ModelMapper mapper) {
         this.userRepository = userRepository;
+        this.gameRepository = gameRepository;
         this.mapper = mapper;
     }
 
@@ -62,27 +67,38 @@ public class UserServiceImpl implements UserService {
             throw new IllegalArgumentException(INCORRECT_USERNAME_PASSWORD);
         }
 
-        this.loggedUserName = optionalUser.get().getFullName();
+        this.loggedUser = optionalUser.get();
 
-        System.out.printf(SUCCESSFULLY_LOGGED + "%n", optionalUser.get().getFullName());
+        System.out.printf(SUCCESSFULLY_LOGGED + "%n", loggedUser.getFullName());
     }
 
     @Override
     public String logout() {
-        if (loggedUserName == null) {
+        if (loggedUser == null) {
             return CANNOT_LOG_OUT;
         }
-        String printName = loggedUserName;
-        loggedUserName = null;
-        return String.format(LOG_OUT, printName);
+        String name = loggedUser.getFullName();
+        loggedUser = null;
+        return String.format(LOG_OUT, name);
     }
 
     @Override
     public User findByEmail(String email) {
         return this.userRepository.findByEmail(email).orElse(null);
     }
+    @Transactional
+    @Modifying
+    @Override
+    public void purchase(String gameTitle) {
+        Game game = this.gameRepository.findByTitle(gameTitle).orElseThrow(NoSuchElementException::new);
+        loggedUser.addGame(game);
+        this.userRepository.save(loggedUser);
+    }
 
-
+    @Override
+    public List<String> findOwnedGames() {
+        return this.userRepository.findOwnedGames().orElseThrow(NoSuchElementException::new);
+    }
 
 
 }

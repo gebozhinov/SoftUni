@@ -2,7 +2,7 @@ package bg.softuni.exercisespringdataautomappingobjects.service.user;
 
 import bg.softuni.exercisespringdataautomappingobjects.model.entities.User;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface UserService {
     void register(String[] args);
@@ -12,6 +12,10 @@ public interface UserService {
     String logout();
 
     User findByEmail(String email);
+
+    void purchase(String gameTitle);
+
+    List<String> findOwnedGames();
 
 
 }
