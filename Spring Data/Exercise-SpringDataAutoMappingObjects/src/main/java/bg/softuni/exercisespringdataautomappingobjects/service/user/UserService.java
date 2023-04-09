@@ -13,9 +13,13 @@ public interface UserService {
 
     User findByEmail(String email);
 
-    void purchase(String gameTitle);
-
     List<String> findOwnedGames();
 
+
+    void addItem(String title);
+
+    void removeItem(String title);
+
+    String buyItem();
 
 }

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.Set;
 
 import static bg.softuni.exercisespringdataautomappingobjects.Constant.Validation.*;
 
@@ -86,19 +87,56 @@ public class UserServiceImpl implements UserService {
     public User findByEmail(String email) {
         return this.userRepository.findByEmail(email).orElse(null);
     }
-    @Transactional
-    @Modifying
-    @Override
-    public void purchase(String gameTitle) {
-        Game game = this.gameRepository.findByTitle(gameTitle).orElseThrow(NoSuchElementException::new);
-        loggedUser.addGame(game);
-        this.userRepository.save(loggedUser);
-    }
+
 
     @Override
     public List<String> findOwnedGames() {
         return this.userRepository.findOwnedGames().orElseThrow(NoSuchElementException::new);
     }
 
+    @Transactional
+    @Modifying
+    @Override
+    public void addItem(String title) {
+        Game game = this.gameRepository.findByTitle(title).orElseThrow(NoSuchElementException::new);
+        if (isGameAlreadyAdded(game)) {
+            throw new IllegalArgumentException(String.format("%s owns this game", this.loggedUser.getFullName()));
+        }
+        loggedUser.addItem(game);
+        this.userRepository.save(loggedUser);
+    }
 
+    @Transactional
+    @Modifying
+    @Override
+    public void removeItem(String title) {
+        Game game = this.gameRepository.findByTitle(title).orElseThrow(NoSuchElementException::new);
+        for (Game currenGame : loggedUser.getShoppingCart()) {
+            if (currenGame.getTitle().equals(game.getTitle())) {
+                loggedUser.removeItem(currenGame);
+            }
+        }
+        this.userRepository.save(loggedUser);
+    }
+
+    @Override
+    public String buyItem() {
+        Set<Game> shoppingCart = loggedUser.getShoppingCart();
+        loggedUser.getGames().addAll(shoppingCart);
+        this.userRepository.save(loggedUser);
+
+        StringBuilder sb = new StringBuilder();
+        shoppingCart.forEach(game -> sb.append("-")
+                .append(game.getTitle())
+                .append(System.lineSeparator()));
+        return sb.toString().trim();
+    }
+    private boolean isGameAlreadyAdded(Game gameToAdd) {
+        for (Game game : this.loggedUser.getGames()) {
+            if (game.getTitle().equals(gameToAdd.getTitle())) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

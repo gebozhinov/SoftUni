@@ -76,12 +76,24 @@ public class Main implements CommandLineRunner {
                         forEach(System.out::println);
                     }
                 }
-                case "Purchase" -> {
-                    // Purchase|Overwatch
+                case "AddItem" -> {
                     if (loggedUser != null) {
                         String title = input[1];
-                        this.userService.purchase(title);
-                        System.out.println(title + " purchased");
+                        this.userService.addItem(title);
+                        System.out.printf("%s added to cart.%n", title);
+                    }
+                }
+                case "RemoveItem" -> {
+                    if (loggedUser != null) {
+                        String title = input[1];
+                        this.userService.removeItem(title);
+                        System.out.printf("%s removed from cart.%n", title);
+                    }
+                }
+                case "BuyItem" -> {
+                    if (loggedUser != null) {
+                        System.out.println("Successfully bought games:");
+                        System.out.println(this.userService.buyItem());
                     }
                 }
             }

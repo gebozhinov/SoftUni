@@ -37,13 +37,22 @@ public class User extends BaseEntity{
     @OneToMany(targetEntity = Order.class, mappedBy = "user")
     private Set<Order> orders;
 
-    public void addGame(Game game) {
-        this.games.add(game);
+    @Transient
+    @OneToMany
+    private Set<Game> shoppingCart;
+    public void addItem(Game game) {
+        this.shoppingCart.add(game);
     }
+
+    public void removeItem(Game game) {
+        this.shoppingCart.remove(game);
+    }
+
 
     public User() {
         this.games = new ArrayList<>();
         this.orders = new HashSet<>();
+        this.shoppingCart = new HashSet<>();
 
     }
 
