@@ -30,7 +30,7 @@ public class Product extends BaseEntity {
     @JoinColumn(name = "seller_id")
     @Fetch(FetchMode.JOIN)
     private User sellerId;
-    @ManyToMany(targetEntity = Category.class)
+    @ManyToMany
     @Fetch(FetchMode.JOIN)
     private Set<Category> categories;
 }

@@ -1,7 +1,7 @@
 package bg.softuni.exercisejson.service;
 
 import bg.softuni.exercisejson.model.dtos.CategoryImportDTO;
-import bg.softuni.exercisejson.model.dtos.ProductImportDTO;
+import bg.softuni.exercisejson.model.dtos.product.ProductImportDTO;
 import bg.softuni.exercisejson.model.dtos.UserImportDTO;
 import bg.softuni.exercisejson.model.entities.Category;
 import bg.softuni.exercisejson.model.entities.Product;
@@ -14,12 +14,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static bg.softuni.exercisejson.config.Paths.*;
@@ -86,6 +84,7 @@ public class SeedServiceImpl implements SeedService {
             fileReader.close();
         }
     }
+
     private Product setRandomCategory(Product product) {
         Random random = new Random();
         int numberOfCategories = random.nextInt((int) this.categoryRepository.count());
@@ -99,19 +98,22 @@ public class SeedServiceImpl implements SeedService {
                 });
 
         product.setCategories(categories);
+
         return product;
     }
+
     private Product setRandomBuyer(Product product) {
         if (product.getPrice().compareTo(BigDecimal.valueOf(700L)) > 0) {
             User buyer = this.userRepository.getRandomEntity().orElseThrow(NoSuchElementException::new);
 
             while (buyer.equals(product.getSellerId())) {
-                 buyer = this.userRepository.getRandomEntity().orElseThrow(NoSuchElementException::new);
+                buyer = this.userRepository.getRandomEntity().orElseThrow(NoSuchElementException::new);
             }
             product.setBuyerId(buyer);
         }
         return product;
     }
+
     private Product setRandomSeller(Product product) {
         User seller = this.userRepository.getRandomEntity().orElseThrow(NoSuchElementException::new);
         product.setSellerId(seller);
