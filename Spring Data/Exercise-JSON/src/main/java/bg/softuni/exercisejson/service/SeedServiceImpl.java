@@ -1,8 +1,8 @@
 package bg.softuni.exercisejson.service;
 
-import bg.softuni.exercisejson.model.dtos.CategoryImportDTO;
+import bg.softuni.exercisejson.model.dtos.category.CategoryImportDTO;
 import bg.softuni.exercisejson.model.dtos.product.ProductImportDTO;
-import bg.softuni.exercisejson.model.dtos.UserImportDTO;
+import bg.softuni.exercisejson.model.dtos.user.UserImportDTO;
 import bg.softuni.exercisejson.model.entities.Category;
 import bg.softuni.exercisejson.model.entities.Product;
 import bg.softuni.exercisejson.model.entities.User;

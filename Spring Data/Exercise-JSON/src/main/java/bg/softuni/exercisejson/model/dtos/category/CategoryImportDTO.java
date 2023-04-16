@@ -1,4 +1,4 @@
-package bg.softuni.exercisejson.model.dtos;
+package bg.softuni.exercisejson.model.dtos.category;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

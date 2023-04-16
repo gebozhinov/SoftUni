@@ -33,4 +33,5 @@ public class Product extends BaseEntity {
     @ManyToMany
     @Fetch(FetchMode.JOIN)
     private Set<Category> categories;
+
 }

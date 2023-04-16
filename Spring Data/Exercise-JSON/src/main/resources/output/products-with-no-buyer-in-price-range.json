@@ -2,128 +2,124 @@
   {
     "name": "TRAMADOL HYDROCHLORIDE",
     "price": 516.48,
-    "sellerFullName": "Anna Parker"
+    "sellerFullName": "Christina Patterson"
   },
   {
     "name": "Allopurinol",
-    "price": 518.50,
-    "sellerFullName": "Paula Hill"
+    "price": 518.50
   },
   {
     "name": "Parsley",
-    "price": 519.06
+    "price": 519.06,
+    "sellerFullName": "Jean Henry"
   },
   {
     "name": "equaline",
-    "price": 520.45
+    "price": 520.45,
+    "sellerFullName": "Rachel Johnson"
   },
   {
     "name": "Extra Strength Pain Reliever PM",
     "price": 542.72,
-    "sellerFullName": "Carl Lawson"
+    "sellerFullName": "Emily Parker"
   },
   {
     "name": "Propranolol Hydrochloride",
-    "price": 546.95
+    "price": 546.95,
+    "sellerFullName": "Carl Daniels"
   },
   {
     "name": "Prednisone",
     "price": 550.72,
-    "sellerFullName": "Jennifer Riley"
+    "sellerFullName": "Sarah Day"
   },
   {
     "name": "TERSI",
     "price": 554.91,
-    "sellerFullName": "Carl Daniels"
+    "sellerFullName": "Gloria Alexander"
   },
   {
     "name": "DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER",
     "price": 555.12,
-    "sellerFullName": "Billy Parker"
+    "sellerFullName": "Clarence Fowler"
   },
   {
     "name": "PLANTAGO LANCEOLATA POLLEN",
-    "price": 561.68
+    "price": 561.68,
+    "sellerFullName": "Chris Mitchell"
   },
   {
     "name": "Echinacea Quartz Gum Support",
     "price": 570.08,
-    "sellerFullName": "Diana Harvey"
+    "sellerFullName": "Gary Stevens"
   },
   {
     "name": "Topiramate",
     "price": 578.77,
-    "sellerFullName": "Nicole Harris"
+    "sellerFullName": "Diana Harvey"
   },
   {
     "name": "AIR",
     "price": 581.69,
-    "sellerFullName": "Benjamin Henry"
+    "sellerFullName": "Diana Harvey"
   },
   {
     "name": "Agaricus Equisetum Special Order",
-    "price": 585.93,
-    "sellerFullName": "Joshua Murray"
+    "price": 585.93
   },
   {
     "name": "Gemcitabine",
-    "price": 594.79,
-    "sellerFullName": "Nicole Harris"
+    "price": 594.79
   },
   {
     "name": "Ketorolac Tromethamine",
     "price": 608.18,
-    "sellerFullName": "Fred Barnes"
+    "sellerFullName": "Sandra Riley"
   },
   {
     "name": "Pleo Ginkgo",
-    "price": 613.65,
-    "sellerFullName": "Sandra Riley"
+    "price": 613.65
   },
   {
     "name": "Diastat",
     "price": 614.14,
-    "sellerFullName": "Gary Stevens"
+    "sellerFullName": "Anna Clark"
   },
   {
     "name": "No7 Protect and Perfect Foundation Sunscreen Broad Spectrum SPF 15 Cool Ivory",
-    "price": 616.19,
-    "sellerFullName": "Sarah Day"
+    "price": 616.19
   },
   {
     "name": "Glipizide",
     "price": 621.78,
-    "sellerFullName": "Jean Henry"
+    "sellerFullName": "Emily Parker"
   },
   {
     "name": "AMARANTHUS PALMERI POLLEN",
     "price": 623.16,
-    "sellerFullName": "Sarah Day"
-  },
-  {
-    "name": "Foaming Hand Sanitizer",
-    "price": 624.72,
     "sellerFullName": "Anna Parker"
   },
   {
+    "name": "Foaming Hand Sanitizer",
+    "price": 624.72
+  },
+  {
     "name": "ziprasidone hydrochloride",
-    "price": 628.66,
-    "sellerFullName": "Carl Lawson"
+    "price": 628.66
   },
   {
     "name": "AVANDAMET",
     "price": 632.08,
-    "sellerFullName": "Betty Lawson"
+    "sellerFullName": "Nicole Harris"
   },
   {
     "name": "Imipramine Hydrochloride",
     "price": 648.69,
-    "sellerFullName": "Joshua Murray"
+    "sellerFullName": "Sarah Day"
   },
   {
     "name": "Childrens Allegra Allergy",
-    "price": 650.97,
-    "sellerFullName": "Emily Parker"
+    "price": 650.97
   },
   {
     "name": "Strattera",
@@ -131,27 +127,25 @@
   },
   {
     "name": "Amitiza",
-    "price": 666.58,
-    "sellerFullName": "Emily Parker"
+    "price": 666.58
   },
   {
     "name": "ENBREL",
     "price": 673.97,
-    "sellerFullName": "Betty Lawson"
+    "sellerFullName": "Anna Clark"
   },
   {
     "name": "Ampicillin",
     "price": 674.63,
-    "sellerFullName": "Arthur Reynolds"
+    "sellerFullName": "Diana Harvey"
   },
   {
     "name": "PRIMAXIN",
     "price": 686.66,
-    "sellerFullName": "Clarence Fowler"
+    "sellerFullName": "Patricia Fuller"
   },
   {
     "name": "CLARINS Ever Matte SPF 15 - 105 Nude",
-    "price": 696.06,
-    "sellerFullName": "Gloria Alexander"
+    "price": 696.06
   }
 ]

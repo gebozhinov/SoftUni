@@ -4,8 +4,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.validation.constraints.Size;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -22,7 +25,14 @@ public class User extends BaseEntity {
     private String lastName;
     @Column
     private int age;
-    @ManyToMany
+
+    @OneToMany(targetEntity = Product.class, mappedBy = "sellerId", fetch = FetchType.EAGER)
+    @Fetch(FetchMode.JOIN)
+    private Set<Product> productsSold;
+    @OneToMany(targetEntity = Product.class, mappedBy = "buyerId", fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SELECT)
+    private Set<Product> productsBought;
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_friends", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "friend_id"))
     private Set<User> friends;
