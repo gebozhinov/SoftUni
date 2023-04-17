@@ -2,88 +2,90 @@
   {
     "name": "TRAMADOL HYDROCHLORIDE",
     "price": 516.48,
-    "sellerFullName": "Christina Patterson"
+    "sellerFullName": "Bonnie Fox"
   },
   {
     "name": "Allopurinol",
-    "price": 518.50
+    "price": 518.50,
+    "sellerFullName": "Jean Henry"
   },
   {
     "name": "Parsley",
     "price": 519.06,
-    "sellerFullName": "Jean Henry"
+    "sellerFullName": "Fred Barnes"
   },
   {
     "name": "equaline",
     "price": 520.45,
-    "sellerFullName": "Rachel Johnson"
+    "sellerFullName": "Carl Daniels"
   },
   {
     "name": "Extra Strength Pain Reliever PM",
-    "price": 542.72,
-    "sellerFullName": "Emily Parker"
+    "price": 542.72
   },
   {
     "name": "Propranolol Hydrochloride",
     "price": 546.95,
-    "sellerFullName": "Carl Daniels"
+    "sellerFullName": "Marie Williamson"
   },
   {
     "name": "Prednisone",
     "price": 550.72,
-    "sellerFullName": "Sarah Day"
+    "sellerFullName": "Diana Harvey"
   },
   {
     "name": "TERSI",
-    "price": 554.91,
-    "sellerFullName": "Gloria Alexander"
+    "price": 554.91
   },
   {
     "name": "DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER",
     "price": 555.12,
-    "sellerFullName": "Clarence Fowler"
+    "sellerFullName": "Betty Ward"
   },
   {
     "name": "PLANTAGO LANCEOLATA POLLEN",
     "price": 561.68,
-    "sellerFullName": "Chris Mitchell"
+    "sellerFullName": "Brenda Howell"
   },
   {
     "name": "Echinacea Quartz Gum Support",
     "price": 570.08,
-    "sellerFullName": "Gary Stevens"
+    "sellerFullName": "Anna Clark"
   },
   {
     "name": "Topiramate",
     "price": 578.77,
-    "sellerFullName": "Diana Harvey"
+    "sellerFullName": "Nicole Martinez"
   },
   {
     "name": "AIR",
     "price": 581.69,
-    "sellerFullName": "Diana Harvey"
+    "sellerFullName": "Anna Clark"
   },
   {
     "name": "Agaricus Equisetum Special Order",
-    "price": 585.93
+    "price": 585.93,
+    "sellerFullName": "Sandra Riley"
   },
   {
     "name": "Gemcitabine",
-    "price": 594.79
+    "price": 594.79,
+    "sellerFullName": "Kathy Gilbert"
   },
   {
     "name": "Ketorolac Tromethamine",
     "price": 608.18,
-    "sellerFullName": "Sandra Riley"
+    "sellerFullName": "Nicole Martinez"
   },
   {
     "name": "Pleo Ginkgo",
-    "price": 613.65
+    "price": 613.65,
+    "sellerFullName": "Jean Henry"
   },
   {
     "name": "Diastat",
     "price": 614.14,
-    "sellerFullName": "Anna Clark"
+    "sellerFullName": "Marie Williamson"
   },
   {
     "name": "No7 Protect and Perfect Foundation Sunscreen Broad Spectrum SPF 15 Cool Ivory",
@@ -92,12 +94,12 @@
   {
     "name": "Glipizide",
     "price": 621.78,
-    "sellerFullName": "Emily Parker"
+    "sellerFullName": "Fred Allen"
   },
   {
     "name": "AMARANTHUS PALMERI POLLEN",
     "price": 623.16,
-    "sellerFullName": "Anna Parker"
+    "sellerFullName": "Wanda Harris"
   },
   {
     "name": "Foaming Hand Sanitizer",
@@ -105,39 +107,41 @@
   },
   {
     "name": "ziprasidone hydrochloride",
-    "price": 628.66
+    "price": 628.66,
+    "sellerFullName": "Jonathan Rodriguez"
   },
   {
     "name": "AVANDAMET",
-    "price": 632.08,
-    "sellerFullName": "Nicole Harris"
+    "price": 632.08
   },
   {
     "name": "Imipramine Hydrochloride",
-    "price": 648.69,
-    "sellerFullName": "Sarah Day"
+    "price": 648.69
   },
   {
     "name": "Childrens Allegra Allergy",
-    "price": 650.97
+    "price": 650.97,
+    "sellerFullName": "Anna Clark"
   },
   {
     "name": "Strattera",
-    "price": 658.54
+    "price": 658.54,
+    "sellerFullName": "Patrick King"
   },
   {
     "name": "Amitiza",
-    "price": 666.58
+    "price": 666.58,
+    "sellerFullName": "Joshua Murray"
   },
   {
     "name": "ENBREL",
     "price": 673.97,
-    "sellerFullName": "Anna Clark"
+    "sellerFullName": "Benjamin Henry"
   },
   {
     "name": "Ampicillin",
     "price": 674.63,
-    "sellerFullName": "Diana Harvey"
+    "sellerFullName": "Wanda Harris"
   },
   {
     "name": "PRIMAXIN",
