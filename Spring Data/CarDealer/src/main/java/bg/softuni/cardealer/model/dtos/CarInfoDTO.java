@@ -5,16 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PartDTO {
+public class CarInfoDTO  {
 
-    private String name;
-    private BigDecimal price;
-    private int quantity;
-    private SupplierDTO supplierDTO;
+    private long id;
+    private String make;
+    private String model;
+    private long travelledDistance;
 }

@@ -8,7 +8,7 @@ public interface SeedService {
     void seedSuppliers() throws IOException;
     void seedParts() throws IOException;
     void seedCars() throws IOException;
-    void seedCustomers();
+    void seedCustomers() throws IOException;
     void seedSales();
 
     default void seedDatabase() throws IOException {
