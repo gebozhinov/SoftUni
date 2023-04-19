@@ -1,24 +1,22 @@
 package bg.softuni.cardealer.model.dtos.customer;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Set;
-
+import java.math.BigDecimal;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CustomerDTO {
+public class CustomerTotalSaleDTO {
 
+    @SerializedName(value = "fullName")
     private String name;
-    private String birthDate;
-    private boolean isYoungDriver;
-
-    private Set<SoldCarDiscountDTO> sales;
-
+    private int boughtCars;
+    private BigDecimal spentMoney;
 
 }

@@ -1,17 +1,19 @@
-package bg.softuni.cardealer.model.dtos.customer;
+package bg.softuni.cardealer.model.dtos.car;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SoldCarDiscountDTO {
+public class PartBaseInfoDTO {
 
-    private double discount;
-    private SoldCarDTO car;
+    private String name;
 
+    private BigDecimal price;
 }

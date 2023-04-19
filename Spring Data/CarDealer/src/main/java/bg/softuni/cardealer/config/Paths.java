@@ -18,6 +18,12 @@ public enum Paths {
 
     public static final Path CARS_FROM_MAKE_TOYOTA =
             Path.of("src", "main", "resources", "output", "cars-from-make-toyota.json");
-
-
+    public static final Path EXPORT_LOCAL_SUPPLIERS =
+            Path.of("src", "main", "resources", "output", "local-suppliers.json");
+    public static final Path EXPORT_CARS_WITH_PARTS =
+            Path.of("src", "main", "resources", "output", "cars-with-parts.json");
+    public static final Path TOTAL_SALES_BY_CUSTOMER =
+            Path.of("src", "main", "resources", "output", "customers-total-sales.json");
+    public static final Path SALES_WITH_APPLIED_DISCOUNT =
+            Path.of("src", "main", "resources", "output", "sales-discounts.json");
 }

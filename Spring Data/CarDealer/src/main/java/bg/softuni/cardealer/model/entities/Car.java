@@ -19,7 +19,7 @@ public class Car extends BaseEntity {
     private String model;
     @Column(name = "travelled_distance")
     private long travelledDistance;
-    @ManyToMany(cascade = CascadeType.MERGE)
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "parts_cars", joinColumns = @JoinColumn(name = "car_id")
             , inverseJoinColumns = @JoinColumn(name = "part_id"))
     private Set<Part> parts;

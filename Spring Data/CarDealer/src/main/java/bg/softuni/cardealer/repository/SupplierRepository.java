@@ -1,10 +1,12 @@
 package bg.softuni.cardealer.repository;
 
+import bg.softuni.cardealer.model.dtos.supplier.LocalSuppliersDTO;
 import bg.softuni.cardealer.model.entities.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -12,4 +14,8 @@ public interface SupplierRepository extends JpaRepository<Supplier, Long> {
     @Query("SELECT s FROM Supplier s " +
             "ORDER BY rand() LIMIT 1 ")
     Optional<Supplier> getRandomSupplier();
+
+    @Query("SELECT s FROM Supplier s " +
+            "WHERE s.isImporter = false ")
+    Optional<List<Supplier>> findAllByImporterIsFalse();
 }

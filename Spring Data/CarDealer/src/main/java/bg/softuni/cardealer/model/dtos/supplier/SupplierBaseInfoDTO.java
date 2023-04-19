@@ -1,4 +1,4 @@
-package bg.softuni.cardealer.model.dtos.customer;
+package bg.softuni.cardealer.model.dtos.supplier;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,9 +9,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SoldCarDiscountDTO {
+public class SupplierBaseInfoDTO {
 
-    private double discount;
-    private SoldCarDTO car;
+    private String name;
+    private boolean isImporter;
 
 }

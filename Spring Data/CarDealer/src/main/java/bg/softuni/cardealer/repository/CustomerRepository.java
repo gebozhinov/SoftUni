@@ -18,4 +18,10 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
     @Query("SELECT c FROM Customer c " +
             "ORDER BY c.birthDate, c.isYoungDriver")
     Optional<List<Customer>> getAllCustomers();
+
+
+    @Query("SELECT c FROM Customer c " +
+            "JOIN c.sales s " +
+            "WHERE s.car IS NOT NULL ")
+    Optional<List<Customer>> getTotalSalesByCustomer();
 }

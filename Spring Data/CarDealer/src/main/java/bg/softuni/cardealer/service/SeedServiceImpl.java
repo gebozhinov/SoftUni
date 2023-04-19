@@ -1,7 +1,7 @@
 package bg.softuni.cardealer.service;
 
 import bg.softuni.cardealer.model.dtos.customer.CustomerDTO;
-import bg.softuni.cardealer.model.dtos.SupplierDTO;
+import bg.softuni.cardealer.model.dtos.supplier.SupplierBaseInfoDTO;
 import bg.softuni.cardealer.model.entities.*;
 import bg.softuni.cardealer.repository.*;
 import com.google.gson.Gson;
@@ -50,7 +50,7 @@ public class SeedServiceImpl implements SeedService {
         if (this.supplierRepository.count() == 0) {
             FileReader fileReader = new FileReader(IMPORT_SUPPLIERS_PATH.toFile());
 
-            SupplierDTO[] supplierDTOS = gson.fromJson(fileReader, SupplierDTO[].class);
+            SupplierBaseInfoDTO[] supplierDTOS = gson.fromJson(fileReader, SupplierBaseInfoDTO[].class);
             List<Supplier> suppliers = Arrays.stream(supplierDTOS)
                     .map(supplierDTO -> modelMapper.map(supplierDTO, Supplier.class))
                     .toList();

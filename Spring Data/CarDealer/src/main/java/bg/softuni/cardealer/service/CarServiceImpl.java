@@ -1,10 +1,13 @@
 package bg.softuni.cardealer.service;
 
-import bg.softuni.cardealer.model.dtos.CarInfoDTO;
+import bg.softuni.cardealer.model.dtos.car.CarDTO;
+import bg.softuni.cardealer.model.dtos.car.CarInfoDTO;
+import bg.softuni.cardealer.model.dtos.car.CarWithPartsDTO;
 import bg.softuni.cardealer.model.entities.Car;
 import bg.softuni.cardealer.repository.CarRepository;
 import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.FileWriter;
@@ -13,6 +16,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import static bg.softuni.cardealer.config.Paths.CARS_FROM_MAKE_TOYOTA;
+import static bg.softuni.cardealer.config.Paths.EXPORT_CARS_WITH_PARTS;
 
 @Service
 public class CarServiceImpl implements CarService{
@@ -21,6 +25,7 @@ public class CarServiceImpl implements CarService{
     private final ModelMapper modelMapper;
     private final Gson gson;
 
+    @Autowired
     public CarServiceImpl(CarRepository carRepository, ModelMapper modelMapper, Gson gson) {
         this.carRepository = carRepository;
         this.modelMapper = modelMapper;
@@ -42,5 +47,19 @@ public class CarServiceImpl implements CarService{
         fileWriter.close();
 
         return carInfoDTOS;
+    }
+
+    @Override
+    public List<CarDTO> findAllWithParts() throws IOException {
+        List<Car> cars = this.carRepository.findAll();
+        List<CarDTO> carWithPartsDTOS = cars.stream()
+                .map(car -> modelMapper.map(car, CarDTO.class))
+                .toList();
+
+        FileWriter fileWriter = new FileWriter(EXPORT_CARS_WITH_PARTS.toFile());
+        gson.toJson(carWithPartsDTOS, fileWriter);
+
+        fileWriter.close();
+        return carWithPartsDTOS;
     }
 }

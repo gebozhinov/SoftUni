@@ -1,4 +1,4 @@
-package bg.softuni.cardealer.model.dtos;
+package bg.softuni.cardealer.model.dtos.car;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
