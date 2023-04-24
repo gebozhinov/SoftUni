@@ -1,10 +1,9 @@
 package bg.softuni.exercisejson.service;
 
 import bg.softuni.exercisejson.model.dtos.user.UserAndProductDTO;
-import bg.softuni.exercisejson.model.dtos.user.UserAndProductWrapperDTO;
+import bg.softuni.exercisejson.model.dtos.user.wrappers.UserAndProductWrapperDTO;
 import bg.softuni.exercisejson.model.dtos.user.UserDTO;
 import bg.softuni.exercisejson.model.dtos.user.UserWithOneItemSoldDTO;
-import bg.softuni.exercisejson.model.entities.User;
 import bg.softuni.exercisejson.repository.UserRepository;
 import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;

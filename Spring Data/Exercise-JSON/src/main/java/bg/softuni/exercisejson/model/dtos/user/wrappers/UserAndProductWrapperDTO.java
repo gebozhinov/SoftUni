@@ -1,5 +1,6 @@
-package bg.softuni.exercisejson.model.dtos.user;
+package bg.softuni.exercisejson.model.dtos.user.wrappers;
 
+import bg.softuni.exercisejson.model.dtos.user.UserAndProductDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

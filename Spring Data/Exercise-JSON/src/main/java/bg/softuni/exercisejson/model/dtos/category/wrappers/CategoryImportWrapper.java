@@ -1,5 +1,6 @@
-package bg.softuni.exercisejson.model.dtos.category;
+package bg.softuni.exercisejson.model.dtos.category.wrappers;
 
+import bg.softuni.exercisejson.model.dtos.category.CategoryImportDTO;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -9,14 +10,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "category")
+@XmlRootElement(name = "categories")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CategoryImportDTO {
-
-    @XmlElement
-    private String name;
+public class CategoryImportWrapper {
+    @XmlElement(name = "category")
+    List<CategoryImportDTO> categories;
 }

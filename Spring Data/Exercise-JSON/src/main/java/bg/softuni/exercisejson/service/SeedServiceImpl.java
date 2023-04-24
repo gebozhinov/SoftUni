@@ -1,8 +1,8 @@
 package bg.softuni.exercisejson.service;
 
-import bg.softuni.exercisejson.model.dtos.category.CategoryImportDTO;
-import bg.softuni.exercisejson.model.dtos.product.ProductImportDTO;
-import bg.softuni.exercisejson.model.dtos.user.UserImportDTO;
+import bg.softuni.exercisejson.model.dtos.category.wrappers.CategoryImportWrapper;
+import bg.softuni.exercisejson.model.dtos.product.wrappers.ProductImportWrapper;
+import bg.softuni.exercisejson.model.dtos.user.wrappers.UserImportWrapper;
 import bg.softuni.exercisejson.model.entities.Category;
 import bg.softuni.exercisejson.model.entities.Product;
 import bg.softuni.exercisejson.model.entities.User;
@@ -10,6 +10,9 @@ import bg.softuni.exercisejson.repository.CategoryRepository;
 import bg.softuni.exercisejson.repository.ProductRepository;
 import bg.softuni.exercisejson.repository.UserRepository;
 import com.google.gson.Gson;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,11 +44,19 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedUsers() throws IOException {
+    public void seedUsers() throws IOException, JAXBException {
         if (userRepository.count() == 0) {
-            FileReader fileReader = new FileReader(SEED_USERS_PATH.toFile());
+//            FileReader fileReader = new FileReader(SEED_USERS_PATH.toFile());
+            FileReader fileReader = new FileReader(SEED_USERS_XML_PATH.toFile());
+//            List<User> users = Arrays.stream(gson.fromJson(fileReader, UserImportDTO[].class))
+//                    .map(userImportDTO -> modelmapper.map(userImportDTO, User.class))
+//                    .toList();
 
-            List<User> users = Arrays.stream(gson.fromJson(fileReader, UserImportDTO[].class))
+            JAXBContext context = JAXBContext.newInstance(UserImportWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            UserImportWrapper userImportWrapper = (UserImportWrapper) unmarshaller.unmarshal(fileReader);
+
+            List<User> users = userImportWrapper.getUsers().stream()
                     .map(userImportDTO -> modelmapper.map(userImportDTO, User.class))
                     .toList();
 
@@ -55,25 +66,43 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedCategories() throws IOException {
+    public void seedCategories() throws IOException, JAXBException {
         if (categoryRepository.count() == 0) {
-            FileReader fileReader = new FileReader(SEED_CATEGORIES_PATH.toFile());
+//            FileReader fileReader = new FileReader(SEED_CATEGORIES_PATH.toFile());
+            FileReader fileReader = new FileReader(SEED_CATEGORIES_XML_PATH.toFile());
 
-            List<Category> categories = Arrays.stream(gson.fromJson(fileReader, CategoryImportDTO[].class))
+//            List<Category> categories = Arrays.stream(gson.fromJson(fileReader, CategoryImportDTO[].class))
+//                    .map(categoryImportDTO -> modelmapper.map(categoryImportDTO, Category.class))
+//                    .toList();
+
+            JAXBContext context = JAXBContext.newInstance(CategoryImportWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            CategoryImportWrapper unmarshal = (CategoryImportWrapper) unmarshaller.unmarshal(fileReader);
+            List<Category> categories = unmarshal.getCategories().stream()
                     .map(categoryImportDTO -> modelmapper.map(categoryImportDTO, Category.class))
                     .toList();
-
             this.categoryRepository.saveAllAndFlush(categories);
             fileReader.close();
         }
     }
 
     @Override
-    public void seedProducts() throws IOException {
+    public void seedProducts() throws IOException, JAXBException {
         if (productRepository.count() == 0) {
-            FileReader fileReader = new FileReader(SEED_PRODUCTS_PATH.toFile());
+//            FileReader fileReader = new FileReader(SEED_PRODUCTS_PATH.toFile());
+            FileReader fileReader = new FileReader(SEED_PRODUCTS_XML_PATH.toFile());
 
-            List<Product> products = Arrays.stream(gson.fromJson(fileReader, ProductImportDTO[].class))
+//            List<Product> products = Arrays.stream(gson.fromJson(fileReader, ProductImportDTO[].class))
+//                    .map(productImportDTO -> modelmapper.map(productImportDTO, Product.class))
+//                    .map(this::setRandomCategory)
+//                    .map(this::setRandomBuyer)
+//                    .map(this::setRandomSeller)
+//                    .toList();
+
+            JAXBContext context = JAXBContext.newInstance(ProductImportWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            ProductImportWrapper unmarshal = (ProductImportWrapper) unmarshaller.unmarshal(fileReader);
+            List<Product> products = unmarshal.getProducts().stream()
                     .map(productImportDTO -> modelmapper.map(productImportDTO, Product.class))
                     .map(this::setRandomCategory)
                     .map(this::setRandomBuyer)
