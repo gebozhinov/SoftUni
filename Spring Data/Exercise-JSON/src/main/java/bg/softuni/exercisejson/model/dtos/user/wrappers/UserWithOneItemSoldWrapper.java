@@ -1,28 +1,26 @@
-package bg.softuni.exercisejson.model.dtos.product;
+package bg.softuni.exercisejson.model.dtos.user.wrappers;
 
+import bg.softuni.exercisejson.model.dtos.user.UserWithOneItemSoldDTO;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "product")
+@XmlRootElement(name = "users")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ProductDTO {
+public class UserWithOneItemSoldWrapper {
 
-    @XmlAttribute
-    private String name;
-    @XmlAttribute
-    private BigDecimal price;
-    @XmlAttribute(name = "seller")
-    private String sellerFullName;
+    @XmlElement(name = "user")
+    List<UserWithOneItemSoldDTO> users;
+
 }

@@ -28,9 +28,9 @@ public class MainRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         seedService.seedDatabase();
-//        productService.findAllByPriceInRange(BigDecimal.valueOf(500), BigDecimal.valueOf(1000));
-//        userService.findAllByProductsSold();
-//        categoryService.getAllByProductsCount();
-//        userService.usersAndProducts();
+        productService.findAllByPriceInRange(BigDecimal.valueOf(500), BigDecimal.valueOf(1000));
+        userService.findAllByProductsSold();
+        categoryService.getAllByProductsCount();
+        userService.usersAndProducts();
     }
 }

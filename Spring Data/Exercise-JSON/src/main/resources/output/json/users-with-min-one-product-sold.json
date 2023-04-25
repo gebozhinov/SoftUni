@@ -2,28 +2,36 @@
   {
     "firstName": "Gloria",
     "lastName": "Alexander",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Gilotrif",
+        "price": 1454.77,
+        "buyerIdFirstName": "Eugene",
+        "buyerIdLastName": "Stewart"
+      },
+      {
+        "name": "Wintergreen Isopropyl Alcohol",
+        "price": 1397.57,
+        "buyerIdFirstName": "Chris",
+        "buyerIdLastName": "Mitchell"
+      },
+      {
+        "name": "Aquafresh",
+        "price": 849.93,
+        "buyerIdFirstName": "Christina",
+        "buyerIdLastName": "Patterson"
+      }
+    ]
   },
   {
     "firstName": "Fred",
     "lastName": "Allen",
     "productsSold": [
       {
-        "name": "Labetalol Hydrochloride",
-        "price": 1345.11,
-        "buyerIdFirstName": "Eugene",
-        "buyerIdLastName": "Stewart"
-      }
-    ]
-  },
-  {
-    "lastName": "Baker",
-    "productsSold": [
-      {
-        "name": "Acetic Acid",
-        "price": 1060.43,
-        "buyerIdFirstName": "Patricia",
-        "buyerIdLastName": "Cooper"
+        "name": "Leg Cramp Relief",
+        "price": 1345.69,
+        "buyerIdFirstName": "Betty",
+        "buyerIdLastName": "Lawson"
       }
     ]
   },
@@ -32,71 +40,111 @@
     "lastName": "Barnes",
     "productsSold": [
       {
-        "name": "Metoprolol Tartrate",
-        "price": 1405.74,
-        "buyerIdFirstName": "Arthur",
-        "buyerIdLastName": "Reynolds"
+        "name": "Clearskin",
+        "price": 968.59,
+        "buyerIdLastName": "Cunningham"
       },
       {
-        "name": "Homeopathic Rheumatism",
-        "price": 967.08,
-        "buyerIdFirstName": "Brenda",
-        "buyerIdLastName": "Howell"
-      },
-      {
-        "name": "Triamterene and Hydrochlorothiazide",
-        "price": 1416.59,
-        "buyerIdFirstName": "Nicole",
-        "buyerIdLastName": "Harris"
+        "name": "Lorazepam",
+        "price": 1134.96,
+        "buyerIdLastName": "Mitchell"
       }
     ]
   },
   {
     "lastName": "Bennett",
-    "productsSold": [
-      {
-        "name": "Aspergillus repens",
-        "price": 1231.42,
-        "buyerIdFirstName": "Chris",
-        "buyerIdLastName": "Mitchell"
-      },
-      {
-        "name": "LV-FX",
-        "price": 820.87,
-        "buyerIdFirstName": "Betty",
-        "buyerIdLastName": "Ward"
-      },
-      {
-        "name": "Ibuprofen",
-        "price": 1305.96,
-        "buyerIdFirstName": "Patricia",
-        "buyerIdLastName": "Cooper"
-      }
-    ]
+    "productsSold": []
   },
   {
     "firstName": "Anna",
     "lastName": "Clark",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Nighttime Sleep Aid",
+        "price": 1217.11,
+        "buyerIdLastName": "Fox"
+      }
+    ]
+  },
+  {
+    "firstName": "Doris",
+    "lastName": "Cook",
+    "productsSold": [
+      {
+        "name": "Finasteride",
+        "price": 1374.01,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Parker"
+      },
+      {
+        "name": "Acid Reducer",
+        "price": 1443.51,
+        "buyerIdFirstName": "Christine",
+        "buyerIdLastName": "Gomez"
+      },
+      {
+        "name": "GEMCITABINE",
+        "price": 1468.11,
+        "buyerIdFirstName": "Thomas",
+        "buyerIdLastName": "Snyder"
+      },
+      {
+        "name": "Aspergillus repens",
+        "price": 1231.42,
+        "buyerIdFirstName": "Diana",
+        "buyerIdLastName": "Harvey"
+      },
+      {
+        "name": "pain relief",
+        "price": 938.23,
+        "buyerIdFirstName": "Fred",
+        "buyerIdLastName": "Barnes"
+      }
+    ]
   },
   {
     "firstName": "Patricia",
     "lastName": "Cooper",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Archangelica Eucalyptus",
+        "price": 1334.91,
+        "buyerIdFirstName": "Brenda",
+        "buyerIdLastName": "Howell"
+      },
+      {
+        "name": "Care One Hemorrhoidal",
+        "price": 932.18,
+        "buyerIdFirstName": "Billy",
+        "buyerIdLastName": "Parker"
+      },
+      {
+        "name": "Alcohol Free Antiseptic",
+        "price": 1486.07,
+        "buyerIdFirstName": "Chris",
+        "buyerIdLastName": "Mitchell"
+      },
+      {
+        "name": "Metoprolol Tartrate",
+        "price": 1405.74,
+        "buyerIdLastName": "Harrison"
+      }
+    ]
   },
   {
     "lastName": "Cunningham",
     "productsSold": [
       {
-        "name": "NEO-POLY-BAC HYDRO",
-        "price": 967.32,
-        "buyerIdLastName": "Harrison"
+        "name": "LBEL Couleur Luxe Rouge Amplifier XP amplifying SPF 15",
+        "price": 1069.43,
+        "buyerIdFirstName": "Jeremy",
+        "buyerIdLastName": "Woods"
       },
       {
-        "name": "Finasteride",
-        "price": 1374.01,
-        "buyerIdFirstName": "Carl",
-        "buyerIdLastName": "Lawson"
+        "name": "Head and Shoulders Conditioner",
+        "price": 1099.59,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Clark"
       }
     ]
   },
@@ -105,15 +153,21 @@
     "lastName": "Daniels",
     "productsSold": [
       {
-        "name": "cough and sore throat",
-        "price": 1482.68,
-        "buyerIdLastName": "Thompson"
+        "name": "MEDI-FIRST Non-Aspirin",
+        "price": 1301.28,
+        "buyerIdLastName": "Fox"
       },
       {
-        "name": "Glipizide and Metformin Hydrochloride",
-        "price": 953.60,
-        "buyerIdFirstName": "Christine",
-        "buyerIdLastName": "Gomez"
+        "name": "CALMING DIAPER RASH",
+        "price": 700.92,
+        "buyerIdFirstName": "Rachel",
+        "buyerIdLastName": "Johnson"
+      },
+      {
+        "name": "Cefadroxil",
+        "price": 1302.20,
+        "buyerIdFirstName": "Jennifer",
+        "buyerIdLastName": "Riley"
       }
     ]
   },
@@ -122,20 +176,15 @@
     "lastName": "Day",
     "productsSold": [
       {
-        "name": "XANTHIUM STRUMARIUM VAR CANADENSE POLLEN",
-        "price": 1091.38,
-        "buyerIdLastName": "Moreno"
+        "name": "Pleo Lat",
+        "price": 720.08,
+        "buyerIdFirstName": "Nicole",
+        "buyerIdLastName": "Harris"
       },
       {
-        "name": "Acetaminophen, Chlorpheniramine Maleate, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride",
-        "price": 1028.27,
-        "buyerIdFirstName": "Clarence",
-        "buyerIdLastName": "Fowler"
-      },
-      {
-        "name": "CVS Therapeutic Menthol Pain Reliever",
-        "price": 1033.42,
-        "buyerIdLastName": "Mitchell"
+        "name": "Isosorbide Mononitrate",
+        "price": 789.91,
+        "buyerIdLastName": "Harrison"
       }
     ]
   },
@@ -144,102 +193,84 @@
     "lastName": "Fowler",
     "productsSold": [
       {
-        "name": "Meloxicam",
-        "price": 809.18,
-        "buyerIdFirstName": "Arthur",
-        "buyerIdLastName": "Reynolds"
+        "name": "SUMATRIPTAN SUCCINATE",
+        "price": 1265.94,
+        "buyerIdFirstName": "Sarah",
+        "buyerIdLastName": "Day"
       },
       {
-        "name": "Ibuprofen",
-        "price": 1088.04,
-        "buyerIdFirstName": "Emily",
-        "buyerIdLastName": "Parker"
-      },
-      {
-        "name": "Americaine",
-        "price": 1165.75,
-        "buyerIdLastName": "Baker"
+        "name": "Etodolac",
+        "price": 1443.13,
+        "buyerIdFirstName": "Amanda",
+        "buyerIdLastName": "Frazier"
       }
     ]
   },
   {
     "lastName": "Fox",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Ibuprofen",
+        "price": 1305.96,
+        "buyerIdLastName": "Peterson"
+      },
+      {
+        "name": "Clarins Paris Skin Illusion - 114 cappuccino",
+        "price": 811.42,
+        "buyerIdFirstName": "Carl",
+        "buyerIdLastName": "Daniels"
+      },
+      {
+        "name": "ESIKA 3-IN-1 PRO MAKE UP FOUNDATION SPF 20 BASE DE MAQUILLAJE PARA ROSTRO 3-EN-1 PRO FPS 20",
+        "price": 1097.60,
+        "buyerIdLastName": "Fox"
+      },
+      {
+        "name": "Smooth texture Orange flavor",
+        "price": 976.65,
+        "buyerIdFirstName": "Jennifer",
+        "buyerIdLastName": "Riley"
+      },
+      {
+        "name": "leader pain reliever",
+        "price": 1179.79,
+        "buyerIdFirstName": "Gloria",
+        "buyerIdLastName": "Alexander"
+      }
+    ]
   },
   {
     "firstName": "Amanda",
     "lastName": "Frazier",
     "productsSold": [
       {
-        "name": "GEMCITABINE",
-        "price": 1468.11,
-        "buyerIdFirstName": "Chris",
-        "buyerIdLastName": "Mitchell"
-      },
-      {
-        "name": "Prednisone",
-        "price": 1285.99,
-        "buyerIdFirstName": "Wanda",
-        "buyerIdLastName": "Harris"
+        "name": "Fosphenytoin Sodium",
+        "price": 1334.06,
+        "buyerIdFirstName": "Fred",
+        "buyerIdLastName": "Allen"
       }
     ]
   },
   {
     "firstName": "Brandon",
     "lastName": "Fuller",
-    "productsSold": [
-      {
-        "name": "Acid Reducer",
-        "price": 1443.51,
-        "buyerIdFirstName": "Gloria",
-        "buyerIdLastName": "Alexander"
-      },
-      {
-        "name": "RESCRIPTOR",
-        "price": 850.52,
-        "buyerIdLastName": "Stewart"
-      },
-      {
-        "name": "Glycopyrrolate",
-        "price": 1471.43,
-        "buyerIdFirstName": "Carl",
-        "buyerIdLastName": "Lawson"
-      }
-    ]
+    "productsSold": []
   },
   {
     "firstName": "Patricia",
     "lastName": "Fuller",
     "productsSold": [
       {
-        "name": "Smooth texture Orange flavor",
-        "price": 976.65,
-        "buyerIdFirstName": "Amanda",
-        "buyerIdLastName": "Frazier"
-      },
-      {
-        "name": "Head and Shoulders Conditioner",
-        "price": 1099.59,
+        "name": "Dawn Ultra Antibacterial Hand",
+        "price": 969.86,
         "buyerIdFirstName": "Wanda",
         "buyerIdLastName": "Harris"
       },
       {
-        "name": "Spironolactone",
-        "price": 933.69,
-        "buyerIdFirstName": "Wanda",
-        "buyerIdLastName": "Harris"
-      },
-      {
-        "name": "SEPHORA Acne-Fighting Mattifying Moisturizer",
-        "price": 1019.28,
-        "buyerIdFirstName": "Patricia",
-        "buyerIdLastName": "Fuller"
-      },
-      {
-        "name": "Nighttime Sleep Aid",
-        "price": 1217.11,
-        "buyerIdFirstName": "Emily",
-        "buyerIdLastName": "Parker"
+        "name": "EPZICOM",
+        "price": 895.65,
+        "buyerIdFirstName": "Joshua",
+        "buyerIdLastName": "Murray"
       }
     ]
   },
@@ -248,19 +279,10 @@
     "lastName": "Gomez",
     "productsSold": [
       {
-        "name": "Clarins Paris Skin Illusion - 114 cappuccino",
-        "price": 811.42,
-        "buyerIdLastName": "Harrison"
-      },
-      {
-        "name": "smart sense nicotine",
-        "price": 1444.12,
-        "buyerIdLastName": "Thompson"
-      },
-      {
-        "name": "Acnezzol Base",
-        "price": 710.60,
-        "buyerIdLastName": "Thompson"
+        "name": "Oxygen",
+        "price": 1242.92,
+        "buyerIdFirstName": "Fred",
+        "buyerIdLastName": "Barnes"
       }
     ]
   },
@@ -269,61 +291,56 @@
     "lastName": "Harris",
     "productsSold": [
       {
-        "name": "DIVALPROEX SODIUM",
-        "price": 1287.03,
-        "buyerIdFirstName": "Chris",
-        "buyerIdLastName": "Mitchell"
+        "name": "Acnezzol Base",
+        "price": 710.60,
+        "buyerIdFirstName": "Jeremy",
+        "buyerIdLastName": "Woods"
       },
       {
-        "name": "Etodolac",
-        "price": 1443.13,
-        "buyerIdFirstName": "Thomas",
-        "buyerIdLastName": "Snyder"
-      },
-      {
-        "name": "Butalbital, Aspirin and Caffeine",
-        "price": 1010.98,
-        "buyerIdFirstName": "Rachel",
-        "buyerIdLastName": "Johnson"
-      },
-      {
-        "name": "VITALUMIERE AQUA",
-        "price": 1293.09,
-        "buyerIdFirstName": "Rachel",
-        "buyerIdLastName": "Johnson"
+        "name": "Fair Foundation SPF 15",
+        "price": 1394.24,
+        "buyerIdLastName": "Stewart"
       }
     ]
   },
   {
     "firstName": "Wanda",
     "lastName": "Harris",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Ringers",
+        "price": 1054.37,
+        "buyerIdFirstName": "Rachel",
+        "buyerIdLastName": "Johnson"
+      },
+      {
+        "name": "Ondansetron",
+        "price": 1249.76,
+        "buyerIdFirstName": "Amanda",
+        "buyerIdLastName": "Frazier"
+      },
+      {
+        "name": "SEPHORA Acne-Fighting Mattifying Moisturizer",
+        "price": 1019.28,
+        "buyerIdFirstName": "Arthur",
+        "buyerIdLastName": "Reynolds"
+      },
+      {
+        "name": "Triamterene and Hydrochlorothiazide",
+        "price": 1416.59,
+        "buyerIdFirstName": "Amanda",
+        "buyerIdLastName": "Frazier"
+      }
+    ]
   },
   {
     "lastName": "Harrison",
     "productsSold": [
       {
-        "name": "Azithromycin",
-        "price": 813.87,
-        "buyerIdFirstName": "Ann",
-        "buyerIdLastName": "Stevens"
-      },
-      {
-        "name": "Benazepril Hydrochloride and Hydrochlorothiazide",
-        "price": 1187.27,
-        "buyerIdLastName": "Stewart"
-      },
-      {
         "name": "Zonisamide",
         "price": 1305.41,
-        "buyerIdFirstName": "Gloria",
-        "buyerIdLastName": "Alexander"
-      },
-      {
-        "name": "Baza Antifungal",
-        "price": 1162.34,
-        "buyerIdFirstName": "Brandon",
-        "buyerIdLastName": "Fuller"
+        "buyerIdFirstName": "Betty",
+        "buyerIdLastName": "Lawson"
       }
     ]
   },
@@ -332,27 +349,15 @@
     "lastName": "Harvey",
     "productsSold": [
       {
-        "name": "smart sense nighttime cold and flu relief",
-        "price": 1101.77,
-        "buyerIdLastName": "Harrison"
+        "name": "Topical 60 Sec Sodium Fluoride",
+        "price": 1228.84,
+        "buyerIdLastName": "Peterson"
       },
       {
-        "name": "Archangelica Eucalyptus",
-        "price": 1334.91,
-        "buyerIdFirstName": "Jean",
-        "buyerIdLastName": "Henry"
-      }
-    ]
-  },
-  {
-    "firstName": "Benjamin",
-    "lastName": "Henry",
-    "productsSold": [
-      {
-        "name": "Alcohol Free Antiseptic",
-        "price": 1486.07,
-        "buyerIdFirstName": "Betty",
-        "buyerIdLastName": "Lawson"
+        "name": "IOPE SUPER VITAL",
+        "price": 824.68,
+        "buyerIdFirstName": "Arthur",
+        "buyerIdLastName": "Reynolds"
       }
     ]
   },
@@ -361,124 +366,100 @@
     "lastName": "Henry",
     "productsSold": [
       {
-        "name": "EPZICOM",
-        "price": 895.65,
-        "buyerIdFirstName": "Sarah",
-        "buyerIdLastName": "Day"
-      }
-    ]
-  },
-  {
-    "firstName": "Paula",
-    "lastName": "Hill",
-    "productsSold": [
-      {
-        "name": "Budpak Hemorrhoid Anesthetic",
-        "price": 1499.29,
-        "buyerIdFirstName": "Anna",
-        "buyerIdLastName": "Parker"
-      },
-      {
-        "name": "Retin-A MICRO",
-        "price": 995.98,
-        "buyerIdFirstName": "Patricia",
-        "buyerIdLastName": "Fuller"
+        "name": "Megestrol Acetate",
+        "price": 976.15,
+        "buyerIdLastName": "Mitchell"
       }
     ]
   },
   {
     "firstName": "Brenda",
     "lastName": "Howell",
-    "productsSold": [
-      {
-        "name": "DIPYRIDAMOLE",
-        "price": 1150.67,
-        "buyerIdLastName": "Harrison"
-      },
-      {
-        "name": "Ringers",
-        "price": 1054.37,
-        "buyerIdLastName": "Thompson"
-      },
-      {
-        "name": "LBEL Couleur Luxe Rouge Amplifier XP amplifying SPF 15",
-        "price": 1069.43,
-        "buyerIdFirstName": "Christine",
-        "buyerIdLastName": "Gomez"
-      },
-      {
-        "name": "Warfarin Sodium",
-        "price": 770.05,
-        "buyerIdLastName": "Moreno"
-      },
-      {
-        "name": "XtraCare Foam Antibacterial Hand Wash",
-        "price": 1251.97,
-        "buyerIdFirstName": "Paula",
-        "buyerIdLastName": "Hill"
-      }
-    ]
+    "productsSold": []
   },
   {
     "firstName": "Rachel",
     "lastName": "Johnson",
     "productsSold": [
       {
-        "name": "Etoposide",
-        "price": 1483.96,
-        "buyerIdFirstName": "Gary",
-        "buyerIdLastName": "Stevens"
+        "name": "Warfarin Sodium",
+        "price": 1379.79,
+        "buyerIdLastName": "Schmidt"
       },
       {
-        "name": "Fosphenytoin Sodium",
-        "price": 1334.06,
-        "buyerIdFirstName": "Ann",
-        "buyerIdLastName": "Stevens"
-      },
-      {
-        "name": "IOPE SUPER VITAL",
-        "price": 824.68,
-        "buyerIdLastName": "Fox"
+        "name": "Baza Antifungal",
+        "price": 1162.34,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Clark"
       }
     ]
   },
   {
-    "firstName": "Patrick",
-    "lastName": "King",
-    "productsSold": []
+    "lastName": "Lawson",
+    "productsSold": [
+      {
+        "name": "Acetaminophen, Chlorpheniramine Maleate, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride",
+        "price": 1028.27,
+        "buyerIdFirstName": "Christina",
+        "buyerIdLastName": "Patterson"
+      },
+      {
+        "name": "PREMIER VALUE ALLERGY",
+        "price": 1127.61,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Clark"
+      },
+      {
+        "name": "Treatment Set TS336667",
+        "price": 1466.47,
+        "buyerIdFirstName": "Christine",
+        "buyerIdLastName": "Gomez"
+      },
+      {
+        "name": "Aspen",
+        "price": 1046.46,
+        "buyerIdFirstName": "Clarence",
+        "buyerIdLastName": "Fowler"
+      }
+    ]
   },
   {
     "firstName": "Betty",
     "lastName": "Lawson",
     "productsSold": [
       {
-        "name": "Wintergreen Isopropyl Alcohol",
-        "price": 1397.57,
-        "buyerIdFirstName": "Rachel",
-        "buyerIdLastName": "Johnson"
+        "name": "Amitriptyline Hydrochloride",
+        "price": 1453.96,
+        "buyerIdLastName": "Harrison"
       },
       {
-        "name": "Treatment Set TS336667",
-        "price": 1466.47,
-        "buyerIdFirstName": "Amanda",
-        "buyerIdLastName": "Frazier"
-      },
-      {
-        "name": "TYLENOL COLD MULTI-SYMPTOM DAYTIME",
-        "price": 1010.81,
-        "buyerIdLastName": "Cunningham"
+        "name": "XANTHIUM STRUMARIUM VAR CANADENSE POLLEN",
+        "price": 1091.38,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Clark"
       }
     ]
   },
   {
-    "firstName": "Carl",
-    "lastName": "Lawson",
+    "firstName": "Nicole",
+    "lastName": "Martinez",
     "productsSold": [
       {
-        "name": "Topical 60 Sec Sodium Fluoride",
-        "price": 1228.84,
-        "buyerIdFirstName": "Diana",
-        "buyerIdLastName": "Harvey"
+        "name": "Myristica Argentum Sinus Relief",
+        "price": 904.52,
+        "buyerIdFirstName": "Jean",
+        "buyerIdLastName": "Henry"
+      },
+      {
+        "name": "TYLENOL COLD MULTI-SYMPTOM DAYTIME",
+        "price": 1010.81,
+        "buyerIdLastName": "Lawson"
+      },
+      {
+        "name": "Acetic Acid",
+        "price": 1060.43,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Parker"
       }
     ]
   },
@@ -486,21 +467,16 @@
     "lastName": "Mitchell",
     "productsSold": [
       {
-        "name": "Metformin Hydrochloride",
-        "price": 953.99,
-        "buyerIdFirstName": "Amanda",
-        "buyerIdLastName": "Frazier"
+        "name": "RESCRIPTOR",
+        "price": 850.52,
+        "buyerIdFirstName": "Jeremy",
+        "buyerIdLastName": "Woods"
       },
       {
-        "name": "Clearskin",
-        "price": 968.59,
-        "buyerIdFirstName": "Brandon",
-        "buyerIdLastName": "Fuller"
-      },
-      {
-        "name": "Aspen",
-        "price": 1046.46,
-        "buyerIdLastName": "Peterson"
+        "name": "Azithromycin",
+        "price": 813.87,
+        "buyerIdFirstName": "Arthur",
+        "buyerIdLastName": "Reynolds"
       }
     ]
   },
@@ -509,56 +485,26 @@
     "lastName": "Mitchell",
     "productsSold": [
       {
-        "name": "Flumazenil",
-        "price": 1151.37,
-        "buyerIdFirstName": "Rachel",
-        "buyerIdLastName": "Johnson"
-      },
-      {
-        "name": "Effervescent Cold Relief",
-        "price": 1436.07,
-        "buyerIdFirstName": "Jean",
-        "buyerIdLastName": "Henry"
-      },
-      {
-        "name": "Megestrol Acetate",
-        "price": 976.15,
-        "buyerIdFirstName": "Betty",
-        "buyerIdLastName": "Lawson"
-      },
-      {
-        "name": "Fair Foundation SPF 15",
-        "price": 1394.24,
-        "buyerIdLastName": "Bennett"
+        "name": "Butalbital, Aspirin and Caffeine",
+        "price": 1010.98,
+        "buyerIdLastName": "Schmidt"
       }
     ]
   },
   {
-    "lastName": "Moreno",
-    "productsSold": [
-      {
-        "name": "Gilotrif",
-        "price": 1454.77,
-        "buyerIdFirstName": "Arthur",
-        "buyerIdLastName": "Reynolds"
-      }
-    ]
+    "firstName": "Joshua",
+    "lastName": "Murray",
+    "productsSold": []
   },
   {
     "firstName": "Anna",
     "lastName": "Parker",
     "productsSold": [
       {
-        "name": "Naproxen",
-        "price": 807.22,
-        "buyerIdFirstName": "Arthur",
-        "buyerIdLastName": "Reynolds"
-      },
-      {
-        "name": "Pollens - Trees, Birch Mix",
-        "price": 1153.54,
-        "buyerIdFirstName": "Sandra",
-        "buyerIdLastName": "Riley"
+        "name": "Labetalol Hydrochloride",
+        "price": 1345.11,
+        "buyerIdFirstName": "Rachel",
+        "buyerIdLastName": "Johnson"
       }
     ]
   },
@@ -567,43 +513,15 @@
     "lastName": "Parker",
     "productsSold": [
       {
-        "name": "CALMING DIAPER RASH",
-        "price": 700.92,
-        "buyerIdLastName": "Fox"
+        "name": "Retin-A MICRO",
+        "price": 995.98,
+        "buyerIdFirstName": "Christina",
+        "buyerIdLastName": "Patterson"
       },
       {
-        "name": "Shopko Lip Treatment",
-        "price": 861.42,
+        "name": "Glycopyrrolate",
+        "price": 1471.43,
         "buyerIdLastName": "Stewart"
-      },
-      {
-        "name": "Ranitidine",
-        "price": 926.64,
-        "buyerIdFirstName": "Chris",
-        "buyerIdLastName": "Mitchell"
-      }
-    ]
-  },
-  {
-    "firstName": "Emily",
-    "lastName": "Parker",
-    "productsSold": [
-      {
-        "name": "Dawn Ultra Antibacterial Hand",
-        "price": 969.86,
-        "buyerIdFirstName": "Anna",
-        "buyerIdLastName": "Parker"
-      },
-      {
-        "name": "Myristica Argentum Sinus Relief",
-        "price": 904.52,
-        "buyerIdFirstName": "Jeremy",
-        "buyerIdLastName": "Woods"
-      },
-      {
-        "name": "MEDI-FIRST Non-Aspirin",
-        "price": 1301.28,
-        "buyerIdLastName": "Peterson"
       }
     ]
   },
@@ -612,44 +530,43 @@
     "lastName": "Patterson",
     "productsSold": [
       {
-        "name": "Care One Hemorrhoidal",
-        "price": 932.18,
-        "buyerIdFirstName": "Jennifer",
-        "buyerIdLastName": "Riley"
-      },
-      {
-        "name": "Perrigo Benzoyl Peroxide",
-        "price": 873.24,
-        "buyerIdFirstName": "Amanda",
-        "buyerIdLastName": "Frazier"
-      },
-      {
-        "name": "Hydralazine Hydrochloride",
-        "price": 1309.72,
-        "buyerIdFirstName": "Fred",
-        "buyerIdLastName": "Allen"
+        "name": "Americaine",
+        "price": 1165.75,
+        "buyerIdFirstName": "Sarah",
+        "buyerIdLastName": "Day"
       }
     ]
+  },
+  {
+    "firstName": "Jacqueline",
+    "lastName": "Perez",
+    "productsSold": []
   },
   {
     "lastName": "Peterson",
     "productsSold": [
       {
-        "name": "PREMIER VALUE ALLERGY",
-        "price": 1127.61,
-        "buyerIdFirstName": "Thomas",
-        "buyerIdLastName": "Snyder"
+        "name": "Laser Block 100",
+        "price": 1135.43,
+        "buyerIdLastName": "Bennett"
       },
       {
-        "name": "Pleo Lat",
-        "price": 720.08,
-        "buyerIdLastName": "Cunningham"
+        "name": "Nevirapine",
+        "price": 1374.72,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Parker"
       },
       {
-        "name": "SUMATRIPTAN SUCCINATE",
-        "price": 1265.94,
-        "buyerIdFirstName": "Carl",
-        "buyerIdLastName": "Lawson"
+        "name": "ESIKA",
+        "price": 879.37,
+        "buyerIdFirstName": "Billy",
+        "buyerIdLastName": "Parker"
+      },
+      {
+        "name": "PCA SKIN ACNE",
+        "price": 1356.22,
+        "buyerIdFirstName": "Billy",
+        "buyerIdLastName": "Parker"
       }
     ]
   },
@@ -663,10 +580,22 @@
     "lastName": "Riley",
     "productsSold": [
       {
-        "name": "Aquafresh",
-        "price": 849.93,
-        "buyerIdFirstName": "Anna",
-        "buyerIdLastName": "Clark"
+        "name": "EMEND",
+        "price": 1365.51,
+        "buyerIdFirstName": "Doris",
+        "buyerIdLastName": "Cook"
+      },
+      {
+        "name": "Pollens - Trees, Birch Mix",
+        "price": 1153.54,
+        "buyerIdFirstName": "Carl",
+        "buyerIdLastName": "Daniels"
+      },
+      {
+        "name": "Hydralazine Hydrochloride",
+        "price": 1309.72,
+        "buyerIdFirstName": "Brenda",
+        "buyerIdLastName": "Howell"
       }
     ]
   },
@@ -675,41 +604,34 @@
     "lastName": "Riley",
     "productsSold": [
       {
-        "name": "Warfarin Sodium",
-        "price": 1379.79,
-        "buyerIdFirstName": "Christina",
-        "buyerIdLastName": "Patterson"
+        "name": "CVS Therapeutic Menthol Pain Reliever",
+        "price": 1033.42,
+        "buyerIdFirstName": "Fred",
+        "buyerIdLastName": "Allen"
       },
       {
-        "name": "Prostate",
-        "price": 716.05,
-        "buyerIdFirstName": "Billy",
-        "buyerIdLastName": "Parker"
+        "name": "up and up temporary minor arthritis pain relief",
+        "price": 1085.78,
+        "buyerIdFirstName": "Diana",
+        "buyerIdLastName": "Harvey"
+      },
+      {
+        "name": "Ranitidine",
+        "price": 926.64,
+        "buyerIdFirstName": "Sandra",
+        "buyerIdLastName": "Riley"
+      },
+      {
+        "name": "Budpak Hemorrhoid Anesthetic",
+        "price": 1499.29,
+        "buyerIdFirstName": "Jean",
+        "buyerIdLastName": "Henry"
       }
     ]
   },
   {
-    "firstName": "Jonathan",
-    "lastName": "Rodriguez",
-    "productsSold": [
-      {
-        "name": "GOONG SECRET CALMING BATH",
-        "price": 742.47,
-        "buyerIdLastName": "Baker"
-      },
-      {
-        "name": "Pollens - Weeds and Garden Plants, Nettle Urtica dioica",
-        "price": 782.77,
-        "buyerIdFirstName": "Brandon",
-        "buyerIdLastName": "Fuller"
-      },
-      {
-        "name": "ESIKA 3-IN-1 PRO MAKE UP FOUNDATION SPF 20 BASE DE MAQUILLAJE PARA ROSTRO 3-EN-1 PRO FPS 20",
-        "price": 1097.60,
-        "buyerIdFirstName": "Fred",
-        "buyerIdLastName": "Barnes"
-      }
-    ]
+    "lastName": "Schmidt",
+    "productsSold": []
   },
   {
     "firstName": "Thomas",
@@ -721,86 +643,132 @@
     "lastName": "Stevens",
     "productsSold": [
       {
-        "name": "IOPE RETIGEN MOISTURE TWIN CAKE NO.21",
-        "price": 1257.71,
-        "buyerIdFirstName": "Brandon",
-        "buyerIdLastName": "Fuller"
+        "name": "smart sense nighttime cold and flu relief",
+        "price": 1101.77,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Parker"
       },
       {
-        "name": "Oxygen",
-        "price": 1242.92,
-        "buyerIdLastName": "Peterson"
+        "name": "Prostate",
+        "price": 716.05,
+        "buyerIdFirstName": "Sandra",
+        "buyerIdLastName": "Riley"
       },
       {
-        "name": "leader pain reliever",
-        "price": 1179.79,
-        "buyerIdFirstName": "Patrick",
-        "buyerIdLastName": "King"
+        "name": "Levothyroxine Sodium",
+        "price": 885.86,
+        "buyerIdFirstName": "Arthur",
+        "buyerIdLastName": "Reynolds"
+      },
+      {
+        "name": "LV-FX",
+        "price": 820.87,
+        "buyerIdFirstName": "Ann",
+        "buyerIdLastName": "Stevens"
       }
     ]
-  },
-  {
-    "firstName": "Gary",
-    "lastName": "Stevens",
-    "productsSold": []
   },
   {
     "lastName": "Stewart",
     "productsSold": [
       {
-        "name": "up and up temporary minor arthritis pain relief",
-        "price": 1085.78,
-        "buyerIdFirstName": "Patricia",
-        "buyerIdLastName": "Fuller"
+        "name": "Aspirin",
+        "price": 925.45,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Clark"
       },
       {
-        "name": "Growing Pains",
-        "price": 1077.37,
-        "buyerIdFirstName": "Christina",
-        "buyerIdLastName": "Patterson"
+        "name": "Naproxen",
+        "price": 807.22,
+        "buyerIdFirstName": "Nicole",
+        "buyerIdLastName": "Martinez"
       },
       {
-        "name": "Isosorbide Mononitrate",
-        "price": 789.91,
-        "buyerIdFirstName": "Benjamin",
-        "buyerIdLastName": "Henry"
+        "name": "DIPYRIDAMOLE",
+        "price": 1150.67,
+        "buyerIdFirstName": "Doris",
+        "buyerIdLastName": "Cook"
       }
     ]
   },
   {
     "firstName": "Eugene",
     "lastName": "Stewart",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Prednisone",
+        "price": 1285.99,
+        "buyerIdLastName": "Fox"
+      }
+    ]
   },
   {
     "lastName": "Thompson",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "XtraCare Foam Antibacterial Hand Wash",
+        "price": 1251.97,
+        "buyerIdFirstName": "Doris",
+        "buyerIdLastName": "Cook"
+      },
+      {
+        "name": "DIVALPROEX SODIUM",
+        "price": 1287.03,
+        "buyerIdLastName": "Thompson"
+      },
+      {
+        "name": "Benazepril Hydrochloride and Hydrochlorothiazide",
+        "price": 1187.27,
+        "buyerIdFirstName": "Betty",
+        "buyerIdLastName": "Lawson"
+      }
+    ]
   },
   {
     "firstName": "Betty",
     "lastName": "Ward",
     "productsSold": [
       {
-        "name": "Nevirapine",
-        "price": 1374.72,
-        "buyerIdLastName": "Baker"
+        "name": "Growing Pains",
+        "price": 1077.37,
+        "buyerIdFirstName": "Anna",
+        "buyerIdLastName": "Clark"
       },
       {
-        "name": "Lorazepam",
-        "price": 1134.96,
-        "buyerIdLastName": "Fox"
+        "name": "NEO-POLY-BAC HYDRO",
+        "price": 967.32,
+        "buyerIdFirstName": "Fred",
+        "buyerIdLastName": "Barnes"
       },
       {
-        "name": "Levothyroxine Sodium",
-        "price": 885.86,
-        "buyerIdFirstName": "Amanda",
-        "buyerIdLastName": "Frazier"
+        "name": "cough and sore throat",
+        "price": 1482.68,
+        "buyerIdFirstName": "Betty",
+        "buyerIdLastName": "Ward"
       }
     ]
   },
   {
     "firstName": "Jeremy",
     "lastName": "Woods",
-    "productsSold": []
+    "productsSold": [
+      {
+        "name": "Etoposide",
+        "price": 1483.96,
+        "buyerIdFirstName": "Jeremy",
+        "buyerIdLastName": "Woods"
+      },
+      {
+        "name": "Shopko Lip Treatment",
+        "price": 861.42,
+        "buyerIdLastName": "Cunningham"
+      },
+      {
+        "name": "Pollens - Weeds and Garden Plants, Nettle Urtica dioica",
+        "price": 782.77,
+        "buyerIdFirstName": "Jennifer",
+        "buyerIdLastName": "Riley"
+      }
+    ]
   }
 ]
