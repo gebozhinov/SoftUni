@@ -26,4 +26,15 @@ public enum Paths {
             Path.of("src", "main", "resources", "output", "customers-total-sales.json");
     public static final Path SALES_WITH_APPLIED_DISCOUNT =
             Path.of("src", "main", "resources", "output", "sales-discounts.json");
+
+
+    // XML Files
+    public static final Path IMPORT_SUPPLIERS_PATH_XML =
+            Path.of("src", "main", "resources", "seedDb", "xmls", "suppliers.xml");
+    public static final Path IMPORT_PARTS_PATH_XML =
+            Path.of("src", "main", "resources", "seedDb", "xmls", "parts.xml");
+    public static final Path IMPORT_CARS_PATH_XML =
+            Path.of("src", "main", "resources", "seedDb", "xmls", "cars.xml");
+    public static final Path IMPORT_CUSTOMERS_PATH_XML =
+            Path.of("src", "main", "resources", "seedDb", "xmls", "customers.xml");
 }

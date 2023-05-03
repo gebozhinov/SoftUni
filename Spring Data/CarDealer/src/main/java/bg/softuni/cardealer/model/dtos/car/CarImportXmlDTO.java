@@ -1,26 +1,26 @@
-package bg.softuni.cardealer.model.dtos.supplier;
+package bg.softuni.cardealer.model.dtos.car;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "supplier")
+@XmlRootElement(name = "car")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SupplierBaseInfoDTO {
+public class CarImportXmlDTO {
 
-    @XmlAttribute
-    private String name;
-    @XmlAttribute(name = "is-importer")
-    private boolean isImporter;
-
+    @XmlElement
+    private String make;
+    @XmlElement
+    private String model;
+    @XmlElement(name = "travelled-distance")
+    private long travelledDistance;
 }

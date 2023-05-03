@@ -1,4 +1,4 @@
-package bg.softuni.cardealer.model.dtos.supplier;
+package bg.softuni.cardealer.model.dtos.part;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -9,18 +9,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "supplier")
+@XmlRootElement(name = "part")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SupplierBaseInfoDTO {
+public class PartDTO {
 
     @XmlAttribute
     private String name;
-    @XmlAttribute(name = "is-importer")
-    private boolean isImporter;
-
+    @XmlAttribute
+    private BigDecimal price;
+    @XmlAttribute
+    private int quantity;
 }

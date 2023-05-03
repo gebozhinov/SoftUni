@@ -1,10 +1,19 @@
 package bg.softuni.cardealer.service;
 
+import bg.softuni.cardealer.model.dtos.car.CarImportXmlDTO;
+import bg.softuni.cardealer.model.dtos.car.wrapper.CarImportXmlWrapper;
 import bg.softuni.cardealer.model.dtos.customer.CustomerDTO;
+import bg.softuni.cardealer.model.dtos.customer.wrapper.CustomerWrapper;
+import bg.softuni.cardealer.model.dtos.part.PartDTO;
+import bg.softuni.cardealer.model.dtos.part.PartWrapper;
 import bg.softuni.cardealer.model.dtos.supplier.SupplierBaseInfoDTO;
+import bg.softuni.cardealer.model.dtos.supplier.wrapper.SupplierBaseInfoWrapper;
 import bg.softuni.cardealer.model.entities.*;
 import bg.softuni.cardealer.repository.*;
 import com.google.gson.Gson;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,13 +55,24 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedSuppliers() throws IOException {
+    public void seedSuppliers() throws IOException, JAXBException {
         if (this.supplierRepository.count() == 0) {
-            FileReader fileReader = new FileReader(IMPORT_SUPPLIERS_PATH.toFile());
+            // JSON
+//            FileReader fileReader = new FileReader(IMPORT_SUPPLIERS_PATH.toFile());
+//            SupplierBaseInfoDTO[] supplierDTOS = gson.fromJson(fileReader, SupplierBaseInfoDTO[].class);
+//            List<Supplier> suppliers = Arrays.stream(supplierDTOS)
+//                    .map(supplierDTO -> modelMapper.map(supplierDTO, Supplier.class))
+//                    .toList();
 
-            SupplierBaseInfoDTO[] supplierDTOS = gson.fromJson(fileReader, SupplierBaseInfoDTO[].class);
-            List<Supplier> suppliers = Arrays.stream(supplierDTOS)
-                    .map(supplierDTO -> modelMapper.map(supplierDTO, Supplier.class))
+            // XML
+            FileReader fileReader = new FileReader(IMPORT_SUPPLIERS_PATH_XML.toFile());
+            JAXBContext context = JAXBContext.newInstance(SupplierBaseInfoWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            SupplierBaseInfoWrapper supplierBaseInfoWrapper = (SupplierBaseInfoWrapper) unmarshaller.unmarshal(fileReader);
+
+
+            List<Supplier> suppliers = supplierBaseInfoWrapper.getSuppliers().stream()
+                    .map(supplierBaseInfoDTO -> modelMapper.map(supplierBaseInfoDTO, Supplier.class))
                     .toList();
 
             this.supplierRepository.saveAllAndFlush(suppliers);
@@ -62,10 +82,22 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedParts() throws IOException {
+    public void seedParts() throws IOException, JAXBException {
         if (partRepository.count() == 0) {
-            FileReader fileReader = new FileReader(IMPORT_PARTS_PATH.toFile());
-            Part[] parts = gson.fromJson(fileReader, Part[].class);
+
+            // JSON
+//            FileReader fileReader = new FileReader(IMPORT_PARTS_PATH.toFile());
+//            Part[] parts = gson.fromJson(fileReader, Part[].class);
+
+            // XML
+            FileReader fileReader = new FileReader(IMPORT_PARTS_PATH_XML.toFile());
+            JAXBContext context = JAXBContext.newInstance(PartWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            PartWrapper unmarshal = (PartWrapper) unmarshaller.unmarshal(fileReader);
+            List<Part> parts = unmarshal.getParts().stream()
+                    .map(partDTO -> modelMapper.map(partDTO, PartDTO.class))
+                    .map(part -> modelMapper.map(part, Part.class))
+                    .toList();
 
 
             for (Part part : parts) {
@@ -73,16 +105,33 @@ public class SeedServiceImpl implements SeedService {
                 part.setSupplier(supplier);
             }
 
-            this.partRepository.saveAllAndFlush(Arrays.stream(parts).toList());
+            // JSON
+//            this.partRepository.saveAllAndFlush(Arrays.stream(parts).toList());
+
+            // XML
+            this.partRepository.saveAllAndFlush(parts);
             fileReader.close();
         }
     }
 
     @Override
-    public void seedCars() throws IOException {
+    public void seedCars() throws IOException, JAXBException {
         if (carRepository.count() == 0) {
-            FileReader fileReader = new FileReader(IMPORT_CARS_PATH.toFile());
-            Car[] cars = gson.fromJson(fileReader, Car[].class);
+
+            // JSON
+//            FileReader fileReader = new FileReader(IMPORT_CARS_PATH.toFile());
+//            Car[] cars = gson.fromJson(fileReader, Car[].class);
+
+            // XML
+            FileReader fileReader = new FileReader(IMPORT_CARS_PATH_XML.toFile());
+            JAXBContext context = JAXBContext.newInstance(CarImportXmlWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            CarImportXmlWrapper carImportXmlWrapper = (CarImportXmlWrapper) unmarshaller.unmarshal(fileReader);
+            List<Car> cars = carImportXmlWrapper.getCars().stream()
+                    .map(carImportXmlDTO -> modelMapper.map(carImportXmlDTO, CarImportXmlDTO.class))
+                    .map(car -> modelMapper.map(car, Car.class))
+                    .toList();
+
 
             Random random = new Random();
             for (Car car : cars) {
@@ -91,16 +140,32 @@ public class SeedServiceImpl implements SeedService {
                 parts.forEach(car::addPart);
             }
 
-            this.carRepository.saveAllAndFlush(Arrays.stream(cars).toList());
+            // JSON
+//            this.carRepository.saveAllAndFlush(Arrays.stream(cars).toList());
+
+            // XML
+            this.carRepository.saveAllAndFlush(cars);
             fileReader.close();
         }
     }
 
     @Override
-    public void seedCustomers() throws IOException {
+    public void seedCustomers() throws IOException, JAXBException {
         if (customerRepository.count() == 0) {
-            FileReader fileReader = new FileReader(IMPORT_CUSTOMERS_PATH.toFile());
-            CustomerDTO[] customerDTOS = gson.fromJson(fileReader, CustomerDTO[].class);
+
+            // JSON
+//            FileReader fileReader = new FileReader(IMPORT_CUSTOMERS_PATH.toFile());
+//            CustomerDTO[] customerDTOS = gson.fromJson(fileReader, CustomerDTO[].class);
+
+            // XML
+            FileReader fileReader = new FileReader(IMPORT_CUSTOMERS_PATH_XML.toFile());
+            JAXBContext context = JAXBContext.newInstance(CustomerWrapper.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            CustomerWrapper customerWrapper = (CustomerWrapper) unmarshaller.unmarshal(fileReader);
+            List<CustomerDTO> customerDTOS = customerWrapper.getCustomers().stream()
+                    .map(customerDTO -> modelMapper.map(customerDTO, CustomerDTO.class))
+                    .toList();
+
 
             List<Customer> customers = new ArrayList<>();
             for (CustomerDTO customerDTO : customerDTOS) {
