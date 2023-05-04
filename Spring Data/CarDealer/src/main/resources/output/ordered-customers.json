@@ -5,19 +5,19 @@
     "isYoungDriver": false,
     "sales": [
       {
-        "discount": 20.0,
+        "discount": 0.0,
         "car": {
-          "make": "Nissan",
-          "model": "GT-R",
-          "travelledDistance": 21477
+          "make": "Citroen",
+          "model": "Elysée",
+          "travelledDistance": 922354775807
         }
       },
       {
-        "discount": 20.0,
+        "discount": 0.0,
         "car": {
-          "make": "Fiat",
-          "model": "500 (2007) Abarth 695 Tributo Maserati",
-          "travelledDistance": 92236854775807
+          "make": "BMW",
+          "model": "M5 F10",
+          "travelledDistance": 10
         }
       }
     ]
@@ -28,19 +28,11 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 40.0,
+        "discount": 15.0,
         "car": {
-          "make": "Fiat",
-          "model": "Panda 4x4",
-          "travelledDistance": 2147447
-        }
-      },
-      {
-        "discount": 10.0,
-        "car": {
-          "make": "Chevy",
-          "model": "Malibu",
-          "travelledDistance": 92233854775807
+          "make": "Ferrari",
+          "model": "Daytona",
+          "travelledDistance": 922337275807
         }
       }
     ]
@@ -49,16 +41,7 @@
     "name": "Rema Revelle",
     "birthDate": "1970-05-01",
     "isYoungDriver": true,
-    "sales": [
-      {
-        "discount": 40.0,
-        "car": {
-          "make": "Ford",
-          "model": "Fiesta",
-          "travelledDistance": 2143647
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Carri Knapik",
@@ -66,11 +49,19 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 40.0,
+        "discount": 5.0,
         "car": {
           "make": "Dacia",
           "model": "Sandero Stepway",
-          "travelledDistance": 922337807
+          "travelledDistance": 92233724775807
+        }
+      },
+      {
+        "discount": 0.0,
+        "car": {
+          "make": "Toyota",
+          "model": "Camry Hybrid",
+          "travelledDistance": 2143647
         }
       }
     ]
@@ -79,32 +70,7 @@
     "name": "Garret Capron",
     "birthDate": "1975-07-01",
     "isYoungDriver": false,
-    "sales": [
-      {
-        "discount": 50.0,
-        "car": {
-          "make": "Nissan",
-          "model": "370Z",
-          "travelledDistance": 21447
-        }
-      },
-      {
-        "discount": 0.0,
-        "car": {
-          "make": "Citroen",
-          "model": "Berlingo",
-          "travelledDistance": 922354775807
-        }
-      },
-      {
-        "discount": 0.0,
-        "car": {
-          "make": "Alfa Romeo",
-          "model": "156",
-          "travelledDistance": 92036854775807
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Teddy Hobby",
@@ -112,43 +78,11 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 0.0,
-        "car": {
-          "make": "Seat",
-          "model": "Ibiza",
-          "travelledDistance": 21647
-        }
-      },
-      {
         "discount": 40.0,
         "car": {
-          "make": "Ferrari",
-          "model": "Daytona",
-          "travelledDistance": 922337275807
-        }
-      },
-      {
-        "discount": 0.0,
-        "car": {
-          "make": "Opel",
-          "model": "Omega",
-          "travelledDistance": 2147483647
-        }
-      },
-      {
-        "discount": 50.0,
-        "car": {
           "make": "Mercedes",
-          "model": "W211",
-          "travelledDistance": 92775807
-        }
-      },
-      {
-        "discount": 20.0,
-        "car": {
-          "make": "Seat",
-          "model": "Toledo",
-          "travelledDistance": 21447
+          "model": "W210",
+          "travelledDistance": 2147483647
         }
       }
     ]
@@ -159,11 +93,35 @@
     "isYoungDriver": false,
     "sales": [
       {
+        "discount": 5.0,
+        "car": {
+          "make": "Mercedes",
+          "model": "W211",
+          "travelledDistance": 47757
+        }
+      },
+      {
+        "discount": 15.0,
+        "car": {
+          "make": "Lamborghini",
+          "model": "Murciélago",
+          "travelledDistance": 2143647
+        }
+      },
+      {
         "discount": 10.0,
         "car": {
-          "make": "Fiat",
-          "model": "Panda 4x4",
-          "travelledDistance": 92233736854775807
+          "make": "Nissan",
+          "model": "Altima",
+          "travelledDistance": 2147447
+        }
+      },
+      {
+        "discount": 10.0,
+        "car": {
+          "make": "Nissan",
+          "model": "Altima",
+          "travelledDistance": 9223372775807
         }
       }
     ]
@@ -174,11 +132,27 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 30.0,
+        "discount": 5.0,
         "car": {
-          "make": "Citroen",
-          "model": "C3",
-          "travelledDistance": 2147647
+          "make": "Lamborghini",
+          "model": "Diablo",
+          "travelledDistance": 2147483647
+        }
+      },
+      {
+        "discount": 40.0,
+        "car": {
+          "make": "Ferrari",
+          "model": "F40",
+          "travelledDistance": 214647
+        }
+      },
+      {
+        "discount": 15.0,
+        "car": {
+          "make": "Mercedes",
+          "model": "W210",
+          "travelledDistance": 2147483647
         }
       }
     ]
@@ -189,19 +163,27 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 20.0,
+        "discount": 50.0,
         "car": {
-          "make": "Peugeot",
-          "model": "405",
-          "travelledDistance": 92236854775807
+          "make": "Mercedes",
+          "model": "W124",
+          "travelledDistance": 2147647
         }
       },
       {
-        "discount": 15.0,
+        "discount": 40.0,
         "car": {
-          "make": "Toyota",
-          "model": "Yaris",
-          "travelledDistance": 21477
+          "make": "Mercedes",
+          "model": "W202",
+          "travelledDistance": 2147647
+        }
+      },
+      {
+        "discount": 10.0,
+        "car": {
+          "make": "Chevy",
+          "model": "Cruze",
+          "travelledDistance": 9223372034775807
         }
       }
     ]
@@ -210,13 +192,39 @@
     "name": "Kristian Engberg",
     "birthDate": "1981-10-03",
     "isYoungDriver": false,
-    "sales": []
+    "sales": [
+      {
+        "discount": 5.0,
+        "car": {
+          "make": "Peugeot",
+          "model": "405",
+          "travelledDistance": 92233854775807
+        }
+      }
+    ]
   },
   {
     "name": "Hipolito Lamoreaux",
     "birthDate": "1982-08-01",
     "isYoungDriver": true,
-    "sales": []
+    "sales": [
+      {
+        "discount": 10.0,
+        "car": {
+          "make": "Mercedes",
+          "model": "A 170 CDI",
+          "travelledDistance": 9223775807
+        }
+      },
+      {
+        "discount": 5.0,
+        "car": {
+          "make": "Toyota",
+          "model": "Corolla",
+          "travelledDistance": 92235807
+        }
+      }
+    ]
   },
   {
     "name": "Zada Attwood",
@@ -224,11 +232,19 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 5.0,
+        "discount": 0.0,
         "car": {
-          "make": "Mercedes",
-          "model": "W212",
-          "travelledDistance": 2183647
+          "make": "Toyota",
+          "model": "Tacoma",
+          "travelledDistance": 9225807
+        }
+      },
+      {
+        "discount": 10.0,
+        "car": {
+          "make": "Dacia",
+          "model": "Duster",
+          "travelledDistance": 21447
         }
       }
     ]
@@ -239,19 +255,27 @@
     "isYoungDriver": false,
     "sales": [
       {
-        "discount": 0.0,
+        "discount": 50.0,
         "car": {
-          "make": "Mercedes",
-          "model": "W212",
-          "travelledDistance": 2147647
+          "make": "Renault",
+          "model": "Clio IV",
+          "travelledDistance": 2147483647
         }
       },
       {
-        "discount": 20.0,
+        "discount": 30.0,
         "car": {
-          "make": "Ford",
-          "model": "GT40",
-          "travelledDistance": 9223377
+          "make": "Mercedes",
+          "model": "W211",
+          "travelledDistance": 47757
+        }
+      },
+      {
+        "discount": 0.0,
+        "car": {
+          "make": "Great Wall",
+          "model": "H8",
+          "travelledDistance": 21447
         }
       }
     ]
@@ -262,11 +286,27 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 50.0,
+        "discount": 40.0,
         "car": {
-          "make": "Ferrari",
-          "model": "Daytona",
-          "travelledDistance": 2147447
+          "make": "Alfa Romeo",
+          "model": "Giulietta",
+          "travelledDistance": 922337203685807
+        }
+      },
+      {
+        "discount": 15.0,
+        "car": {
+          "make": "Ford",
+          "model": "Pinto",
+          "travelledDistance": 922337807
+        }
+      },
+      {
+        "discount": 40.0,
+        "car": {
+          "make": "Alfa Romeo",
+          "model": "AR51",
+          "travelledDistance": 922337275807
         }
       }
     ]
@@ -277,11 +317,19 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 50.0,
+        "discount": 0.0,
         "car": {
-          "make": "Peugeot",
-          "model": "308",
-          "travelledDistance": 854775807
+          "make": "Toyota",
+          "model": "Prius",
+          "travelledDistance": 922337807
+        }
+      },
+      {
+        "discount": 0.0,
+        "car": {
+          "make": "Dacia",
+          "model": "Duster",
+          "travelledDistance": 21447
         }
       }
     ]
@@ -290,32 +338,7 @@
     "name": "Lino Subia",
     "birthDate": "1985-12-21",
     "isYoungDriver": false,
-    "sales": [
-      {
-        "discount": 0.0,
-        "car": {
-          "make": "Renault",
-          "model": "Duster",
-          "travelledDistance": 922337203685807
-        }
-      },
-      {
-        "discount": 5.0,
-        "car": {
-          "make": "Nissan",
-          "model": "Altima",
-          "travelledDistance": 214747
-        }
-      },
-      {
-        "discount": 15.0,
-        "car": {
-          "make": "Chevy",
-          "model": "Corvette",
-          "travelledDistance": 92233720375807
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Jimmy Grossi",
@@ -323,27 +346,27 @@
     "isYoungDriver": true,
     "sales": [
       {
+        "discount": 0.0,
+        "car": {
+          "make": "Seat",
+          "model": "Mii",
+          "travelledDistance": 21447
+        }
+      },
+      {
         "discount": 40.0,
         "car": {
-          "make": "Alfa Romeo",
-          "model": "156",
-          "travelledDistance": 92233720368547
+          "make": "Ferrari",
+          "model": "250 GTO",
+          "travelledDistance": 2183647
         }
       },
       {
         "discount": 30.0,
         "car": {
-          "make": "Seat",
-          "model": "Mii",
-          "travelledDistance": 936854775807
-        }
-      },
-      {
-        "discount": 50.0,
-        "car": {
-          "make": "Nissan",
-          "model": "Altima",
-          "travelledDistance": 9223372775807
+          "make": "Mercedes",
+          "model": "W212",
+          "travelledDistance": 2147647
         }
       }
     ]
@@ -352,30 +375,30 @@
     "name": "Carole Witman",
     "birthDate": "1987-10-01",
     "isYoungDriver": false,
-    "sales": [
-      {
-        "discount": 20.0,
-        "car": {
-          "make": "Nissan",
-          "model": "Altima",
-          "travelledDistance": 214747
-        }
-      },
-      {
-        "discount": 5.0,
-        "car": {
-          "make": "Skoda",
-          "model": "Fabia",
-          "travelledDistance": 92233720368807
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Oren Perlman",
     "birthDate": "1988-10-01",
     "isYoungDriver": true,
-    "sales": []
+    "sales": [
+      {
+        "discount": 5.0,
+        "car": {
+          "make": "Skoda",
+          "model": "Rapid",
+          "travelledDistance": 2147447
+        }
+      },
+      {
+        "discount": 0.0,
+        "car": {
+          "make": "Opel",
+          "model": "Kadet",
+          "travelledDistance": 21474847
+        }
+      }
+    ]
   },
   {
     "name": "Natalie Poli",
@@ -383,19 +406,11 @@
     "isYoungDriver": false,
     "sales": [
       {
-        "discount": 15.0,
+        "discount": 0.0,
         "car": {
-          "make": "Citroen",
-          "model": "C1",
+          "make": "Renault",
+          "model": "Alaskan",
           "travelledDistance": 2147483647
-        }
-      },
-      {
-        "discount": 20.0,
-        "car": {
-          "make": "Toyota",
-          "model": "Yaris",
-          "travelledDistance": 21477
         }
       }
     ]
@@ -404,7 +419,24 @@
     "name": "Marcelle Griego",
     "birthDate": "1990-10-04",
     "isYoungDriver": true,
-    "sales": []
+    "sales": [
+      {
+        "discount": 30.0,
+        "car": {
+          "make": "Opel",
+          "model": "Omega",
+          "travelledDistance": 1
+        }
+      },
+      {
+        "discount": 5.0,
+        "car": {
+          "make": "Great Wall",
+          "model": "H2",
+          "travelledDistance": 21647
+        }
+      }
+    ]
   },
   {
     "name": "Yvonne Mccalla",
@@ -412,11 +444,51 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 50.0,
+        "discount": 5.0,
         "car": {
           "make": "Skoda",
-          "model": "Rapid Spaceback",
-          "travelledDistance": 474
+          "model": "Rapid",
+          "travelledDistance": 2147447
+        }
+      },
+      {
+        "discount": 10.0,
+        "car": {
+          "make": "Seat",
+          "model": "Toledo",
+          "travelledDistance": 2147647
+        }
+      },
+      {
+        "discount": 50.0,
+        "car": {
+          "make": "Seat",
+          "model": "Toledo",
+          "travelledDistance": 2147647
+        }
+      },
+      {
+        "discount": 30.0,
+        "car": {
+          "make": "Ferrari",
+          "model": "Daytona",
+          "travelledDistance": 922337275807
+        }
+      },
+      {
+        "discount": 10.0,
+        "car": {
+          "make": "Alfa Romeo",
+          "model": "Giulietta",
+          "travelledDistance": 2036854775807
+        }
+      },
+      {
+        "discount": 15.0,
+        "car": {
+          "make": "Fiat",
+          "model": "Panda 4x4",
+          "travelledDistance": 2147447
         }
       }
     ]
@@ -425,47 +497,13 @@
     "name": "Ann Mcenaney",
     "birthDate": "1992-03-02",
     "isYoungDriver": true,
-    "sales": [
-      {
-        "discount": 10.0,
-        "car": {
-          "make": "Citroen",
-          "model": "C3",
-          "travelledDistance": 2147647
-        }
-      },
-      {
-        "discount": 50.0,
-        "car": {
-          "make": "Citroen",
-          "model": "C5",
-          "travelledDistance": 2147483647
-        }
-      },
-      {
-        "discount": 50.0,
-        "car": {
-          "make": "Toyota",
-          "model": "Tacoma",
-          "travelledDistance": 21474647
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Cinthia Lasala",
     "birthDate": "1992-11-01",
     "isYoungDriver": true,
-    "sales": [
-      {
-        "discount": 10.0,
-        "car": {
-          "make": "Peugeot",
-          "model": "407",
-          "travelledDistance": 922036854775807
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Emmitt Benally",
@@ -473,11 +511,11 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 50.0,
+        "discount": 10.0,
         "car": {
-          "make": "Toyota",
-          "model": "Tacoma",
-          "travelledDistance": 2147
+          "make": "Rolls-Royce",
+          "model": "Ghost",
+          "travelledDistance": 214747
         }
       }
     ]
@@ -488,19 +526,35 @@
     "isYoungDriver": false,
     "sales": [
       {
-        "discount": 10.0,
+        "discount": 0.0,
         "car": {
-          "make": "Alfa Romeo",
-          "model": "156",
-          "travelledDistance": 92036854775807
+          "make": "Ferrari",
+          "model": "250 GTO",
+          "travelledDistance": 214747
         }
       },
       {
-        "discount": 30.0,
+        "discount": 5.0,
         "car": {
           "make": "Renault",
           "model": "Alaskan",
           "travelledDistance": 2147483647
+        }
+      },
+      {
+        "discount": 15.0,
+        "car": {
+          "make": "Peugeot",
+          "model": "206",
+          "travelledDistance": 21474647
+        }
+      },
+      {
+        "discount": 50.0,
+        "car": {
+          "make": "Alfa Romeo",
+          "model": "Giulietta",
+          "travelledDistance": 2036854775807
         }
       }
     ]
@@ -509,63 +563,13 @@
     "name": "Faustina Burgher",
     "birthDate": "1994-06-01",
     "isYoungDriver": false,
-    "sales": [
-      {
-        "discount": 30.0,
-        "car": {
-          "make": "BMW",
-          "model": "E67",
-          "travelledDistance": 21447
-        }
-      },
-      {
-        "discount": 50.0,
-        "car": {
-          "make": "Mercedes",
-          "model": "A 160 CDI",
-          "travelledDistance": 4775807
-        }
-      },
-      {
-        "discount": 5.0,
-        "car": {
-          "make": "Nissan",
-          "model": "Altima",
-          "travelledDistance": 214747
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Taina Achenbach",
     "birthDate": "1994-10-01",
     "isYoungDriver": false,
-    "sales": [
-      {
-        "discount": 10.0,
-        "car": {
-          "make": "Ford",
-          "model": "Pinto",
-          "travelledDistance": 2147647
-        }
-      },
-      {
-        "discount": 20.0,
-        "car": {
-          "make": "Opel",
-          "model": "Vectra",
-          "travelledDistance": 9223372854775807
-        }
-      },
-      {
-        "discount": 20.0,
-        "car": {
-          "make": "Rolls-Royce",
-          "model": "Dawn",
-          "travelledDistance": 214647
-        }
-      }
-    ]
+    "sales": []
   },
   {
     "name": "Johnette Derryberry",
@@ -573,19 +577,19 @@
     "isYoungDriver": true,
     "sales": [
       {
-        "discount": 40.0,
+        "discount": 20.0,
         "car": {
-          "make": "Peugeot",
-          "model": "405",
-          "travelledDistance": 92036854775807
+          "make": "Toyota",
+          "model": "Corolla",
+          "travelledDistance": 975807
         }
       },
       {
-        "discount": 30.0,
+        "discount": 20.0,
         "car": {
-          "make": "Chevy",
-          "model": "Camaro",
-          "travelledDistance": 2147487
+          "make": "Rolls-Royce",
+          "model": "Phantom Drophead Coupé",
+          "travelledDistance": 9223372075807
         }
       }
     ]
@@ -594,15 +598,6 @@
     "name": "Daniele Zarate",
     "birthDate": "1995-10-05",
     "isYoungDriver": false,
-    "sales": [
-      {
-        "discount": 40.0,
-        "car": {
-          "make": "Skoda",
-          "model": "Fabia",
-          "travelledDistance": 92233720368807
-        }
-      }
-    ]
+    "sales": []
   }
 ]

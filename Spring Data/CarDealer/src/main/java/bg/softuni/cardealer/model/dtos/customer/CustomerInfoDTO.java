@@ -1,16 +1,16 @@
 package bg.softuni.cardealer.model.dtos.customer;
 
-import com.google.gson.annotations.SerializedName;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
+import java.time.LocalDate;
+
 
 @Getter
 @Setter
@@ -18,14 +18,15 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @XmlRootElement(name = "customer")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CustomerTotalSaleDTO {
+public class CustomerInfoDTO {
 
-    @SerializedName(value = "fullName")
-    @XmlAttribute(name = "full-name")
+    @XmlElement
+    private long id;
+    @XmlElement
     private String name;
-    @XmlAttribute(name = "bought-cars")
-    private int boughtCars;
-    @XmlAttribute(name = "spent-money")
-    private BigDecimal spentMoney;
+    @XmlElement(name = "birth-date")
+    private String birthDate;
+    @XmlElement(name = "is-young-driver")
+    private boolean isYoungDriver;
 
 }

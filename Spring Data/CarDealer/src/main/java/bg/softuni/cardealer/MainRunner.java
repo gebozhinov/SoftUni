@@ -30,11 +30,11 @@ public class MainRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         this.seedService.seedDatabase();
-//        customerService.getAllCustomers();
-//        carService.findAllByMakeOrderByModelAscTravelledDistanceDesc("Toyota");
-//        supplierService.findAllByImporterIsFalse();
-//        carService.findAllWithParts();
-//        customerService.getTotalSalesByCustomer();
-//        saleService.getAll();
+        customerService.getAllCustomers();
+        carService.findAllByMakeOrderByModelAscTravelledDistanceDesc("Toyota");
+        supplierService.findAllByImporterIsFalse();
+        carService.findAllWithParts();
+        customerService.getTotalSalesByCustomer();
+        saleService.getAll();
     }
 }

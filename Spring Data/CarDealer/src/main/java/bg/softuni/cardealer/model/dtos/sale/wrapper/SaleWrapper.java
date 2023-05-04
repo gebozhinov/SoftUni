@@ -1,26 +1,25 @@
-package bg.softuni.cardealer.model.dtos.car;
+package bg.softuni.cardealer.model.dtos.sale.wrapper;
 
+import bg.softuni.cardealer.model.dtos.sale.SaleDTO;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "part")
+@XmlRootElement(name = "sales")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PartBaseInfoDTO {
+public class SaleWrapper {
 
-    @XmlAttribute
-    private String name;
-    @XmlAttribute
-    private BigDecimal price;
+    @XmlElement(name = "sale")
+    private List<SaleDTO> sales;
 }
