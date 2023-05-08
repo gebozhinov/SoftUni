@@ -26,12 +26,10 @@ public class Forecast extends BaseEntity {
 
     @Column(name = "min_temperature", nullable = false)
     private Double minTemperature;
-
     @Column(nullable = false)
     private LocalTime sunrise;
     @Column(nullable = false)
     private LocalTime sunset;
-
     @ManyToOne
     private City city;
 

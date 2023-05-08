@@ -19,14 +19,10 @@ import java.util.Set;
 public class City extends BaseEntity {
 
     @Column(name = "city_name",nullable = false, unique = true)
-    @Size(min = 2, max = 60)
     private String cityName;
-
     @Column(columnDefinition = "TEXT")
-    @Size(min = 2)
     private String description;
     @Column(nullable = false)
-    @Min(value = 500)
     private Integer population;
     @ManyToOne
     private Country country;

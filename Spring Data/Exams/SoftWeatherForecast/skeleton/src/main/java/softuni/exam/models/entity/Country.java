@@ -22,10 +22,8 @@ import java.util.Set;
 public class Country extends BaseEntity{
 
     @Column(name = "country_name",nullable = false, unique = true)
-    @Size(min = 2, max = 60)
     private String countryName;
     @Column(nullable = false)
-    @Size(min = 2, max = 20)
     private String currency;
 
     @OneToMany(targetEntity = City.class, mappedBy = "country")
