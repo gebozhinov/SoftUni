@@ -19,16 +19,6 @@ public class ImportCompaniesController {
         this.companyService = companyService;
     }
 
-    @GetMapping("import/xml")
-    public String importXML(Model model) {
-
-        boolean areCompaniesImported = this.companyService.areImported();
-
-        boolean[] importedStatus = {areCompaniesImported, false, false};
-        model.addAttribute("areImported", importedStatus);
-        return "xml/import-xml";
-    }
-
     @GetMapping("import/companies")
     public String viewImportCompanies(Model model) throws IOException {
 
