@@ -15,7 +15,9 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static bg.softuni.nextleveltechnologies.constant.Message.INCORRECT_DATA;
 import static bg.softuni.nextleveltechnologies.constant.Message.SUCCESSFULLY_IMPORTED_EMPLOYEE;
@@ -89,5 +91,15 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public boolean areImported() {
         return this.employeeRepository.count() > 0;
+    }
+
+    @Override
+    public String findAllByAgeAfter(Integer age) {
+
+        return employeeRepository.findAllByAgeAfter(age).orElseThrow(NoSuchElementException::new)
+                .stream()
+                .map(Employee::toString)
+                .collect(Collectors.joining(System.lineSeparator()));
+
     }
 }

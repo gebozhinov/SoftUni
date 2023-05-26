@@ -28,4 +28,10 @@ public class Employee {
     @ManyToOne(optional = false)
     private Project project;
 
+    @Override
+    public String toString() {
+        return "Employee name: " + firstName + " " + lastName + "\n" +
+                "   Age: " + age + "\n" +
+                "   Project name: " + project.getName();
+    }
 }

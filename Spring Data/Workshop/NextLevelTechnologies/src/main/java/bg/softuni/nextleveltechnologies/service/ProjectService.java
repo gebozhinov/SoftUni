@@ -1,7 +1,9 @@
 package bg.softuni.nextleveltechnologies.service;
 
+
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
+
 
 public interface ProjectService {
 
@@ -10,4 +12,6 @@ public interface ProjectService {
     String importProjects() throws JAXBException;
 
     boolean areImported();
+
+    String findAllByFinished();
 }

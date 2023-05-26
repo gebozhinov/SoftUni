@@ -17,7 +17,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static bg.softuni.nextleveltechnologies.constant.Message.INCORRECT_DATA;
 import static bg.softuni.nextleveltechnologies.constant.Message.SUCCESSFULLY_IMPORTED_PROJECT;
@@ -98,6 +100,16 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public boolean areImported() {
         return this.projectRepository.count() > 0;
+    }
+
+    @Override
+    public String findAllByFinished() {
+
+        return projectRepository.findAllByIsFinishedTrue()
+                .orElseThrow(NoSuchElementException::new)
+                .stream()
+                .map(Project::toString)
+                .collect(Collectors.joining(System.lineSeparator()));
     }
 
 

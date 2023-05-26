@@ -40,4 +40,16 @@ public class Project {
 
     @OneToMany(targetEntity = Employee.class, mappedBy = "project")
     private Set<Employee> employees;
+
+
+    @Override
+    public String toString() {
+        return "Project: \n" +
+                "   name: " + name + "\n" +
+                "   description: " + description + "\n" +
+                "   is finished: " + isFinished + "\n" +
+                "   payment: " + payment + "\n" +
+                "   start date: " + startDate + "\n" +
+                "   " + company;
+    }
 }

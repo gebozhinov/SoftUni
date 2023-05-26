@@ -23,4 +23,9 @@ public class Company {
 
     @OneToMany(targetEntity = Project.class, mappedBy = "company")
     private Set<Project> projects;
+
+    @Override
+    public String toString() {
+        return "Company name: " + name;
+    }
 }
