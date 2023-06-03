@@ -34,10 +34,10 @@ public class Seller extends BaseEntity {
     private Seller manager;
 
     public Seller() {}
+
     public String getFirstName() {
         return firstName;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -72,5 +72,13 @@ public class Seller extends BaseEntity {
 
     public void setShop(Shop shop) {
         this.shop = shop;
+    }
+
+    public Seller getManager() {
+        return manager;
+    }
+
+    public void setManager(Seller manager) {
+        this.manager = manager;
     }
 }
