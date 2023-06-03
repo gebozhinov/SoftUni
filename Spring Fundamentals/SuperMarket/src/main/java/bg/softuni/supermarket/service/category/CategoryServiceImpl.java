@@ -2,7 +2,6 @@ package bg.softuni.supermarket.service.category;
 
 import bg.softuni.supermarket.domain.entities.Category;
 import bg.softuni.supermarket.repository.CategoryRepository;
-import bg.softuni.supermarket.util.ValidationUtil;
 import org.springframework.stereotype.Service;
 
 import static bg.softuni.supermarket.constant.Messages.*;
@@ -12,8 +11,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository categoryRepository;
 
-    public CategoryServiceImpl(CategoryRepository categoryRepository,
-                               ValidationUtil validationUtil) {
+    public CategoryServiceImpl(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
 
