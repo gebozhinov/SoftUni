@@ -12,7 +12,7 @@ public class UserRole extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToMany(targetEntity = User.class, mappedBy = "role")
+    @OneToMany(targetEntity = User.class, mappedBy = "role", fetch = FetchType.EAGER)
     private Set<User> users;
 
     public UserRole() {}
@@ -21,8 +21,9 @@ public class UserRole extends BaseEntity {
         return role;
     }
 
-    public void setRole(Role role) {
+    public UserRole setRole(Role role) {
         this.role = role;
+        return this;
     }
 
     public Set<User> getUsers() {

@@ -24,7 +24,7 @@ public class User extends BaseEntity {
     @Column(name = "is_active")
     private Boolean isActive;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     private UserRole role;
 
     @Column(name = "image_url")
