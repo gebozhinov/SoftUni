@@ -20,13 +20,12 @@ public class DataInitializer implements CommandLineRunner  {
     @Override
     public void run(String... args) throws Exception {
 
-        BrandEntity brand = new BrandEntity();
-        brand.setCreated(LocalDate.now());
-        brand.setModified(LocalDate.now());
-        brand.setName("Audi");
-
-        brandService.addBrand(brand);
-        System.out.println();
+//        BrandEntity brand = new BrandEntity();
+//        brand.setCreated(LocalDate.now());
+//        brand.setModified(LocalDate.now());
+//        brand.setName("Audi");
+//
+//        brandService.addBrand(brand);
 
     }
 }
