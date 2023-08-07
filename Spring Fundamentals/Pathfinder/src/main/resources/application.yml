@@ -18,7 +18,7 @@ spring:
 #      encoding: utf-8
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     open-in-view: false
     properties:
       hibernate:

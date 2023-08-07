@@ -37,6 +37,11 @@ public class Route {
         inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories;
 
+    @OneToMany(targetEntity = Comments.class, mappedBy = "route", cascade = CascadeType.ALL)
+    private Set<Comments> comments;
+
+    @OneToMany(targetEntity = Picture.class, mappedBy = "route", fetch = FetchType.EAGER)
+    private Set<Picture> pictures;
     public Long getId() {
         return id;
     }
@@ -106,6 +111,24 @@ public class Route {
 
     public Route setDescription(String description) {
         this.description = description;
+        return this;
+    }
+
+    public Set<Comments> getComments() {
+        return comments;
+    }
+
+    public Route setComments(Set<Comments> comments) {
+        this.comments = comments;
+        return this;
+    }
+
+    public Set<Picture> getPictures() {
+        return pictures;
+    }
+
+    public Route setPictures(Set<Picture> pictures) {
+        this.pictures = pictures;
         return this;
     }
 }
