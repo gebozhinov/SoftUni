@@ -67,7 +67,14 @@
 
 
 <div class="container-fluid">
-    <h5 class="text-center text-white mt-5">Welcome to MobiLeLeLe</h5>
+    <h5 class="text-center text-white mt-5">Welcome to MobiLeLeLe,
+        <span th:if="${@currentUser.isLogged()}"
+          th:text="${@currentUser.getName()}" >
+        </span>
+        <span th:if="${@currentUser.isLogged() == false}">
+            Anonymous!
+        </span>
+    </h5>
 </div>
 
 <div>

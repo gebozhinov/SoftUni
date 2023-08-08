@@ -1,4 +1,7 @@
 package bg.softuni.Mobilelele.service;
 
-public interface ModelService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class ModelService {
 }
