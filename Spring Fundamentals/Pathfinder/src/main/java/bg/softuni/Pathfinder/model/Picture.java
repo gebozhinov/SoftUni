@@ -22,14 +22,7 @@ public class Picture {
     @ManyToOne
     private Route route;
 
-    public Long getId() {
-        return id;
-    }
 
-    public Picture setId(Long id) {
-        this.id = id;
-        return this;
-    }
 
     public String getTitle() {
         return title;

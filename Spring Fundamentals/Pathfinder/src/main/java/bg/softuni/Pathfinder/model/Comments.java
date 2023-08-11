@@ -27,14 +27,7 @@ public class Comments {
     @ManyToOne
     private Route route;
 
-    public Long getId() {
-        return id;
-    }
 
-    public Comments setId(Long id) {
-        this.id = id;
-        return this;
-    }
 
     public boolean isApproved() {
         return isApproved;

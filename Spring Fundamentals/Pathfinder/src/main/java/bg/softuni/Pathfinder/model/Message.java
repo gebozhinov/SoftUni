@@ -24,14 +24,7 @@ public class Message {
     @ManyToOne
     private User recipient;
 
-    public Long getId() {
-        return id;
-    }
 
-    public Message setId(Long id) {
-        this.id = id;
-        return this;
-    }
 
     public LocalDateTime getDateTime() {
         return dateTime;
