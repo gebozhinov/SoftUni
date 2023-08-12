@@ -91,7 +91,7 @@
                     type="password"
                     class="form-control"
                    placeholder="Confirm Password"/>
-            <div class="password-match"
+            <div class="error-global"
                     th:each="err : ${#fields.errors('global')}"
                  th:text="${err}"
             />

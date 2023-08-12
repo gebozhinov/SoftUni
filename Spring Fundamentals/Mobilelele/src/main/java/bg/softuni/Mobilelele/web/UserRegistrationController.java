@@ -23,7 +23,7 @@ public class UserRegistrationController {
     }
 
     @ModelAttribute("userModel")
-    public UserRegisterDTO initUserModel(Model model) {
+    public UserRegisterDTO userModel() {
         return new UserRegisterDTO();
     }
 
