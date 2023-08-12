@@ -1,9 +1,11 @@
 package bg.softuni.Mobilelele.model.dto;
 
+import bg.softuni.Mobilelele.model.validation.EqualPassword;
+import bg.softuni.Mobilelele.model.validation.UniqueUsername;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
-
+@EqualPassword(message = "Passwords do not match.")
 public class UserRegisterDTO {
 
     @NotEmpty
@@ -12,12 +14,15 @@ public class UserRegisterDTO {
     @NotEmpty
     @Size(min = 2, max = 20)
     private String lastName;
-    @NotEmpty
-    @Size(min = 4)
+    @NotEmpty(message = "Enter username.")
+    @Size(min = 4, message = "Username should be at least 4 symbols.")
+    @UniqueUsername
     private String username;
-    @NotEmpty
-    @Size(min = 5)
+    @NotEmpty(message = "Password should not be empty.")
+    @Size(min = 5, message = "Password must be at least 5 symbols.")
     private String password;
+
+
     private String confirmPassword;
 
     public String getFirstName() {

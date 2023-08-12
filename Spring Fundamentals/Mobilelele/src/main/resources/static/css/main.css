@@ -57,3 +57,20 @@ form.main-form {
 .logged-user {
      color: white;
 }
+
+.password-match {
+     /*display:none;*/
+     /*width:100%;*/
+     /*margin-top:.25rem;*/
+     /*font-size:80%;*/
+     /*color:#dc3545*/
+     color: #721c24;
+     background-color: #f8d7da;
+     border-color: #f5c6cb;
+     border-radius: .25rem;
+     margin-top: .25rem;
+     font-size: 80%;
+     position: relative;
+     padding: .75rem 1.25rem;
+
+}
