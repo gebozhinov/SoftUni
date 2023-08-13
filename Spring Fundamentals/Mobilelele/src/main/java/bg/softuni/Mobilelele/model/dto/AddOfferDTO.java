@@ -1,7 +1,7 @@
 package bg.softuni.Mobilelele.model.dto;
 
-import bg.softuni.Mobilelele.model.entity.enums.Engine;
-import bg.softuni.Mobilelele.model.entity.enums.Transmission;
+import bg.softuni.Mobilelele.model.enums.Engine;
+import bg.softuni.Mobilelele.model.enums.Transmission;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
 
@@ -23,11 +23,15 @@ public class AddOfferDTO {
     @NotNull
     private Transmission transmission;
 
+    @NotNull
     private Integer year;
 
+    @NotNull
     private Integer mileage;
 
+    @NotNull
     private String description;
+    @NotNull
 
     private String imageUrl;
 

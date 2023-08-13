@@ -3,7 +3,6 @@ package bg.softuni.Mobilelele.web;
 import bg.softuni.Mobilelele.model.dto.AddOfferDTO;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -32,14 +31,15 @@ public class OfferController {
     }
 
     @PostMapping("/add")
-    public String addOff(@Valid AddOfferDTO addOfferDTO,
-                         BindingResult bindingResult,
-                         RedirectAttributes redirectAttributes) {
+    public String addOffer(@Valid AddOfferDTO offerModel,
+                           BindingResult bindingResult,
+                           RedirectAttributes redirectAttributes) {
 
         if (bindingResult.hasErrors()) {
 
-            redirectAttributes.addFlashAttribute("offerModel", addOfferDTO);
-            redirectAttributes.addFlashAttribute("ord.springframework.validation.BindingResult.offerModel", bindingResult);
+            redirectAttributes.addFlashAttribute("offerModel", offerModel);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.offerModel",
+                    bindingResult);
 
             return "redirect:/offers/add";
         }

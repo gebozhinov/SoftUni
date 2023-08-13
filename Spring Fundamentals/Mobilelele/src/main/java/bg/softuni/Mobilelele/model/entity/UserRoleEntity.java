@@ -1,6 +1,6 @@
 package bg.softuni.Mobilelele.model.entity;
 
-import bg.softuni.Mobilelele.model.entity.enums.Role;
+import bg.softuni.Mobilelele.model.enums.Role;
 import jakarta.persistence.*;
 
 @Entity

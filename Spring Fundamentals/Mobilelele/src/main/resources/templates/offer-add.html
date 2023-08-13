@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -38,14 +38,15 @@
             </div>
             <div class="form-group col-md-6 mb-3">
                 <label for="price" class="text-white font-weight-bold">Price</label>
-                <input id="price"
+                <input
+                        id="price"
                        th:field="*{price}"
                        th:errorclass="is-invalid"
                        type="number"
                        step="100"
                        class="form-control"
-                       placeholder="Suggested price"/>
-                <p  class=" errors alert alert-danger">
+                       placeholder="Suggested price" />
+                <p class="invalid-feedback errors alert alert-danger">
                         Suggested price is required.
                 </p>
             </div>
@@ -53,19 +54,20 @@
         <div class="row">
             <div class="form-group col-md-6 mb-3">
                 <label class="text-center text-white font-weight-bold" for="engine">Engine</label>
-                <select id="engine"
+                <select
+                        id="engine"
                         name="engine"
-                        th:field="*{engine}"
                         th:errorclass="is-invalid"
                         class="form-control">
                     <option value="">- Select engine type -</option>
-                    <option th:each="e : ${T(bg.softuni.Mobilelele.model.entity.enums.Engine).values()}"
+                    <option th:each="e : ${T(bg.softuni.Mobilelele.model.enums.Engine).values()}"
                             th:text="${e}"
                             th:value="${e}"
                             th:selected="${e} == *{engine}">
                         Engine type
                     </option>
                 </select>
+<!--                <p th:if="${#fields.hasErrors('engine')}">Invalid engine</p>-->
                 <p class="invalid-feedback errors alert alert-danger">
                     Engine type is required.
                 </p>
@@ -78,7 +80,7 @@
                         th:errorclass="is-invalid">
                     <option value="">- Select transmission type -</option>
                     <option
-                        th:each="e : ${T(bg.softuni.Mobilelele.model.entity.enums.Transmission).values()}"
+                        th:each="e : ${T(bg.softuni.Mobilelele.model.enums.Transmission).values()}"
                         th:text="${e}"
                         th:value="${e}"
                         th:selected="${e} == *{transmission}" >

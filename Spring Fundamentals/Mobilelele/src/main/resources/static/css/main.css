@@ -59,11 +59,6 @@ form.main-form {
 }
 
 .error-global {
-     /*display:none;*/
-     /*width:100%;*/
-     /*margin-top:.25rem;*/
-     /*font-size:80%;*/
-     /*color:#dc3545*/
      color: #721c24;
      background-color: #f8d7da;
      border-color: #f5c6cb;

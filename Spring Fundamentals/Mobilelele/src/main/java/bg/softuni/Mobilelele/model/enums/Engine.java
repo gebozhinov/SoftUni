@@ -1,4 +1,4 @@
-package bg.softuni.Mobilelele.model.entity.enums;
+package bg.softuni.Mobilelele.model.enums;
 
 public enum Engine {
 
