@@ -13,7 +13,7 @@ public class AddOfferDTO {
 
     private Long modelId;
 
-    @NotNull(message = "Input price.")
+    @NotNull(message = "Price is required.")
     @DecimalMin(value = "0", message = "Price must be positive.")
     private BigDecimal price;
 
