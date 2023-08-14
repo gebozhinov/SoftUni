@@ -1,6 +1,9 @@
 package bg.softuni.Mobilelele.web;
 
 import bg.softuni.Mobilelele.model.dto.AddOfferDTO;
+import bg.softuni.Mobilelele.model.dto.BrandDTO;
+import bg.softuni.Mobilelele.service.BrandService;
+import bg.softuni.Mobilelele.service.OfferService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -10,14 +13,28 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/offers")
 public class OfferController {
 
+    private final OfferService offerService;
+    private final BrandService brandService;
+
+    public OfferController(OfferService offerService,
+                           BrandService brandService) {
+        this.offerService = offerService;
+        this.brandService = brandService;
+    }
 
     @ModelAttribute("offerModel")
     public AddOfferDTO offerModel() {
         return new AddOfferDTO();
+    }
+    @ModelAttribute("brands")
+    public List<BrandDTO> brands() {
+        return brandService.getAllBrands();
     }
 
     @GetMapping("/all")
@@ -44,7 +61,8 @@ public class OfferController {
             return "redirect:/offers/add";
         }
 
-        return "redirect:/";
+        offerService.addOffer(offerModel);
+        return "redirect:/offers/all";
     }
 
 }

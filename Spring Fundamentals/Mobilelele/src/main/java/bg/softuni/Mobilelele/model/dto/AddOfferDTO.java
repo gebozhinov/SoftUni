@@ -2,8 +2,7 @@ package bg.softuni.Mobilelele.model.dto;
 
 import bg.softuni.Mobilelele.model.enums.Engine;
 import bg.softuni.Mobilelele.model.enums.Transmission;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.*;
 
 
 import java.math.BigDecimal;
@@ -11,6 +10,8 @@ import java.math.BigDecimal;
 public class AddOfferDTO {
 
 
+    @NotNull
+    @Min(1)
     private Long modelId;
 
     @NotNull(message = "Price is required.")
@@ -24,16 +25,17 @@ public class AddOfferDTO {
     private Transmission transmission;
 
     @NotNull
+    @Min(1930)
     private Integer year;
 
     @NotNull
+    @Positive
     private Integer mileage;
 
-    @NotNull
+    @NotBlank
     private String description;
-    @NotNull
-
-    private String imageUrl;
+    @NotBlank
+    private String imageURL;
 
     public Long getModelId() {
         return modelId;
@@ -98,12 +100,12 @@ public class AddOfferDTO {
         return this;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public AddOfferDTO setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public AddOfferDTO setImageURL(String imageURL) {
+        this.imageURL = imageURL;
         return this;
     }
 }

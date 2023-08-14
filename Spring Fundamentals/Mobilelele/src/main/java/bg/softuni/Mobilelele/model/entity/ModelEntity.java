@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Table(name = "models")
 public class ModelEntity extends BaseEntity {
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String name;
 
     @Enumerated(EnumType.STRING)

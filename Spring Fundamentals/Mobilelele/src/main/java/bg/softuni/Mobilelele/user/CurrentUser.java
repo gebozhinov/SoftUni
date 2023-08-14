@@ -7,6 +7,7 @@ import org.springframework.web.context.annotation.SessionScope;
 @SessionScope
 public class CurrentUser {
 
+    private String username;
     private String name;
     private boolean isLogged;
 
@@ -29,8 +30,17 @@ public class CurrentUser {
     }
 
     public void clear() {
+        this.username = null;
         this.name = null;
         this.isLogged = false;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public CurrentUser setUsername(String username) {
+        this.username = username;
+        return this;
+    }
 }
