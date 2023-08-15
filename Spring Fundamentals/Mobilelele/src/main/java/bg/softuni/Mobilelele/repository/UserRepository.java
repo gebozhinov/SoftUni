@@ -14,4 +14,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     @Query(value = "SELECT * FROM users " +
             "WHERE username = :username",nativeQuery = true)
     Optional<UserEntity> login(String username);
+
+
 }
