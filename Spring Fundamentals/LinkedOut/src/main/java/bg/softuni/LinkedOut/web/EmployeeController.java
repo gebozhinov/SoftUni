@@ -1,6 +1,7 @@
 package bg.softuni.LinkedOut.web;
 
 import bg.softuni.LinkedOut.model.dto.AddEmployeeDTO;
+import bg.softuni.LinkedOut.model.dto.AllEmployeesDTOImpl;
 import bg.softuni.LinkedOut.service.CompanyService;
 import bg.softuni.LinkedOut.service.EmployeeService;
 import jakarta.validation.Valid;
@@ -37,6 +38,11 @@ public class EmployeeController {
         return this.companyService.findAllCompanyNames();
     }
 
+    @ModelAttribute("allEmployees")
+    public List<AllEmployeesDTOImpl> allEmployeesDTO() {
+        return this.employeeService.findAllEmployees();
+    }
+
     @GetMapping("/add")
     public String addEmployee() {
         return "employee-add";
@@ -60,5 +66,10 @@ public class EmployeeController {
 
         return "redirect:/";
 
+    }
+
+    @GetMapping("/all")
+    public String allEmployees() {
+        return "employee-all";
     }
 }

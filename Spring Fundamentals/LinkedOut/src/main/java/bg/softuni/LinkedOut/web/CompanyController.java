@@ -1,6 +1,9 @@
 package bg.softuni.LinkedOut.web;
 
 import bg.softuni.LinkedOut.model.dto.AddCompanyDTO;
+import bg.softuni.LinkedOut.model.dto.AllCompaniesDTO;
+import bg.softuni.LinkedOut.model.dto.AllCompaniesDTOImpl;
+import bg.softuni.LinkedOut.repository.CompanyRepository;
 import bg.softuni.LinkedOut.service.CompanyService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -11,12 +14,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/companies")
 public class CompanyController {
 
 
     private final CompanyService companyService;
+
 
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
@@ -27,6 +33,13 @@ public class CompanyController {
         return new AddCompanyDTO();
     }
 
+    @ModelAttribute("allCompanies")
+    public List<AllCompaniesDTOImpl> allCompaniesDTO() {
+
+      return this.companyService.findAllCompanies();
+
+
+    }
     @GetMapping("/add")
     public String addCompany() {
         return "company-add";
@@ -49,6 +62,12 @@ public class CompanyController {
         this.companyService.addCompany(addCompanyDTO);
 
         return "redirect:/";
+    }
+
+    @GetMapping("/all")
+    public String allCompanies() {
+
+        return "company-all";
     }
 
 }

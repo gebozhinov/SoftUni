@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>LinkedOut</title>
@@ -79,6 +79,7 @@
                                     <input
                                             type="radio"
                                             th:field="*{educationLevel}"
+                                            th:errorclass="is-invalid"
                                             th:value="${e}"
                                             class="form-check-input">
                                     <label class="form-check-label"
