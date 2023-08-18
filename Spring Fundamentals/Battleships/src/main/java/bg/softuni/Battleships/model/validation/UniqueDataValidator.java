@@ -1,5 +1,6 @@
 package bg.softuni.Battleships.model.validation;
 
+import bg.softuni.Battleships.repository.ShipRepository;
 import bg.softuni.Battleships.repository.UserRepository;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
@@ -7,10 +8,13 @@ import jakarta.validation.ConstraintValidatorContext;
 public class UniqueDataValidator implements ConstraintValidator<UniqueData, String> {
 
     private final UserRepository userRepository;
+    private final ShipRepository shipRepository;
     private String fieldName;
 
-    public UniqueDataValidator(UserRepository userRepository) {
+    public UniqueDataValidator(UserRepository userRepository,
+                               ShipRepository shipRepository) {
         this.userRepository = userRepository;
+        this.shipRepository = shipRepository;
     }
 
     @Override
@@ -21,12 +25,12 @@ public class UniqueDataValidator implements ConstraintValidator<UniqueData, Stri
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
 
-        if (fieldName.equals("username")) {
-            return this.userRepository.findByUsername(value).isEmpty();
-        } else if (fieldName.equals("email")) {
-            return this.userRepository.findByEmail(value).isEmpty();
-        }
+        return switch (fieldName) {
+            case "username" -> this.userRepository.findByUsername(value).isEmpty();
+            case "email" -> this.userRepository.findByEmail(value).isEmpty();
+            case "name" -> this.shipRepository.findByName(value).isEmpty();
+            default -> false;
+        };
 
-        return false;
     }
 }
