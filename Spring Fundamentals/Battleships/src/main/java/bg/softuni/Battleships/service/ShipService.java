@@ -4,6 +4,7 @@ import bg.softuni.Battleships.model.Category;
 import bg.softuni.Battleships.model.Ship;
 import bg.softuni.Battleships.model.User;
 import bg.softuni.Battleships.model.dto.AddShipDTO;
+import bg.softuni.Battleships.model.dto.BattleDTO;
 import bg.softuni.Battleships.model.dto.ShipDTO;
 import bg.softuni.Battleships.model.mapper.AddShipMapper;
 import bg.softuni.Battleships.model.mapper.ShipMapper;
@@ -77,4 +78,18 @@ public class ShipService {
 
     }
 
+    public void battle(BattleDTO battleDTO) {
+        Ship attacker = this.shipRepository.findById(battleDTO.getAttackerId()).get();
+        Ship defender = this.shipRepository.findById(battleDTO.getDefenderId()).get();
+        this.attack(attacker, defender);
+
+    }
+
+    private void attack(Ship attacker, Ship defender) {
+        defender.setHealth(defender.getHealth() - attacker.getPower());
+        if (defender.getHealth() <= 0) {
+            this.shipRepository.delete(defender);
+        }
+        this.shipRepository.flush();
+    }
 }

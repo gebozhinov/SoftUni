@@ -2,6 +2,7 @@ package bg.softuni.Battleships.web;
 
 import bg.softuni.Battleships.model.dto.AddShipDTO;
 import bg.softuni.Battleships.service.ShipService;
+import bg.softuni.Battleships.user.SessionUser;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -14,9 +15,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class ShipController {
 
     private final ShipService shipService;
+    private final SessionUser sessionUser;
 
-    public ShipController(ShipService shipService) {
+    public ShipController(ShipService shipService,
+                          SessionUser sessionUser) {
         this.shipService = shipService;
+        this.sessionUser = sessionUser;
     }
 
     @ModelAttribute("addShip")
@@ -26,6 +30,9 @@ public class ShipController {
 
     @GetMapping("/ship/add")
     public String add() {
+        if (!sessionUser.isLogged()) {
+            return "redirect:/";
+        }
 
         return "/ship-add";
     }
@@ -33,6 +40,10 @@ public class ShipController {
     @PostMapping("/ship/add")
     public String add(@Valid AddShipDTO addShipDTO, BindingResult bindingResult,
                       RedirectAttributes redirectAttributes) {
+
+        if (!sessionUser.isLogged()) {
+            return "redirect:/";
+        }
 
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("addShip", addShipDTO);

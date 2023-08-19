@@ -3,6 +3,7 @@ package bg.softuni.Battleships.web;
 import bg.softuni.Battleships.model.dto.LoginUserDTO;
 import bg.softuni.Battleships.model.dto.RegisterUserDTO;
 import bg.softuni.Battleships.service.UserService;
+import bg.softuni.Battleships.user.SessionUser;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -18,8 +19,12 @@ public class UserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    private final SessionUser sessionUser;
+
+    public UserController(UserService userService,
+                          SessionUser sessionUser) {
         this.userService = userService;
+        this.sessionUser = sessionUser;
     }
 
 
@@ -35,12 +40,19 @@ public class UserController {
 
     @GetMapping("/login")
     public String login() {
+        if (sessionUser.isLogged()) {
+            return "redirect:/home";
+        }
         return "login";
     }
 
     @PostMapping("/login")
     public String login(@Valid LoginUserDTO loginUserDTO, BindingResult bindingResult,
                         RedirectAttributes redirectAttributes) {
+
+        if (sessionUser.isLogged()) {
+            return "redirect:/home";
+        }
 
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("loginUser", loginUserDTO);
@@ -66,12 +78,21 @@ public class UserController {
 
     @GetMapping("/register")
     public String register() {
+
+        if (sessionUser.isLogged()) {
+            return "redirect:/home";
+        }
+
         return "register";
     }
     @PostMapping("/register")
     public String register(@Valid RegisterUserDTO registerUserDTO,
                            BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) {
+
+        if (sessionUser.isLogged()) {
+            return "redirect:/home";
+        }
 
         if (bindingResult.hasErrors()) {
 
