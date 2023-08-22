@@ -68,4 +68,18 @@ public class PostService {
         this.postRepository.save(post);
         this.userRepository.save(user);
     }
+
+    @Transactional
+    public void removePost(Long id) {
+
+        Post post = this.postRepository.findById(id).get();
+
+        for (User user : this.userRepository.findAll()) {
+            user.getLikedPosts().remove(post);
+        }
+
+
+        this.postRepository.delete(post);
+    }
+
 }

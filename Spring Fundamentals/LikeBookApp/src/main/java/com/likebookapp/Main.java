@@ -5,7 +5,7 @@ import com.likebookapp.repository.PostRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Main implements CommandLineRunner {
 
     private final PostRepository postRepository;

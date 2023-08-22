@@ -47,9 +47,17 @@ public class PostController {
     }
 
     @GetMapping("/like/{id}")
-    public String like(@PathVariable Long id ) {
+    public String like(@PathVariable Long id) {
 
         this.postService.likePost(id);
+
+        return "redirect:/home";
+    }
+
+    @GetMapping("/remove/{id}")
+    public String remove(@PathVariable Long id) {
+
+        this.postService.removePost(id);
 
         return "redirect:/home";
     }
