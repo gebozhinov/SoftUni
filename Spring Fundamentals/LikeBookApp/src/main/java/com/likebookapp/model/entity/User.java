@@ -26,7 +26,7 @@ public class User {
     @OneToMany(targetEntity = Post.class, mappedBy = "user")
     private Set<Post> posts;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_likes",
                 joinColumns = @JoinColumn(name = "user_id"),
                 inverseJoinColumns = @JoinColumn(name = "post_id"))

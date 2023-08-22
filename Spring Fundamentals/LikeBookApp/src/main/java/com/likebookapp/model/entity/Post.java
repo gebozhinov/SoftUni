@@ -18,7 +18,7 @@ public class Post {
     @ManyToOne
     private User user;
 
-    @ManyToMany(mappedBy = "likedPosts")
+    @ManyToMany(mappedBy = "likedPosts", fetch = FetchType.EAGER)
     private Set<User> userLikes;
 
     @ManyToOne
