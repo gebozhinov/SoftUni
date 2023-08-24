@@ -5,6 +5,7 @@ public class SongDTOImpl implements SongDTO {
     private String performer;
     private String title;
     private Integer duration;
+    private Long id;
 
     @Override
     public String getPerformer() {
@@ -19,6 +20,11 @@ public class SongDTOImpl implements SongDTO {
     @Override
     public Integer getDuration() {
         return this.duration;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
     }
 
 
@@ -37,5 +43,8 @@ public class SongDTOImpl implements SongDTO {
         return this;
     }
 
-
+    public SongDTOImpl setId(Long id) {
+        this.id = id;
+        return this;
+    }
 }

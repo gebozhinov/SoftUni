@@ -4,4 +4,5 @@ public interface SongDTO {
     String getPerformer();
     String getTitle();
     Integer getDuration();
+    Long getId();
 }

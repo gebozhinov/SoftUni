@@ -16,7 +16,7 @@
                         <span
                                 th:text="${song.performer} + ' - ' + ${song.title} + ' (' + ${song.duration} + ' min)'">
                         </span>
-                        <a class="ml-3 text-danger" href="/">Add</a>
+                        <a class="ml-3 text-danger" th:href="@{/song/add/{id}(id=*{song.id})}">Add</a>
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@
                                 th:text="${song.performer} + ' - ' + ${song.title} + ' (' + ${song.duration} + ' min)'">
 
                         </span>
-                        <a class="ml-3 text-danger" href="/">Add</a>
+                        <a class="ml-3 text-danger" th:href="@{/song/add/{id}(id=*{song.id})}">Add</a>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                         <span th:text="${song.performer} + ' - ' + ${song.title} + ' (' + ${song.duration} + ' min)'">
 
                         </span>
-                        <a class="ml-3 text-danger" href="/">Add</a>
+                        <a class="ml-3 text-danger" th:href="@{/song/add/{id}(id=*{song.id})}">Add</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     </table>
                 </div>
 
-                <a href="/" class="mt-1 mb-0 btn btn-danger">Remove all</a>
+                <a href="/song/remove-all" class="mt-1 mb-0 btn btn-danger">Remove all</a>
             
             </div>
         </div>

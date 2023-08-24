@@ -58,8 +58,28 @@ public class SongService {
 
     }
 
-    public int totalDurationOfPlaylist() {
-        return this.songRepository.totalDurationOfPlaylist(this.sessionUser.getId());
+    public void add(Long id) {
+
+        User user = this.userRepository.findById(this.sessionUser.getId()).get();
+        Song song = this.songRepository.findById(id).get();
+        user.getPlaylist().add(song);
+        this.userRepository.save(user);
+        this.userRepository.flush();
+    }
+
+    public void removeAll() {
+
+        User user = this.userRepository.findById(this.sessionUser.getId()).get();
+
+        user.getPlaylist().clear();
+        this.userRepository.saveAndFlush(user);
+
+    }
+
+    public Integer totalDurationOfPlaylist() {
+        Integer duration = this.songRepository.totalDurationOfPlaylist(this.sessionUser.getId());
+
+       return duration == null ? 0 : duration;
     }
 
     public List<SongDTOImpl> findAllByLoggedUser() {
@@ -94,15 +114,18 @@ public class SongService {
             String performer = song.getPerformer();
             String title = song.getTitle();
             Integer duration = song.getDuration();
+            Long id = song.getId();
 
-            SongDTOImpl popSongDTO = new SongDTOImpl();
-            popSongDTO.setPerformer(performer);
-            popSongDTO.setTitle(title);
-            popSongDTO.setDuration(duration);
+            SongDTOImpl songDTO = new SongDTOImpl();
+            songDTO.setPerformer(performer);
+            songDTO.setTitle(title);
+            songDTO.setDuration(duration);
+            songDTO.setId(id);
 
-            songs.add(popSongDTO);
+            songs.add(songDTO);
         }
         return songs;
     }
+
 
 }

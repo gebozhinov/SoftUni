@@ -1,5 +1,6 @@
 package bg.softuni.Spotify.web;
 
+import bg.softuni.Spotify.service.UserService;
 import bg.softuni.Spotify.user.SessionUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,25 +8,34 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    private final SessionUser sessionUser;
+    private final UserService userService;
 
-    public HomeController(SessionUser sessionUser) {
-        this.sessionUser = sessionUser;
+    public HomeController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping("/")
     public String index() {
+        if (userService.isUserLogged()) {
+            return "/home";
+        }
         return "/index";
     }
 
     @GetMapping("/home")
     public String home() {
-        return "/home";
+        if (userService.isUserLogged()) {
+            return "/home";
+        }
+        return "redirect:/";
     }
 
     @GetMapping("/logout")
     public String logout() {
-        this.sessionUser.clear();
+        if (userService.isUserLogged()) {
+            this.userService.logout();
+            return "redirect:/";
+        }
         return "/index";
     }
 }

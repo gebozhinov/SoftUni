@@ -69,4 +69,11 @@ public class UserService {
                 .setLogged(true);
 
     }
+
+    public void logout() {
+        this.sessionUser.clear();
+    }
+    public boolean isUserLogged() {
+        return this.sessionUser.isLogged();
+    }
 }

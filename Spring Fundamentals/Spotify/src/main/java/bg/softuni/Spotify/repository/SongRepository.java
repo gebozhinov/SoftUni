@@ -16,24 +16,24 @@ public interface SongRepository extends JpaRepository<Song, Long> {
     @Query(value = "SELECT sum(duration) FROM songs s " +
             "JOIN users_songs us ON s.id = us.song_id " +
             "WHERE us.user_id = :id",nativeQuery = true)
-    int totalDurationOfPlaylist(long id);
+    Integer totalDurationOfPlaylist(long id);
 
-    @Query(value = "SELECT s.performer, s.title, s.duration FROM songs s " +
+    @Query(value = "SELECT s.performer, s.title, s.duration, s.id FROM songs s " +
             "JOIN users_songs us ON s.id = us.song_id " +
             "WHERE us.user_id = :id", nativeQuery = true)
     Optional<List<SongDTO>> findAllByLoggedUser(long id);
 
-    @Query(value = "SELECT s.performer, s.title, s.duration, st.style_name as style FROM songs s " +
+    @Query(value = "SELECT s.performer, s.title, s.duration, st.style_name as style, s.id FROM songs s " +
             "JOIN styles st ON s.style_id = st.id " +
             "WHERE st.style_name = 0",nativeQuery = true)
     Optional<List<SongDTO>> findAllPopSongs();
 
-    @Query(value = "SELECT s.performer, s.title, s.duration, st.style_name as style FROM songs s " +
+    @Query(value = "SELECT s.performer, s.title, s.duration, st.style_name as style, s.id FROM songs s " +
             "JOIN styles st ON s.style_id = st.id " +
             "WHERE st.style_name = 1",nativeQuery = true)
     Optional<List<SongDTO>> findAllRockSongs();
 
-    @Query(value = "SELECT s.performer, s.title, s.duration, st.style_name as style FROM songs s " +
+    @Query(value = "SELECT s.performer, s.title, s.duration, st.style_name as style, s.id FROM songs s " +
             "JOIN styles st ON s.style_id = st.id " +
             "WHERE st.style_name = 2",nativeQuery = true)
     Optional<List<SongDTO>> findAllJazzSongs();

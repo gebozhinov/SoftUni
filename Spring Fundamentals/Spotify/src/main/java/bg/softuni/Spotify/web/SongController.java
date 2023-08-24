@@ -1,14 +1,13 @@
 package bg.softuni.Spotify.web;
 
 import bg.softuni.Spotify.model.dto.AddSongDTO;
+import bg.softuni.Spotify.repository.UserRepository;
 import bg.softuni.Spotify.service.SongService;
+import bg.softuni.Spotify.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -16,9 +15,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class SongController {
 
     private final SongService songService;
+    private final UserService userService;
 
-    public SongController(SongService songService) {
+    public SongController(SongService songService,
+                          UserService userService) {
         this.songService = songService;
+        this.userService = userService;
     }
 
     @ModelAttribute("addSong")
@@ -28,12 +30,21 @@ public class SongController {
 
     @GetMapping("/add")
     public String add() {
+
+        if (!this.userService.isUserLogged()) {
+            return "redirect:/login";
+        }
+
         return "/song-add";
     }
 
     @PostMapping("/add")
     public String add(@Valid AddSongDTO addSongDTO, BindingResult bindingResult,
                       RedirectAttributes redirectAttributes) {
+
+        if (!this.userService.isUserLogged()) {
+            return "redirect:/login";
+        }
 
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("addSong", addSongDTO);
@@ -43,6 +54,30 @@ public class SongController {
         }
 
         this.songService.add(addSongDTO);
+
+        return "redirect:/home";
+    }
+
+    @GetMapping("/add/{id}")
+    public String add(@PathVariable Long id) {
+
+        if (!this.userService.isUserLogged()) {
+            return "redirect:/login";
+        }
+
+        this.songService.add(id);
+
+        return "redirect:/home";
+    }
+
+    @GetMapping("/remove-all")
+    public String remove() {
+
+        if (!this.userService.isUserLogged()) {
+            return "redirect:/login";
+        }
+
+        this.songService.removeAll();
 
         return "redirect:/home";
     }

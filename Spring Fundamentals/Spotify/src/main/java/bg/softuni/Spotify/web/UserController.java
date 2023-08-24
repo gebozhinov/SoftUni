@@ -32,12 +32,19 @@ public class UserController {
 
     @GetMapping("/register")
     public String register() {
+        if (this.userService.isUserLogged()) {
+            return "redirect:/";
+        }
         return "/register";
     }
 
     @PostMapping("/register")
     public String register(@Valid RegisterUserDTO registerUserDTO, BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) {
+
+        if (this.userService.isUserLogged()) {
+            return "redirect:/";
+        }
 
         if (bindingResult.hasErrors()) {
 
@@ -54,12 +61,19 @@ public class UserController {
 
     @GetMapping("/login")
     public String login() {
+        if (this.userService.isUserLogged()) {
+            return "redirect:/";
+        }
         return "/login";
     }
 
     @PostMapping("/login")
     public String login(@Valid LoginUserDTO loginUserDTO, BindingResult bindingResult,
                         RedirectAttributes redirectAttributes) {
+
+        if (this.userService.isUserLogged()) {
+            return "redirect:/";
+        }
 
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("loginUser", loginUserDTO);
