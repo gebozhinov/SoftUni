@@ -35,6 +35,8 @@ public class UserService {
 
         this.userRepository.save(user);
 
+        this.login(user);
+
 
     }
 
@@ -52,14 +54,19 @@ public class UserService {
         boolean matches = this.passwordEncoder.matches(rawPassword, encodedPassword);
 
         if (matches) {
-            this.sessionUser
-                    .setId(optionalUser.get().getId())
-                    .setUsername(optionalUser.get().getUsername())
-                    .setEmail(optionalUser.get().getEmail())
-                    .setLogged(true);
+            this.login(optionalUser.get());
             return true;
         }
 
         return false;
+    }
+
+    private void login(User user) {
+        this.sessionUser
+                .setId(user.getId())
+                .setUsername(user.getUsername())
+                .setEmail(user.getEmail())
+                .setLogged(true);
+
     }
 }
