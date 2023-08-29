@@ -18,7 +18,8 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @OneToMany(targetEntity = Product.class, mappedBy = "user")
+    @OneToMany
+    @JoinColumn(name = "products")
     private Set<Product> products;
 
     public Long getId() {

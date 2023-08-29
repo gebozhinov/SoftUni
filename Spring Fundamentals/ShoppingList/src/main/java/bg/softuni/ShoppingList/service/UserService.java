@@ -34,8 +34,9 @@ public class UserService {
         User user = this.userMapper.registerUserDtoToUser(registerUserDTO)
                 .setPassword(this.passwordEncoder.encode(registerUserDTO.getPassword()));
 
-        this.login(user);
+
         this.userRepository.save(user);
+        this.login(user);
 
     }
     private void login(User user) {

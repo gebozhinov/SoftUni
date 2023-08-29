@@ -19,7 +19,6 @@ public class AddProductDTO {
     private String description;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @FutureOrPresent(message = "Date cannot be in the past.")
-    @NotNull(message = "Date and time should not be null.")
     private LocalDateTime neededBefore;
     @DecimalMin(value = "0", message = "Price should be positive number.")
     @NotNull(message = "Price should not be null.")

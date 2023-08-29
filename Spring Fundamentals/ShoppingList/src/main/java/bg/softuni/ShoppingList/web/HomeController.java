@@ -24,8 +24,8 @@ public class HomeController {
     @GetMapping("/home")
     public String home() {
         if (this.userService.isLogged()) {
-            return "/index";
+            return "/home";
         }
-        return "/home";
+        return "/index";
     }
 }

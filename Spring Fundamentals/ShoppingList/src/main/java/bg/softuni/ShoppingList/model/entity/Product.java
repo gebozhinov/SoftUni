@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "products")
@@ -18,12 +19,11 @@ public class Product {
     private String description;
     @Column(nullable = false)
     private BigDecimal price;
-    @Column(nullable = false)
+    @Column(name = "needed_before")
     private LocalDateTime neededBefore;
     @ManyToOne
     private Category category;
-    @ManyToOne
-    private User user;
+
 
     public Long getId() {
         return id;
@@ -74,12 +74,5 @@ public class Product {
         return this;
     }
 
-    public User getUser() {
-        return user;
-    }
 
-    public Product setUser(User user) {
-        this.user = user;
-        return this;
-    }
 }

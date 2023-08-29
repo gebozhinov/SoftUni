@@ -6,10 +6,7 @@ import bg.softuni.ShoppingList.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -56,5 +53,27 @@ public class ProductController {
         this.productService.add(addProductDTO);
 
         return "/home";
+    }
+
+    @GetMapping("/buy/{id}")
+    public String buy(@PathVariable Long id) {
+
+        if (!this.userService.isLogged()) {
+            return "redirect:/";
+        }
+
+        this.productService.buyProduct(id);
+
+        return "redirect:/home";
+    }
+
+    @GetMapping("/buy/all")
+    public String buyAllProducts() {
+        if (!this.userService.isLogged()) {
+            return "redirect:/";
+        }
+
+        this.productService.buyAllProducts();
+        return "redirect:/home";
     }
 }

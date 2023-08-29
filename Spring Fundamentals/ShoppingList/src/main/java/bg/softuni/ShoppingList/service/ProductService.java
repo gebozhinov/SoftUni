@@ -1,8 +1,8 @@
 package bg.softuni.ShoppingList.service;
 
 import bg.softuni.ShoppingList.model.dto.AddProductDTO;
-import bg.softuni.ShoppingList.model.dto.product.Food;
-import bg.softuni.ShoppingList.model.dto.product.FoodImpl;
+import bg.softuni.ShoppingList.model.dto.product.ProductInfo;
+import bg.softuni.ShoppingList.model.dto.product.ProductInfoImpl;
 import bg.softuni.ShoppingList.model.entity.Category;
 import bg.softuni.ShoppingList.model.entity.Product;
 import bg.softuni.ShoppingList.model.entity.User;
@@ -13,9 +13,10 @@ import bg.softuni.ShoppingList.repository.UserRepository;
 import bg.softuni.ShoppingList.user.SessionUser;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -42,31 +43,86 @@ public class ProductService {
     public void add(AddProductDTO addProductDTO) {
 
         Category category = this.categoryRepository.findByOrdinalName(addProductDTO.getCategory()).orElse(null);
-        User user = this.userRepository.findByUsername(this.sessionUser.getUsername()).orElse(null);
+
 
         Product product = this.productMapper.addProductDtoToProduct(addProductDTO)
-                .setCategory(category)
-                .setUser(user);
+                .setCategory(category);
 
         this.productRepository.save(product);
 
     }
 
-    public List<FoodImpl> findAllFoods() {
+    public List<ProductInfoImpl> findAllFoods() {
 
 
-        List<Food> foodList = this.productRepository.findAllFoods(this.sessionUser.getId()).orElse(new ArrayList<>());
+        List<ProductInfo> foods = this.productRepository.findAllFoods().orElse(new ArrayList<>());
 
-        List<FoodImpl> foods = new ArrayList<>();
-        for (Food food : foodList) {
-            FoodImpl foodImpl = new FoodImpl();
-            foodImpl.setName(food.getName());
-            foodImpl.setPrice(food.getPrice());
-            foods.add(foodImpl);
+        return getProductInfos(foods);
+
+    }
+    public List<ProductInfoImpl> findAllDrinks() {
+
+
+        List<ProductInfo> drinks = this.productRepository.findAllDrinks().orElse(new ArrayList<>());
+
+        return getProductInfos(drinks);
+
+    }
+    public List<ProductInfoImpl> findAllHousehold() {
+
+
+        List<ProductInfo> household = this.productRepository.findAllHousehold().orElse(new ArrayList<>());
+
+        return getProductInfos(household);
+
+    }
+    public List<ProductInfoImpl> findAllOther() {
+
+
+        List<ProductInfo> other = this.productRepository.findAllOther().orElse(new ArrayList<>());
+
+        return getProductInfos(other);
+
+    }
+
+    public void buyProduct(Long id) {
+        Product product = this.productRepository.findById(id).get();
+        User user = this.userRepository.findById(this.sessionUser.getId()).get();
+
+        if (user.getProducts().isEmpty()) {
+            user.setProducts(new HashSet<>());
+        }
+
+        user.getProducts().add(product);
+        this.userRepository.save(user);
+
+
+
+    }
+
+    public void buyAllProducts() {
+        List<Product> products = this.productRepository.findAllProducts().orElse(new ArrayList<>());
+
+        User user = this.userRepository.findById(this.sessionUser.getId()).get();
+
+        if (user.getProducts().isEmpty()) {
+            user.setProducts(new HashSet<>());
+        }
+
+        user.getProducts().addAll(products);
+        this.userRepository.save(user);
+    }
+    private List<ProductInfoImpl> getProductInfos(List<ProductInfo> drinksList) {
+        List<ProductInfoImpl> drinks = new ArrayList<>();
+        for (ProductInfo productInfo : drinksList) {
+            ProductInfoImpl product = new ProductInfoImpl();
+            product.setId(productInfo.getId());
+            product.setName(productInfo.getName());
+            product.setPrice(productInfo.getPrice());
+            drinks.add(product);
 
         }
-        return foods;
-
+        return drinks;
     }
 
 }

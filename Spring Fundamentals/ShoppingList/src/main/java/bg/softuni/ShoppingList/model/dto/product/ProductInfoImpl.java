@@ -2,10 +2,21 @@ package bg.softuni.ShoppingList.model.dto.product;
 
 import java.math.BigDecimal;
 
-public class FoodImpl implements Food {
+public class ProductInfoImpl implements ProductInfo {
 
+    private Long id;
     private String name;
     private BigDecimal price;
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public ProductInfoImpl setId(Long id) {
+        this.id = id;
+        return this;
+    }
 
     @Override
     public String getName() {
@@ -17,12 +28,12 @@ public class FoodImpl implements Food {
         return price;
     }
 
-    public FoodImpl setName(String name) {
+    public ProductInfoImpl setName(String name) {
         this.name = name;
         return this;
     }
 
-    public FoodImpl setPrice(BigDecimal price) {
+    public ProductInfoImpl setPrice(BigDecimal price) {
         this.price = price;
         return this;
     }
