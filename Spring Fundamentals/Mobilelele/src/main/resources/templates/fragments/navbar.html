@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"          >
 <head>
     <meta charset="UTF-8">
     <title>Navbar</title>
@@ -7,7 +9,7 @@
 <body>
 <div>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="/"><img alt="car picture" src="/img/car.png" class="logo"></a>
+    <a class="navbar-brand" href="/"><img alt="car picture" src="/images/car.png" class="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,7 +39,7 @@
             <a class="dropdown-item" href="/">Something else here</a>
           </div>
         </li>
-        <li class="nav-item" th:if="${@currentUser.isLogged()}">
+        <li class="nav-item" sec:authorize="isAuthenticated()">
           <div class="form-inline my-2 my-lg-0 border px-3">
             <div class="logged-user"
                  text="Welcome, Gosho"></div>
@@ -45,12 +47,14 @@
           </div>
         </li>
 
-        <li class="nav-item" th:if="${@currentUser.isLogged() == false}">
-          <a class="nav-link" th:href="@{/users/register}">Register</a>
-        </li>
-        <li class="nav-item" th:if="${@currentUser.isLogged() == false}" >
-          <a class="nav-link" th:href="@{/users/login}">Login</a>
-        </li>
+        <th:block sec:authorize="!isAuthenticated()">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/users/register}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/users/login}">Login</a>
+          </li>
+        </th:block>
 
       </ul>
     </div>
