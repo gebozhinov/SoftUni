@@ -1,7 +1,7 @@
 package bg.softuni.Mobilelele.config;
 
 import bg.softuni.Mobilelele.repository.UserRepository;
-import bg.softuni.Mobilelele.service.UserDetailService;
+import bg.softuni.Mobilelele.service.AppUserDetailService;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -48,6 +48,7 @@ public class Config {
                         (form) -> form
                                 // the custom login form
                                 .loginPage("/users/login")
+                                .loginProcessingUrl("/users/login")
                                 // the name of the username form field
                                 .usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY)
                                 // the name of the password form field
@@ -55,7 +56,8 @@ public class Config {
                                 // where to go in case that the login is successful
                                 .defaultSuccessUrl("/")
                                 // where to go in case that the login failed
-                                .failureForwardUrl("/users/login")
+                                .failureForwardUrl("/users/login-error")
+                                .permitAll()
 
                 )
                 // configure logout
@@ -76,8 +78,8 @@ public class Config {
     }
 
     @Bean
-    public UserDetailService userDetailService(UserRepository userRepository) {
-        return new UserDetailService(userRepository);
+    public AppUserDetailService userDetailService(UserRepository userRepository) {
+        return new AppUserDetailService(userRepository);
     }
 
     @Bean

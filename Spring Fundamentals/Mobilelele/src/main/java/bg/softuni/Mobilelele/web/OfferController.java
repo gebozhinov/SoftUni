@@ -5,6 +5,8 @@ import bg.softuni.Mobilelele.model.dto.BrandDTO;
 import bg.softuni.Mobilelele.service.BrandService;
 import bg.softuni.Mobilelele.service.OfferService;
 import jakarta.validation.Valid;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,7 +52,8 @@ public class OfferController {
     @PostMapping("/add")
     public String addOffer(@Valid AddOfferDTO offerModel,
                            BindingResult bindingResult,
-                           RedirectAttributes redirectAttributes) {
+                           RedirectAttributes redirectAttributes,
+                           @AuthenticationPrincipal UserDetails userDetails) {
 
         if (bindingResult.hasErrors()) {
 
@@ -61,7 +64,7 @@ public class OfferController {
             return "redirect:/offers/add";
         }
 
-        offerService.addOffer(offerModel);
+        offerService.addOffer(offerModel, userDetails);
         return "redirect:/offers/all";
     }
 

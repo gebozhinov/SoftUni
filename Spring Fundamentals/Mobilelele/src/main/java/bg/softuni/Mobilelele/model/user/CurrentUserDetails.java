@@ -32,6 +32,9 @@ public class CurrentUserDetails implements UserDetails {
         return this.lastName;
     }
 
+    public String getFullName() {
+        return this.firstName != null && this.lastName != null ? this.firstName + " " + this.lastName : null;
+    }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.authorities;

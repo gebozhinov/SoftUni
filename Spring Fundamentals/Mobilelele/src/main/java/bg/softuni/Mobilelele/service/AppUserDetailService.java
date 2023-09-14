@@ -4,21 +4,21 @@ import bg.softuni.Mobilelele.model.entity.UserEntity;
 import bg.softuni.Mobilelele.model.entity.UserRoleEntity;
 import bg.softuni.Mobilelele.model.user.CurrentUserDetails;
 import bg.softuni.Mobilelele.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class UserDetailService implements UserDetailsService {
+public class AppUserDetailService implements UserDetailsService {
 
 
     private final UserRepository userRepository;
 
-    public UserDetailService(UserRepository userRepository) {
+    public AppUserDetailService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -39,7 +39,7 @@ public class UserDetailService implements UserDetailsService {
         );
     }
     private GrantedAuthority map(UserRoleEntity userRole) {
-        return new SimpleGrantedAuthority("Role_" +
+        return new SimpleGrantedAuthority(
                 userRole.getRole().name());
     }
 }
