@@ -43,6 +43,9 @@ public class Route {
     @OneToMany(targetEntity = Picture.class, mappedBy = "route", fetch = FetchType.EAGER)
     private Set<Picture> pictures;
 
+    public Long getId() {
+        return id;
+    }
 
     public String getGpxCoordinates() {
         return gpxCoordinates;
