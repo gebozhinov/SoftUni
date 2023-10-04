@@ -1,16 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" >
+
 <nav class="main-nav">
     <ul>
         <li>
             <a href="/">Add new route</a>
         </li>
         <li>
-            <a href="/">Profile</a>
+            <a href="/profile">Profile</a>
         </li>
-        <li>
+        <li sec:authorize="hasAuthority('ADMIN')">
             <a href="/">Admin</a>
         </li>
         <li>
-            <a href="/">Logout</a>
+            <form
+                th:action="@{/logout}"
+                th:method="post">
+                <button type="submit">Logout</button>
+                </form>
         </li>
     </ul>
 </nav>

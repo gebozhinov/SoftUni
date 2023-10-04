@@ -25,14 +25,19 @@ public class Config {
       return   httpSecurity.authorizeHttpRequests(authorize -> authorize
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .requestMatchers("/").permitAll()
-                .requestMatchers("/register", "/login").permitAll()
+                .requestMatchers("/register", "/login").anonymous()
                 .anyRequest().authenticated()
-      ).formLogin(login -> login
+                ).formLogin(login -> login
                       .loginPage("/login")
                       .usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY)
                       .passwordParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_PASSWORD_KEY)
                       .defaultSuccessUrl("/")
-                      .failureForwardUrl("/login?error=true")
+                      .failureUrl("/login?error")
+                ).logout(logout -> logout
+                      .logoutUrl("/logout")
+                      .logoutSuccessUrl("/")
+                      .deleteCookies("JSESSIONID")
+                      .clearAuthentication(true)
 
               ).build();
     }

@@ -1,5 +1,5 @@
 <!-- Navigation -->
 <header>
-    <th:block th:insert="~{/fragments/guest-nav}" />
-    <th:block th:insert="~{/fragments/logged-nav}" />
+    <th:block sec:authorize="isAnonymous()" th:insert="~{/fragments/guest-nav}" />
+    <th:block sec:authorize="isAuthenticated()" th:insert="~{/fragments/logged-nav}" />
 </header>

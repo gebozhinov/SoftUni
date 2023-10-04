@@ -360,3 +360,16 @@ body {
 .registration-form .invalid-feedback {
     color: white;
 }
+.main-nav button {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+    width: 100%;
+    border: none;
+}
