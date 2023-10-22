@@ -4,6 +4,8 @@ import bg.softuni.Pathfinder.model.Route;
 import bg.softuni.Pathfinder.repository.RouteRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RouteService {
 
@@ -17,5 +19,9 @@ public class RouteService {
     public Route getMostCommented() {
 
         return routeRepository.getMostCommented();
+    }
+
+    public List<Route> getAllRoutes() {
+        return this.routeRepository.findAll();
     }
 }

@@ -14,7 +14,7 @@ spring:
         enabled: true
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
-  #  sql:
+#  sql:
 #    init:
 #      mode: always
 #      encoding: utf-8
