@@ -24,4 +24,9 @@ public class RouteService {
     public List<Route> getAllRoutes() {
         return this.routeRepository.findAll();
     }
+
+    public Route getRouteDetails(Long id) {
+        return this.routeRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("This route does not exist!"));
+    }
 }
