@@ -8,6 +8,7 @@ import bg.softuni.Pathfinder.model.view.RouteDetailsView;
 import bg.softuni.Pathfinder.model.view.RouteIndexView;
 import bg.softuni.Pathfinder.service.AuthService;
 import bg.softuni.Pathfinder.service.RouteService;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -71,20 +72,28 @@ public class RouteController {
     }
 
     @PostMapping("/new")
-    public String addRoute(Principal principal, RouteCreationDTO routeCreationDTO) {
+    public String addRoute(Principal principal, @Valid RouteCreationDTO routeCreationDTO) {
 
         Route route = new Route();
         route.setAuthor(this.authService.findUserByUsername(principal.getName()));
         route.setName(routeCreationDTO.getName());
         route.setDescription(routeCreationDTO.getDescription());
         route.setVideoUrl(routeCreationDTO.getVideoUrl());
-        route.setLevel(UserLevel.valueOf(routeCreationDTO.getLevel()));
+        route.setLevel(getLevel(routeCreationDTO.getLevel()));
 
-        // TODO
-        return null;
+        routeService.createRoute(route, routeCreationDTO.getImage());
+        return "redirect:/routes/" + route.getId();
 
     }
     public String findFirstImageUrl(Set<Picture> pictures) {
      return  pictures.stream().findFirst().map(Picture::getUrl).orElse("N/A");
+    }
+
+    private UserLevel getLevel(String key) {
+        if (key == null) {
+            return UserLevel.BEGINNER;
+        }
+
+        return UserLevel.levelMap.get(key);
     }
 }

@@ -25,7 +25,7 @@ public class ImageCloudService {
                 "api_secret", API_SECRET));
     }
 
-    public void saveImage(MultipartFile multipartFile) {
+    public String saveImage(MultipartFile multipartFile) {
         String imageId = UUID.randomUUID().toString();
         Map params = ObjectUtils.asMap(
             "public_id", imageId,
@@ -42,5 +42,12 @@ public class ImageCloudService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        return String.format("https://res.cloudinary.com/dinjk0zq4/image/upload/" +
+                imageId + "." + getFileExtension(multipartFile.getOriginalFilename()));
+    }
+
+    private String getFileExtension(String fileName) {
+        return fileName.substring(fileName.lastIndexOf('.') + 1);
     }
 }

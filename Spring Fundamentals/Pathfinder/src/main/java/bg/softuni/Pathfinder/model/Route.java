@@ -40,7 +40,7 @@ public class Route {
     @OneToMany(targetEntity = Comments.class, mappedBy = "route", cascade = CascadeType.ALL)
     private Set<Comments> comments;
 
-    @OneToMany(targetEntity = Picture.class, mappedBy = "route", fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Picture.class, mappedBy = "route", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Picture> pictures;
 
     public Long getId() {
