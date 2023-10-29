@@ -28,6 +28,9 @@ public class Comments {
     private Route route;
 
 
+    public Long getId() {
+        return id;
+    }
 
     public boolean isApproved() {
         return isApproved;

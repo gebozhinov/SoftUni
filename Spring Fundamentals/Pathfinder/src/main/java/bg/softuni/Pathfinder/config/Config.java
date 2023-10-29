@@ -26,6 +26,7 @@ public class Config {
                       .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                       .requestMatchers("/").permitAll()
                       .requestMatchers("/routes").permitAll()
+                      .requestMatchers("/api/**").permitAll()
                       .requestMatchers("routes/new").authenticated()
                       .requestMatchers("/register", "/login").anonymous()
                       .anyRequest().authenticated()

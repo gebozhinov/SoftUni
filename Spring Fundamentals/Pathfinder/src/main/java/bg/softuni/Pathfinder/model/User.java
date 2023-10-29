@@ -111,4 +111,8 @@ public class User {
         this.email = email;
         return this;
     }
+
+    public Long getId() {
+        return id;
+    }
 }

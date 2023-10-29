@@ -91,10 +91,15 @@
         </section>
         <p style="visibility: hidden">GPX Download: <a id="gpxDownload"></a></p>
     </div>
+    <input
+        id="csrf"
+        type="hidden"
+        th:name="${_csrf.headerName}"
+        th:value="${_csrf.token}"/>
 	<!-- Scripts: track and comments 
-    <script th:src="@{/js/track.js}"></script>
+    <script th:src="@{/js/track.js}"></script> -->
     <script th:src="@{/js/comments.js}"></script>
-	-->
+
 </div>
 <footer class="footer bg-blur rounded">
     <div class="container-fluid text-center">
