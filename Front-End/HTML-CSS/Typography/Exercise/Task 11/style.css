@@ -1,0 +1,63 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+}
+
+ul {
+    list-style: square;
+}
+
+ul ul {
+    list-style: inside;
+}
+
+ul ul ul {
+    list-style: circle;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray;
+    
+}
+
+table tr {
+    border: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+table th {
+    background-color: darkgray;
+    text-align: left;
+    border-right: 1px solid gray;
+}
+
+table td {
+    border-right: 1px solid gray;
+}
+
+table tr:nth-child(2n+2) {
+    background-color: lightgray;
+}
+
+blockquote {
+    border-left: 3px solid gray;
+    
+}
+
+blockquote p {
+    font-style: italic;
+    margin-left: 35px;
+}
+
+blockquote p:last-child {
+    text-align: right;
+}
