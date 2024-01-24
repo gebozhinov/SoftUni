@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 3em;
+}
+
+header {
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+header p {
+    font-size: 56px;
+    padding-bottom: 0.3em;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+    padding: 0.5em;
+}
+
+main h1 {
+    padding: 0.5em 0;
+}
+
+main p {
+    padding-bottom: 1em;
+}
