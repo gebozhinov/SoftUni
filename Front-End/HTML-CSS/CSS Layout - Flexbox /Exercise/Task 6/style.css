@@ -30,8 +30,3 @@ img {
     background-color: #fff;
     border: 7px solid black;
 }
-
-.gallery {
-    display: flex;
-    align-items: center;
-}
