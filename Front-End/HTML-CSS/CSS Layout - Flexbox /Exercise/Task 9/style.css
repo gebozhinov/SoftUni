@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    padding: 2em 2em;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    max-width: 250px;
+    min-height: 100px;
+    margin-top: 20em;
+    box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+}
+
+.card p {
+    padding: 0.5em;
+}
+
+.card p:first-of-type {
+    padding-bottom: 0;
+    font-weight: bold;
+}
