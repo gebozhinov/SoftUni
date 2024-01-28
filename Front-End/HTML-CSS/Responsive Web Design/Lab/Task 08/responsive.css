@@ -1,0 +1,13 @@
+.card h2 {
+  font-size: 1em;
+}
+
+.post {
+  container: title / inline-size;
+}
+
+@container title (width > 400px) {
+  .card h2 {
+    font-size: 10em;
+  }
+}
