@@ -1,0 +1,82 @@
+body {
+    padding: 3em 5em;
+    background-color: rgb(238, 238, 238);
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+header p {
+    font-size: 56px;
+}
+
+
+main {
+    width: 60%;
+}
+
+main h1 {
+    padding-top: 1em;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 2em 2em;
+}
+
+aside {
+    padding-top: 1em;
+    padding-left: 5em;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    padding: 0.5em;
+    border: 5px solid black;
+}
+
+blockquote {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    float: right;
+    color: #666;
+    border-left: 2px solid #666;
+    padding: 0 0 2em 1em;
+    width: 50%;
+}
+
+blockquote p:nth-child(2) {
+    text-align: right;
+    padding-top: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+}
+
+p:not(:nth-of-type(1)) {
+    padding: 0.5em 0;
+}
+
+.float-left {
+    float: left;
+    margin: 1em 2em 2em 0;
+}
+
+aside p {
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 0.5em;
+}
+
+ul {
+    padding-left: 1.5em;
+}
