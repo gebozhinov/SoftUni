@@ -1,0 +1,13 @@
+@media (max-width: 500px) {
+    body {
+        flex-direction: column;
+    }
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        padding: 1em 0;
+        text-align: center;
+    }
+}
