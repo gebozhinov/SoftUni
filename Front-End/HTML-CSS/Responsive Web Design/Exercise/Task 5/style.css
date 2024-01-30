@@ -1,0 +1,98 @@
+body {
+    padding: 2em 20em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p:nth-of-type(1) {
+    flex: 1 1 100%;
+    color: blueviolet;
+    font-size: 47px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0.5em;
+    color: #333;
+}
+
+section {
+    display: flex;
+    padding-right: 5em;
+    padding-left: 5em;
+    flex-wrap: wrap;
+}
+
+
+
+section:nth-of-type(1) h2 {
+    font-size: 28px;
+    padding-top: 3em;
+    flex: 1 1 100%;
+}
+
+section:nth-of-type(1) div:nth-child(2) {
+    padding-top: 1em;
+    width: 14em;
+    display: flex;
+    flex: 2 1 100%;
+}
+
+section:nth-of-type(1) p:nth-child(3) {
+    border: 1px solid black;
+    width: 15em;
+    text-align: center;
+}
+
+section div i {
+    font-size: 108px;   
+}
+
+.main .center-title {
+    flex: 1 1 100%;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 28px;
+}
+
+.main div {
+    flex: 3 1 30%;
+    padding: 1em 0;
+}
+
+.main div img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    max-height: 200px;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+
+.main div p {
+    text-align: center;
+}
+
+.main div p:nth-of-type(1) {
+    padding-top: 0.5em;
+    font-weight: bold;
+}
+
+.main div p:nth-of-type(3) {
+    font-style: italic;
+}

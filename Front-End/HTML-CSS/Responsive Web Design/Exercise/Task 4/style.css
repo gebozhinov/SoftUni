@@ -1,0 +1,23 @@
+body {
+    padding: 2em;
+    background-color: rgb(238, 238, 238);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    row-gap: 0;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 0 0.5em;
+}
+
+.heading {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
