@@ -14,7 +14,7 @@ nav {
 
 nav p:nth-of-type(1) {
     flex: 1 1 100%;
-    color: blueviolet;
+    color: purple;
     font-size: 47px;
 }
 
@@ -63,7 +63,7 @@ section div i {
     font-size: 108px;   
 }
 
-.main .center-title {
+.center-title {
     flex: 1 1 100%;
     text-align: center;
     padding-top: 2em;
@@ -75,7 +75,7 @@ section div i {
     padding: 1em 0;
 }
 
-.main div img {
+.profile-picture {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
@@ -84,15 +84,79 @@ section div i {
     filter: drop-shadow(0 0 0.75rem black);
 }
 
-.main div p {
+.center-decription {
     text-align: center;
+    padding: 0 0.5em;
 }
 
-.main div p:nth-of-type(1) {
+.bold {
     padding-top: 0.5em;
     font-weight: bold;
 }
 
-.main div p:nth-of-type(3) {
+.italic {
     font-style: italic;
+}
+
+.sign-up {
+    background-color: purple;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sign-up p {
+    padding-bottom: 1em;
+}
+
+.email {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px;
+}
+
+.register {
+    padding: 1em 2.5em;
+}
+
+footer {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer div p:first-of-type {
+    font-size: 22px;
+}
+footer div p:nth-child(2){
+    max-width: 20em;
+}
+
+.sitemap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 23em;
+    justify-content: space-between;
+
+}
+
+.sitemap li {
+    list-style: none;
+    padding-right: 5em;
+}
+
+.sitemap li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+footer i {
+    padding-right: 1em;
 }
