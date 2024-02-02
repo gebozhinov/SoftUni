@@ -1,0 +1,45 @@
+@media (width > 1300px) and (width <= 1800px) {
+    .timeline article:nth-child(even) {
+        padding-right: 5em;
+    }
+    .timeline article:nth-child(odd) {
+        padding-left: 5em;
+    }
+}
+
+@media (width > 1000px) and (width <= 1300px) {
+   
+    .timeline {
+        width: auto;
+    }
+}
+
+@media (width <= 1000px) {
+   
+    .timeline {
+        width: auto;
+    }
+
+    .timeline article:nth-child(odd) {
+        align-self: flex-end;
+        width: 50%;
+        padding-left: 0.5em;
+        padding-right: 10em;
+        border-right: none;
+        border-left: 0.5em solid rgb(153, 153, 153);
+        text-align: right;
+    }
+
+    h3 {
+        text-align: left;
+        padding-top: 1em;
+    }
+
+    ul {
+        padding-left: 1em;
+    }
+
+    .timeline article:nth-child(2) {
+        padding-top: 1em;
+    }
+}

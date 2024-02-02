@@ -1,0 +1,59 @@
+body {
+    padding: 2em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    border: 0.3em solid rgb(153, 153, 153);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.timeline > p {
+    border: 0.2em solid rgb(153, 153, 153);
+    margin: auto;
+    padding: 0.5em 1em;
+}
+
+.timeline article p {
+    font-style: italic;
+    padding: 0.5em 1em 0 1em;
+}
+
+.timeline article:nth-child(even) {
+    align-self: flex-end;
+    width: 50%;
+    padding-left: 0.5em;
+    padding-right: 10em;
+    border-left: 0.5em solid rgb(153, 153, 153);
+}
+
+.timeline article:nth-child(odd) {
+    align-self: flex-start;
+    width: 50%;
+    text-align: end;
+    padding-right: 0.5em;
+    padding-left: 10em;
+    border-right: 0.5em solid rgb(153, 153, 153);
+    margin-left: 0.5em;
+}
+
+
+.timeline article:nth-child(2) {
+    padding-top: 2em;
+}
+
+.timeline article:last-child {
+    padding-bottom: 3em;
+}
+
+ul {
+    padding-top: 1em;
+    padding-right: 1em;
+}
+
