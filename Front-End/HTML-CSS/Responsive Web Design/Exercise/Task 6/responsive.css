@@ -1,0 +1,30 @@
+@media screen and (max-width: 500px) {
+    body {
+        padding: 2em 2em;
+    }
+
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        /* width: 100%; */
+        flex-wrap: wrap;
+    }
+
+    th {
+        writing-mode: horizontal-tb; /* Reset vertical text orientation */
+    }
+}
+
+@media screen and (width > 500px) and (width <= 1200px) {
+    body {
+        padding: 2em 5em;
+    }
+}
+
+@media screen and (width > 1200px) and (width <= 1500px) {
+    body {
+        padding: 2em 8em;
+    }
+}
+

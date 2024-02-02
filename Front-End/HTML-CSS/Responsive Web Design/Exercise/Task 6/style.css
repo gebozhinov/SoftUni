@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 2em 10em;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
