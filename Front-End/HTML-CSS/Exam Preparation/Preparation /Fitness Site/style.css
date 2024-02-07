@@ -78,3 +78,53 @@ main {
     font-weight: bold;
     border-radius: 0.5em;
 }
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+}
+
+.welcome-section h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 2em;
+}
+
+.welcome-section h3::after {
+    content: '';
+    background-color: red;
+    width: 5ch;
+    height: 2px;
+    display: block;
+    margin: 1em auto;
+}
+
+.welcome-section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0 7em 0;
+}
+
+.fitness-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.fitness-info-headline {
+    text-align: center;
+    color: red;
+    padding-bottom: 1em;
+}
+
+.fitness-info-more {
+    width: 30em;
+    padding: 0 5em;
+    text-align: center;
+}
+
+.fitness-info img {
+    width: 15%;
+    align-self: center;
+    padding-bottom: 2em;
+}
