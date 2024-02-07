@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    color: white;
+    padding: 1em;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    display: block;
+    padding: 0 0.5em;
+}
+
+header ul li a {
+    color: white;
+}
+
+header ul li span {
+    display: none;
+}
