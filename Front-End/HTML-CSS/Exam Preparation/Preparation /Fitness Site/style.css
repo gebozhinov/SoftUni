@@ -1,3 +1,9 @@
+body {
+    background: url(image/fitness-main.jpg);
+    background-size: contain;
+    background-position: center -15em;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -31,7 +37,6 @@ main {
 .main-section {
     display: flex;
     flex-direction: column;
-    background-color: black;
     color: white;
 }
 
@@ -79,19 +84,23 @@ main {
     border-radius: 0.5em;
 }
 
-.welcome-section {
+.welcome-section, .coaches-section {
     display: flex;
     flex-direction: column;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
-.welcome-section h3 {
+.coaches-section {
+    background-color: #ddd;
+}
+
+.welcome-section h3, .coaches-section h3 {
     text-align: center;
     font-size: 1.5em;
     padding-top: 2em;
 }
 
-.welcome-section h3::after {
+.welcome-section h3::after, .coaches-section h3::after {
     content: '';
     background-color: red;
     width: 5ch;
@@ -100,31 +109,58 @@ main {
     margin: 1em auto;
 }
 
-.welcome-section-container {
+.welcome-section-container, .coaches-section-container {
     display: flex;
     justify-content: space-between;
     padding: 1em 0 7em 0;
 }
 
-.fitness-info {
+.fitness-info, .coaches-info {
     display: flex;
     flex-direction: column;
 }
 
-.fitness-info-headline {
+.fitness-info-headline, .program {
     text-align: center;
     color: red;
     padding-bottom: 1em;
 }
 
-.fitness-info-more {
+.program {
+    font-size: 0.95em
+}
+
+.fitness-info-more, .program-info {
     width: 30em;
     padding: 0 5em;
     text-align: center;
+}
+
+.program-info {
+    color: #666;
 }
 
 .fitness-info img {
     width: 15%;
     align-self: center;
     padding-bottom: 2em;
+}
+
+.coach-name {
+    text-align: center;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.coaches-info img {
+    width: 70%;
+    align-self: center;
+    padding-bottom: 1em;
+    border-radius: 2em;
+}
+
+footer {
+    background-color: red;
+    text-align: center;
+    padding: 1em 0;
 }
