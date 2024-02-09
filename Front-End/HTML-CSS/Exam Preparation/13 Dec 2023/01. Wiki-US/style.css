@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Agbalumo', system-ui;
+}
+
+body {
+    margin: 1em;
+    max-width: 45em;
+    border: 2px solid black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    background-color: lightblue;
+    padding: 0 1em;
+}
+
+header h1 {
+    padding-top: 1em;
+}
+
+header h1, .country {
+    border-bottom: 2px solid black;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: 1em;
+    border: 2px solid black;
+}
+
+aside img {
+    width: 100%;
+    align-self: center;
+}
+
+.usa-map {
+    max-width: 100em;
+    text-indent: 2em;
+    padding-top: 1.5em;
+    font-size: 12px;
+}
+
+.usa-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.usa-info p:first-child {
+    text-indent: 2em;
+}
+
+.usa-info p:last-child {
+    text-align: 2em;
+    text-indent: 2em;
+    padding-top: 1em;
+}
+
+.about {
+    padding: 0 2em;
+    background-color: black;
+    color: white;
+    max-width: 17em;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.facts {
+    background-color: lightblue;
+}
+
+.facts p {
+    padding-left: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+.facts p:first-child {
+    padding-top: 0.5em;
+}
+
+.facts span {
+    font-weight: bold;
+}
