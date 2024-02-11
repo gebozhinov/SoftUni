@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-title {
+    display: flex;
+}
+
+.site-title p:first-of-type {
+    font-size: 38px;
+    padding: 0.5em 1em 0 1em;
+}
+
+.site-title p:last-of-type {
+    color: #aaa;
+    align-self: flex-end;
+    padding-left: 2em;
+}
+
+.border {
+    margin-top: 1em;
+    border-left: 2px solid #aaa;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    display: block;
+}
