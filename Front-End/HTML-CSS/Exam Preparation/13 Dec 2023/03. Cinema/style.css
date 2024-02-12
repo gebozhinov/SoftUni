@@ -13,20 +13,36 @@ header {
 }
 
 .site-title p:last-of-type {
-    color: #aaa;
+    color: #666;
     align-self: flex-end;
     padding-left: 2em;
+    font-size: 14px;
 }
 
 .border {
     margin-top: 1em;
-    border-left: 2px solid #aaa;
+    border-left: 2px solid #666;
 }
 
 header ul {
     display: flex;
+    align-items: center;
+    padding-right: 2em;
 }
 
 header ul li {
     display: block;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 1em;
+    background-color: #eee;
+    border-left: 1px solid #fff;
+    color: #666;
+}
+
+.homepage {
+    background-color: rgb(28, 209, 124);
+    color: black;
 }
