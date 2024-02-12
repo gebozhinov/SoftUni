@@ -1,6 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 2em;
 }
 
 .site-title {
@@ -50,6 +51,17 @@ header ul li a {
 main {
     display: flex;
     flex-direction: column;
+}
+
+.background {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40em;
+}
+
+.background img {
+    display: none;
 }
 
 .main-article {
@@ -151,4 +163,15 @@ main {
 .more-articles-detail p {
     text-align: center;
     color: #666;
+}
+
+footer {
+    background-color: rgb(28, 209, 124);
+    padding: 5em 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.568);  
+}
+
+footer span {
+    color: white;
 }
