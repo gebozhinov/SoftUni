@@ -9,7 +9,7 @@ header {
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
-    height: 40em;   
+    height: 58em;   
 }
 
 .header-container {
@@ -43,14 +43,55 @@ header {
 .header-container ul li a {
     text-decoration: none;
     color: white;
+    text-transform: uppercase;
 }
 
 .about-container {
     color: white;
-    max-width: 35em;
-    padding: 3em 0 0 8em;
+    max-width: 45em;
+    padding: 3em 0 0 15em;
+}
+
+.about-container h1 {
+    font-size: 50px;
 }
 
 .about-container p {
     padding-top: 1em;
+    font-size: 19px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 75em;
+    align-self: center;
+    padding-top: 7em;
+}
+
+.articles-container {
+    display: flex;
+    padding-bottom: 5em;
+}
+
+.articles-container h2 {
+    font-size: 38px;
+}
+
+.articles-container p {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-right: 2em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.button {
+    color: brown;
+    text-decoration: none;
+    border: 1px solid brown;
+    padding: 0.5em 1.5em;
+}
+
+.sponsors-container {
+    display: flex;
 }
