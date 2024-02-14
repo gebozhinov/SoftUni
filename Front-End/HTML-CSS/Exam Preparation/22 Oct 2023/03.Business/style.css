@@ -1,0 +1,56 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40em;   
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 100px;
+    margin: 1em 0 0 2em;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-container ul {
+    display: flex;
+    align-items: center;
+    padding-right: 2em;
+}
+
+.header-container ul li {
+    display: block;
+    padding-top: 1em;
+    padding-right: 2em;
+}
+
+.header-container ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.about-container {
+    color: white;
+    max-width: 35em;
+    padding: 3em 0 0 8em;
+}
+
+.about-container p {
+    padding-top: 1em;
+}
