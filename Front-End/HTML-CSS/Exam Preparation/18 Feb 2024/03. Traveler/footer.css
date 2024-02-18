@@ -1,0 +1,23 @@
+footer {
+    background-color: rgb(70, 40, 20);
+    color: white;
+    font-size: 16px;
+}
+
+.footer-container {
+    padding: 3em 7em;
+}
+
+footer img {
+    max-width: 4em;
+    margin-bottom: 2em;
+}
+
+footer p:first-of-type {
+    max-width: 27%;
+    padding-bottom: 1em;
+}
+
+footer p:last-of-type {
+    color: rgb(255, 255, 255, 0.5);
+}

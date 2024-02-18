@@ -1,0 +1,135 @@
+/* main {
+    display: flex;
+    flex-direction: column;
+} */
+
+.main-background:nth-child(odd) {
+    background-color: antiquewhite;
+}
+.main-background:nth-child(even) {
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote p {
+    min-width: -moz-available;
+    padding-left: 31.5%;
+    padding-top: 2em;
+    padding-bottom: 3.5em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.quote h2 {
+    max-width: 38%;
+    font-style: italic;
+    font-size: 46px;
+    line-height: 1;
+    padding-bottom: 2em;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support p:first-of-type {
+    padding-top: 2.5em;
+    padding-bottom: 1.5em;
+    font-size: 22px;
+}
+
+.support p:last-of-type {
+    padding-bottom: 2.5em;
+    max-width: 15%;
+    text-align: center;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article img {
+    max-width: 30%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.article h3 {
+    font-size: 46px;
+    max-width: 20%;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.article p {
+    max-width: 30%;
+    color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 3em;
+    text-align: justify;
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 0.5em 1.5em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
+    font-size: 16px;
+}
+
+.button:first-of-type {
+    align-self: flex-start;
+    margin-bottom: 3em;
+}
+
+.button:last-of-type {
+    align-self: center;
+    margin-bottom: 3em;
+}
+
+.local-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.local-guide h3 {
+    font-size: 46px;
+    max-width: 25%;
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.local-guide p {
+    max-width: 47%;
+    color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+.find-a-local-guide-button {
+    text-decoration: none;
+    color: black;
+    background-color: gold;
+    padding: 1em 1.5em;
+    border-radius: 30px;
+    margin-bottom: 3em;
+}
