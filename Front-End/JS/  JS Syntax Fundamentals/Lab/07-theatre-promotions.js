@@ -32,6 +32,3 @@ function tickerPrice(typeOfDay, age) {
         console.log("Error!")
     }
 }
-
-tickerPrice('Weekday', 19)
-
