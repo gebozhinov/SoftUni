@@ -5,6 +5,3 @@ function excellent(grade) {
         console.log("Not excellent")
     }
 }
-
-excellent(5.50)
-excellent(4.35)
