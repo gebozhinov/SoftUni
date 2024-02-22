@@ -6,6 +6,3 @@ function circleArea(input) {
         console.log(`We can not calculate the circle area, because we receive a ${typeof input}.`)
     }
 }
-
-circleArea(5)
-circleArea('name')

@@ -41,6 +41,3 @@ function monthPrinter(num) {
 
     }
 }
-
-monthPrinter(2);
-monthPrinter(13);
