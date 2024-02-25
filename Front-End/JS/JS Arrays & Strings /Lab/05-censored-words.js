@@ -4,5 +4,3 @@ function censored(sentence, word) {
 
     console.log(sentence.replace(regex, rep));
 }
-
-censored('Find the hidden word hidden', 'hidden')
