@@ -26,7 +26,4 @@ function mining(goldAmount) {
         console.log(`Day of the first purchased bitcoin: ${dayOfFirstBitcoinBought}`)
     }
     console.log(`Left money: ${money.toFixed(2)} lv.`)
-
 }
-
-mining([100, 200, 300])
