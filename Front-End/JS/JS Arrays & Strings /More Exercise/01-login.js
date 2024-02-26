@@ -15,9 +15,5 @@ function login(array) {
             console.log(`User ${username} blocked!`)
             break;
         }
-
     }
-
 }
-
-login(['sunny','rainy','cloudy','sunny','not sunny']);
